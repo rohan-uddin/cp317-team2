@@ -1,24 +1,28 @@
 # Specifications
 
 ## Project Proposal
-- **Title:** StudySpace
-- **Start Date:** 01/15/2021
-- **End Date:** 04/12/2021
+
+-   **Title:** StudySpace
+-   **Start Date:** 01/15/2021
+-   **End Date:** 04/12/2021
 
 ## Overview
+
 StudySpace is a web application that allows university students to create and find virtual study spaces to help them study and experience university together.
 
 This application allows students to:
-- Create profiles and log-in
-- Match with other study groups or individuals (choose a list of hobbies, preferences, major, favourite subjects)
-- Search for groups they are interested and join them
-- Be able to make posts and ask questions within groups, which can be commented on
+
+-   Create profiles and log-in
+-   Match with other study groups or individuals (choose a list of hobbies, preferences, major, favourite subjects)
+-   Search for groups they are interested and join them
+-   Be able to make posts and ask questions within groups, which can be commented on
 
 Furthermore the platform will have:
-- Voice chats available for the different rooms
-- Different chat rooms for international students and returning students
-- An area to buy, sell, and ask questions about textbooks (marketplace)
-- Mental health support (find individuals to talk to)
+
+-   Voice chats available for the different rooms
+-   Different chat rooms for international students and returning students
+-   An area to buy, sell, and ask questions about textbooks (marketplace)
+-   Mental health support (find individuals to talk to)
 
 ## What is the purpose of the project
 
@@ -27,43 +31,51 @@ This project allows university students to create and find virtual study spaces 
 Premium Desk is a virtual desk for students who would like to buy services from a tutor. The tutor can be a student, professor, or a 3rd party tutor. Each tutor has their own page with their respective qualifications and an area to leave reviews. The premium desk can either be used between 1 tutor and 1 student, or 1 tutor and multiple students having the same difficulties. This feature will be categorized under the virtual tables, there will be free tables with other students or this paid desk.
 
 Live chat rooms are a feature that will enable private discussions during lectures. When students feel like their questions are too “dumb” or do not understand the professor, they can join these live chat rooms to talk to other students in the same lecture. Students who feel more confident can also decide to ask these questions to the professor.
- 
+
 There will be a general discussion section that students at any institution can use to discuss general topics such as recreational activities, clubs, campus amenities, advice for adjusting to living alone, and much more.
 
-Students will also be able to use an “Anonymous” feature that will allow them to post questions to a discussion board with complete privacy. This will allow for students to feel more comfortable asking their questions and getting the help they need. 
+Students will also be able to use an “Anonymous” feature that will allow them to post questions to a discussion board with complete privacy. This will allow for students to feel more comfortable asking their questions and getting the help they need.
 
 ## Who is the audience?
 
 Primarily students. We have subdivided these into the following categories:
-- People writing exams wanting to study
-- Individuals looking for special help related to their course 
-- Working in a group for an assigned group project for a course.
-- Aspiring university students.
+
+-   People writing exams wanting to study.
+-   Individuals looking for special help related to their course.
+-   Working in a group for an assigned group project for a course.
+-   Aspiring university students.
+
+Tutors, our project allows other tutors to effortlessly connect with other students; tutors would be able to find their clients with ease.
+
+An indirect audience would be the school's tutor/study organizations such as MAC (Math Assistance Center) in Laurier's Lazardis Hall. Students would normally go to MAC to get help with Math related questions and work. With our project, students don't have to rely on the tutuors provided by the MAC to assist them with their courses. Since these organizations are usually packed and full of students, our project would create less 'pressure' on these organizations by re-directing students to other tutors that are not associated with the organziation.
+
+An indirect audience would be the schools' board of directors. The school could gauge what study spaces are commonly used throughout the campus. This data could be used to decide if more study spaces should be built (or disassembeled) at a specific area; which inevitably also benefits the students.
 
 ## What are the benefits to the audience?
 
-- Saves time and effort
-- Meet new people/Create a network
-- Creates unique environment that fosters education
-- Allows for student matchmaking based on:
-    - Age
-    - language
-    - Major
-    - School
-    - Year
-- Getting help with assignments
+-   Able to connect with other people easier, saving time and effort
+-   Open more oppurtunities to network with other people.
+-   Creates unique environment that fosters education
+-   Allows for student matchmaking based on:
+    -   Age
+    -   language
+    -   Major
+    -   School
+    -   Year
+-   Getting help with assignments
 
 # Versions
 
 ## Version 1.0
 
 ### Written by:
-- 
-- 
-- 
-- 
+
+-
+-
+-
+-
 
 ### Edits by:
-- Rohan Uddin: ported document to markdown, cleaned and formatted some of the language.
-- 
 
+-   Rohan Uddin: ported document to markdown, cleaned and formatted some of the language.
+-
