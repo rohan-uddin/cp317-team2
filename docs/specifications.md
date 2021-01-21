@@ -57,13 +57,13 @@ Primarily students. We have subdivided these into the following categories:
 
 ## Version 1.0
 
-Written by:
+### Written by:
 - 
 - 
 - 
 - 
 
-Edits by:
+### Edits by:
 - Rohan Uddin: ported document to markdown, cleaned and formatted some of the language.
 - 
 
