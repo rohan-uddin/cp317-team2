@@ -85,3 +85,4 @@ Students can use the “Anonymous” feature, which allows them to anonymously p
 -   [2021-01-20] Rohan Uddin: ported document to markdown, cleaned and formatted some of the language. (Rev. 1)
 -   [2021-01-20] Janelle Tait (Rev. 2)
 -   [2021-01-25] Dayton Talarico (Rev. 3)
+-   [2021-01-28] Dayton Talarico (Rev. 4)
