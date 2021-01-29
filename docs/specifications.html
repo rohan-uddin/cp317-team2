@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>specifications</title>
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="./specifications_files/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h2> StudySpace Software Requirement Specification </h2>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#1-introduction">1. Introduction</a>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#11-purpose">1.1. Purpose</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#12-scope">1.2. Scope</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#13-definitions">1.3. Definitions</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#14-references">1.4. References</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#15-overview">1.5. Overview</a></li>
+</ul>
+</li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#2-overall-description">2. Overall Description</a>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#21-product-perspective">2.1. Product Perspective</a>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#211-user-interfaces">2.1.1. User Interfaces</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#212-software-interfaces">2.1.2. Software Interfaces</a></li>
+</ul>
+</li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#22-product-functions">2.2. Product Functions</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#23-user-characteristics">2.3. User Characteristics</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#24-constraints">2.4. Constraints</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#25-assumptions-and-dependencies">2.5. Assumptions and Dependencies</a></li>
+</ul>
+</li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#3-specific-requirements">3. Specific Requirements</a>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#31-external-interface">3.1. External Interface</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#32-functions">3.2. Functions</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#33-logical-database-requirements">3.3. Logical Database Requirements</a></li>
+</ul>
+</li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#4-software-system-attributes">4. Software System Attributes</a>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#41-security">4.1. Security</a></li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#42-portability">4.2. Portability</a></li>
+</ul>
+</li>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#5-versions">5. Versions</a>
+<ul>
+<li><a href="file:///C:/Users/ab/AppData/Local/Temp/mume2021029-16916-hdcp8q.3b2kg.html#version-10---19012021">Version 1.0 - 19/01/2021</a></li>
+</ul>
+</li>
+</ul>
+<h3 class="mume-header" id="1-introduction">1. Introduction</h3>
+
+<p>StudySpace is a web application that provides post-secondary students with access to virtual spaces that foster unique social learning environments. The purpose of this project is to promote a sense of unity and community among students by helping them meet new peers, connect, and study together.</p>
+<h4 class="mume-header" id="11-purpose">1.1. Purpose</h4>
+
+<p>The purpose of this document is to establish the requirements of the project from an implementation perspective. Additionally, this document lays the foundation for all group processes from start to finish by outlining the vision for the project. This document is intended to be used by developers, users, and any other individual who wants to learn the concept of this application and how it’s features work.</p>
+<h4 class="mume-header" id="12-scope">1.2. Scope</h4>
+
+<p>StudySpace allows users to search for and join virtual study groups. User benefits include improving academic success, making friends, and gaining a sense of community among peers. The objective of StudySpace is to make it easier for students to find groups of like-minded individuals who they can collaborate with -regardless of their physical locations. Through the use of this product, even students who are enrolled in online courses do not miss out on the benefits of group work and peer discussion.</p>
+<h4 class="mume-header" id="13-definitions">1.3. Definitions</h4>
+
+<ol>
+<li><strong>DESK</strong><br>
+A Desk is a virtual space wherein students may collaborate privately or publically.<br>
+Each desk is temporary it only exists so long as there are people are using it. After everyone leaves the desk, it is purged from memory.<br>
+Each desk has an admin who can set a limit to the number of members and add signifiers such as language, age category,  and other factors.<br>
+Users can sort desks based on their preferences (see: Private Desk), or join a random one (see: Public Desk).</li>
+<li><strong>TEAM</strong><br>
+Team refers to students in CP317 W21 Team 2.</li>
+<li><strong>STUDY SPACE</strong><br>
+Study Space refers to the web application created by the Team for the Initial Audience, Mr. David Brown.</li>
+<li><strong>USER MATCH</strong><br>
+Users have the option to enter information about themselves, such as various preferences, courses they’re enrolled in, and their study habits.<br>
+Users who are both members of the same group have the possibility of getting matched. The more preferences, common classes, and similar study habits two group members have, the more likely they are to be matched. When a User Match occurs, the matched users show up in each other’s list of user matches, found on the page of the group they were matched from.</li>
+<li><strong>STUDY GROUP</strong><br>
+A group of Students.</li>
+<li><strong>STUDENT</strong><br>
+A Student is a user enrolled in any Canadian university, who seeks the use of a Desk.</li>
+<li><strong>INITIAL AUDIENCE</strong><br>
+This product was made for the use of Mr. David Brown, who is the initial User that is not part of the Team to use and test this application.</li>
+<li><strong>TARGET AUDIENCE</strong><br>
+This product was created to solve areas most commonly experienced by Students.</li>
+<li><strong>CHAT</strong><br>
+A Chat is a feature where all members of a Group can send text messages to each other. The Chat is viewed through a chat box on the Group’s page.</li>
+<li><strong>VOICE CHAT</strong><br>
+A Voice Chat is a feature where all members of a Group call each other. The Voice Chat is viewed through a chat box on the Group’s page.</li>
+<li><strong>TUTOR</strong><br>
+A Tutor can be a student, professor, or a 3rd party that offers teaching services to any student(s).</li>
+<li><strong>PUBLIC DESK</strong><br>
+A Desk that any Student can enter and collaborate in.</li>
+<li><strong>PRIVATE DESK</strong><br>
+A Desk designated for a particular Study Group.<br>
+Students that are not part of that Study Group may not enter a Private Desk.</li>
+<li><strong>FRIEND</strong><br>
+Any two Users can become Friends if one sends a Friend Request and the other accepts it. When two Users are Friends, they are able to send private chats directly to one another.</li>
+<li><strong>GROUP NAME</strong><br>
+A Group Name is the name of a Group. The Group Name is set by a member of the Group. The Group Name must be unique so that other Users can easily discover the Group via Search.</li>
+<li><strong>GROUP</strong><br>
+A Group is a collection of two or more users who have connected through StudySpace either by Invitation or a User Match. All members of a Group automatically have access to a Chat upon joining.</li>
+<li><strong>INVITATION</strong><br>
+An Invitation is the opportunity for a User to join a Private Group. Any member of a Private Group can choose to send an Invitation to a User who isn’t already a member.</li>
+<li><strong>PAGE</strong><br>
+A Page is where Posts are viewed. Each Group can have one or more Pages.</li>
+<li><strong>POST</strong><br>
+A Post is an object which can include photos and text. Posts are created by Users for all members of a Group to see. Users can make a Post about anything they wish, including: buying/selling textbooks, searching for a tutor, asking questions, looking for advice, etc. Users can write a Response to a Post.</li>
+<li><strong>PRIVATE GROUP</strong><br>
+A Private Group is a Group that is only accessible to Users who have either been Invited to the group by an existing member or User Matched to the group. Posts and Chats, and Pages within a Private Group are not visible to any User who is not a member of the Group.</li>
+<li><strong>PUBLIC GROUP</strong><br>
+A Public Group is a Group that is accessible to all Users and does not require an Invitation or User Match to join. All Posts and Chats, and Pages within a Public Group are visible to all Users.</li>
+<li><strong>PROFILE</strong><br>
+A page with personal information about the user. The Profile also provides functionality such as managing group memberships and accessing chats.</li>
+<li><strong>RESPONSE</strong><br>
+A Response is a text message which is linked to a Post.</li>
+<li><strong>SEARCH</strong><br>
+Search is a function of the app where Users can search and discover Groups by Group Name or Users by Username.</li>
+<li><strong>USER</strong><br>
+A User is someone who uses the application; likely a Student.</li>
+<li><strong>USERNAME</strong><br>
+A Username is part of a User’s account information. A Username is the name by which a User is referred to on the app.</li>
+</ol>
+<h4 class="mume-header" id="14-references">1.4. References</h4>
+
+<p>IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998</p>
+<h4 class="mume-header" id="15-overview">1.5. Overview</h4>
+
+<p>The rest of this document contains details about the overall description and specific requirements of the project. Section 2 contains information about the product perspective, product functions, user characteristics, constraints, and dependencies. Section 3 discusses external interfaces, functions, logical database requirements, and software system attributes.</p>
+<h3 class="mume-header" id="2-overall-description">2. Overall Description</h3>
+
+<h4 class="mume-header" id="21-product-perspective">2.1. Product Perspective</h4>
+
+<p>StudySpace is an independent, self-contained web application. Core features are personalized profiles, groups, chats and pages in each group. It is a web application with 2 components: user interfaces (front end), and software interfaces (back end).</p>
+<h5 class="mume-header" id="211-user-interfaces">2.1.1. User Interfaces</h5>
+
+<p><strong>Search bar</strong><br>
+StudySpace has a search bar along the top, icons to log in, and a home page with general information that appears upon entering the site. Users can use the search bar to navigate to groups that interest them.</p>
+<p><strong>Profile</strong><br>
+Once logged in, a user will see a link to their profile. This link remains present as the user navigates the website. On the left side of this page, users can view/edit their preferences and other personal information. On the right, there are two lists: a list of groups the user is a part of, and a list of users they are friends with. By clicking on one of the groups, the user is taken to the group page for that specific group. By clicking on one of the users, the user is taken to the profile page of that user. Since the users are friends, the friends’ profile page will contain a button near the top, labelled “Message”, which the User can click to send a direct chat to that friend.</p>
+<p><strong>Create new post</strong><br>
+On the group page, there is a button at the top that allows the user to create a new post. Taking up the centre of the group page is a list of titles corresponding to previously-published posts belonging to the group. The posts are sorted by popularity.</p>
+<p><strong>Full-screen view of the post</strong><br>
+Clicking on the title of a post brings the user to a page containing a full-screen view of the post, with the title and total number of upvotes/downvotes at the top, and the body of the post underneath. On either side of the upvotes/downvotes count are two arrow-shaped buttons; one pointing up and one pointing down. To upvote this post, the user must simply click the upward-pointing arrow. To downvote the post, the user must click the downward-pointing arrow. From this view, the responses to the post are also visible; they are displayed below the body of the original post. In between the body of the post and its responses, there is a textbox and a “Reply” button to the right of it. These features allow the user to submit a response to the post.</p>
+<p><strong>Chat box</strong><br>
+On the right-hand side of the group page is a chat box where members of the group can send text messages for others members to see.</p>
+<p><strong>User pop-up</strong><br>
+Any post, response, or chat displays a link which is the username of the user who sent/posted it. For posts, the username is displayed at the top next to the title. For responses and chat messages, the username of the sender is displayed directly above the body of the message. Clicking on the username brings the user to the profile of the user who sent/posted the item. Users can view the preferences and personal information of another user via their profile. While viewing another user’s profile, a user also has the option to request to be their friend via a button in the top-right corner labelled “Send Friend Request”.</p>
+<p><strong>User match bar</strong><br>
+Along the left side of any group page is a list of user matches. User matches are based on the number of preferences two users have in common. Clicking on an entry in this list will bring the user to the profile of the matched user/suggested friend’s page where they can send a friend request if they would like.</p>
+<h5 class="mume-header" id="212-software-interfaces">2.1.2. Software Interfaces</h5>
+
+<p>On the backend, clicking on groups, profiles, or posts sends a request to the database containing all information required by the site. The database must return said required information.</p>
+<p>The chat function is also handled by the backend.</p>
+<h4 class="mume-header" id="22-product-functions">2.2. Product Functions</h4>
+
+<p>Users can create their own group with a desired set of members or a specific topic. New groups may not share a name with existing groups. Users can create posts, comment on posts, chat, log in, and send friend requests to other users.</p>
+<p><strong>Private Group - Signed In Users</strong><br>
+Posts are only visible to users who have joined the group. Thus, users who have not joined the group cannot vote, comment on, or create any posts.</p>
+<p><strong>Private Group - Users Who Are Not Signed In</strong><br>
+Posts are not visible. Thus, users who have not signed in cannot vote or comment on any posts.</p>
+<p><strong>Public Group - Signed In Users</strong><br>
+Posts are visible to everyone. Users who have not joined the group may still view the   group’s posts. Thus, any user can vote and comment on any posts. Any user could also make a post in the group.</p>
+<p><strong>Public Group - Users Who Are Not Signed In</strong><br>
+Posts are visible to everyone. Users who are not signed in can only view the posts. They cannot comment or vote.</p>
+<p><strong>Voting and Commenting On A Post</strong><br>
+All users, including the post’s author, can upvote or downvote only once. Only users who are members of a private group can vote and comment on posts in said private group. All signed-in users can vote on posts and make comment(s) in a public group.</p>
+<h4 class="mume-header" id="23-user-characteristics">2.3. User Characteristics</h4>
+
+<p>Post-secondary students are the intended users of this product. As such, it is assumed that the user is educated and has experience using a web browser and navigating websites. It is helpful -but not necessary- for the user to have experience with common social media platforms, such as Reddit, Instagram, or Twitter. This experience should aid the user in learning how some features of StudySpace work, such as chat, due to the similarities to other social media.</p>
+<h4 class="mume-header" id="24-constraints">2.4. Constraints</h4>
+
+<p>A large number of users must be able to access the website at once. To ensure the website is reliable, smooth, and feels responsive to the user, chat logs should update within a second whenever a user sends a chat.</p>
+<h4 class="mume-header" id="25-assumptions-and-dependencies">2.5. Assumptions and Dependencies</h4>
+
+<p>It is assumed that users have a functioning, web-capable device with a browser installed. Users are expected to have an internet connection for the entire duration of their session. StudySpace should be compatible with any operating system and it does not matter whether a mobile device or desktop is used.</p>
+<h3 class="mume-header" id="3-specific-requirements">3. Specific Requirements</h3>
+
+<h4 class="mume-header" id="31-external-interface">3.1. External Interface</h4>
+
+<p>Layouts</p>
+<ul>
+<li>Mobile-responsive and adaptive for screens 320px in width (smallest screen for a device) and above.</li>
+</ul>
+<p>Posts</p>
+<ul>
+<li>Beside each post, there is an “upvote” or “downvote” icon.<br>
+Upvoting a post increases the total number of upvotes/downvotes by 1, and downvoting decreases the total by 1.</li>
+<li>Any user, including the author of the post, can only upvote or downvote a post once. The total number of upvotes/downvotes can be less than 0 if the number of downvotes exceeds the number of upvotes.</li>
+<li>Only loading in a small amount of posts initially. More posts will load as the user scrolls up.</li>
+<li>If no posts have been made to a group, a message is displayed which says, “There are no posts here.”</li>
+<li>When creating a post, there are requirements that must be met before it can be published. All posts need a title and at least one character of body text.</li>
+</ul>
+<h4 class="mume-header" id="32-functions">3.2. Functions</h4>
+
+<p>Creating, editing, deleting post</p>
+<ul>
+<li>Once a user has created a post, they can edit or delete the post by accessing it via the group page where it is posted.</li>
+</ul>
+<p>Searching</p>
+<ul>
+<li>Any additional spaces or misspelled words in the search bar must be understood. For example “CP31 7 Wilfred” must show the intended results of “Cp317 Wilfrid”.<br>
+Implemented by a Full-Text-Search in the relational database which is part of the backend.</li>
+</ul>
+<p>User sign-in</p>
+<ul>
+<li>When users sign in, the email form must be in proper email format (eg; having “@” in their email address”).</li>
+<li>There are no password requirements.</li>
+<li>Users stay logged in until they sign out.</li>
+</ul>
+<h4 class="mume-header" id="33-logical-database-requirements">3.3. Logical Database Requirements</h4>
+
+<table>
+<thead>
+<tr>
+<th>USERS:</th>
+<th>contains a record for every user that has created a profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fields</td>
+<td>A User ID unique to the User A User’s preferences  A User’s personal information (name, major)</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>The user id is the primary key of the USERS table.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>FRIENDS:</th>
+<th>contains a record for every friendship relation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fields</td>
+<td>A unique Friendship ID for each Friendship Two User ID fields, one for each User involved in the friendship</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>The friendship ID is the primary key of the FRIENDS table.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>GROUPS:</th>
+<th>contains a record for every group in the system</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fields</td>
+<td>A unique Group ID Group name Group members  Note: the group members field contains all the members of a group assigned to a record, which is a multivalued attribute</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>The group ID is the primary key of the GROUPS table.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>POSTS:</th>
+<th>contains a record for every post that has ever been published</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fields</td>
+<td>A unique Post ID for each Post The ID of the group it was posted in The Post title The Post’s body text The Post’s total number of upvotes The Post’s total number of downvotes</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>The post ID is the primary key of the POSTS table.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>RESPONSES:</th>
+<th>contains a record for every response that has ever been made to a post</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fields</td>
+<td>A unique Response ID The text stored in the Response The ID of the Post it is associated with</td>
+</tr>
+<tr>
+<td>Relationships</td>
+<td>The response ID is the primary key of the RESPONSES table.</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="4-software-system-attributes">4. Software System Attributes</h3>
+
+<h4 class="mume-header" id="41-security">4.1. Security</h4>
+
+<p>Any access to the StudySpace backend needs to be verified to ensure that only authorized administrators/moderators have access. Authorization involves entering a valid username and password to an account with administrator privileges. When an administrator or moderator logs into the system, they are granted permissions to edit, create, and delete content.</p>
+<h4 class="mume-header" id="42-portability">4.2. Portability</h4>
+
+<p>StudySpace must be accessible on any mobile or desktop device that is web-capable and has a browser. Therefore, StudySpace must be compatible with any operating system, including Windows, Mac OS, Linux, iOS and Android. The product must also be compatible with any browser, including Chrome, Firefox, Internet Explorer, Edge, and Safari.</p>
+<h3 class="mume-header" id="5-versions">5. Versions</h3>
+
+<h4 class="mume-header" id="version-10-19012021">Version 1.0 - 19/01/2021</h4>
+
+<p>Author(s)</p>
+<ul>
+<li>Arvin</li>
+<li>Brian</li>
+<li>David</li>
+<li>Mackenzie</li>
+<li>Matthew</li>
+<li>Muhammed</li>
+<li>Shyam</li>
+<li>Zeeshan</li>
+</ul>
+<p>Document conversion, re-formatting according to known standards, and cleanup</p>
+<ul>
+<li>Rohan</li>
+</ul>
+<h5> Version 1.2 - 25/01/2021 </h5>
+<p>SQA</p>
+<ul>
+<li>Dayton</li>
+</ul>
+<p>Revision edits made by</p>
+<ul>
+<li>Janelle</li>
+</ul>
+<p>Document conversion, re-formatting according to known standards, and cleanup</p>
+<ul>
+<li>Janelle</li>
+<li>Mackenzie</li>
+<li>Matt</li>
+<li>Ann</li>
+</ul>
+<h5> Version 1.4 - 28/01/2021 </h5>
+<p>SQA</p>
+<ul>
+<li>Dayton</li>
+</ul>
+<p>Revision edits made by</p>
+<ul>
+<li>Janelle</li>
+</ul>
+<p>Document conversion, re-formatting according to known standards, and cleanup</p>
+<ul>
+<li>Ann</li>
+</ul>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  </body></html>
