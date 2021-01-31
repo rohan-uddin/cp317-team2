@@ -1,0 +1,430 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">StudySpace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link active" href="specifications.html">Specifications</a>
+            <a class="nav-item nav-link" href="#">SPMP</a>
+            <a class="nav-item nav-link" href="#">Requirements</a>
+            <a class="nav-item nav-link" href="#">Analysis</a>
+            <a class="nav-item nav-link" href="#">Design</a>
+            <a class="nav-item nav-link" href="#">Implementation</a>
+            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link to Web App</a>
+          </div>
+        </div>
+    </nav>
+    <br>
+    <br>
+    <div class="container">
+        <h2>Software Requirement Specifications</h2>
+        <ul>
+            <li><a href="#1-introduction">1. Introduction</a>
+                <ul>
+                    <li><a href="#11-purpose">1.1. Purpose</a></li>
+                    <li><a href="#12-scope">1.2. Scope</a></li>
+                    <li><a href="#13-definitions">1.3. Definitions</a></li>
+                    <li><a href="#14-references">1.4. References</a></li>
+                    <li><a href="#15-overview">1.5. Overview</a></li>
+                </ul>
+            </li>
+            <li><a href="#2-overall-description">2. Overall Description</a>
+                <ul>
+                    <li><a href="#21-product-perspective">2.1. Product Perspective</a>
+                        <ul>
+                            <li><a href="#211-user-interfaces">2.1.1. User Interfaces</a></li>
+                            <li><a href="#212-software-interfaces">2.1.2. Software Interfaces</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#22-product-functions">2.2. Product Functions</a></li>
+                    <li><a href="#23-user-characteristics">2.3. User Characteristics</a></li>
+                    <li><a href="#24-constraints">2.4. Constraints</a></li>
+                    <li><a href="#25-assumptions-and-dependencies">2.5. Assumptions and Dependencies</a></li>
+                </ul>
+            </li>
+            <li><a href="#3-specific-requirements">3. Specific Requirements</a>
+                <ul>
+                    <li><a href="#31-external-interface">3.1. External Interface</a></li>
+                    <li><a href="#32-functions">3.2. Functions</a></li>
+                    <li><a href="#33-logical-database-requirements">3.3. Logical Database Requirements</a></li>
+                </ul>
+            </li>
+            <li><a href="#4-software-system-attributes">4. Software System Attributes</a>
+                <ul>
+                    <li><a href="#41-security">4.1. Security</a></li>
+                    <li><a href="#42-portability">4.2. Portability</a></li>
+                </ul>
+            </li>
+            <li><a href="#5-versions">5. Versions</a>
+            </li>
+        </ul>
+        <h3 class="mume-header" id="1-introduction">1. Introduction</h3>
+
+        <p>StudySpace is a web application that provides post-secondary students with access to virtual spaces that foster unique social learning environments. The purpose of this project is to promote a sense of unity and community among students by helping them meet new peers, connect, and study together.</p>
+        <h4 class="mume-header" id="11-purpose">1.1. Purpose</h4>
+
+        <p>The purpose of this document is to establish the requirements of the project from an implementation perspective. Additionally, this document lays the foundation for all group processes from start to finish by outlining the vision for the project. This document is intended to be used by developers, users, and any other individual who wants to learn the concept of this application and how it&#x2019;s features work.</p>
+        <h4 class="mume-header" id="12-scope">1.2. Scope</h4>
+
+        <p>StudySpace allows users to search for and join virtual study groups. User benefits include improving academic success, making friends, and gaining a sense of community among peers. The objective of StudySpace is to make it easier for students to find groups of like-minded individuals who they can collaborate with -regardless of their physical locations. Through the use of this product, even students who are enrolled in online courses do not miss out on the benefits of group work and peer discussion.</p>
+        <h4 class="mume-header" id="13-definitions">1.3. Definitions</h4>
+
+        <ol>
+        <li><strong>DESK</strong><br>
+        A Desk is a virtual space wherein students may collaborate privately or publically.<br>
+        Each desk is temporary it only exists so long as there are people are using it. After everyone leaves the desk, it is purged from memory.<br>
+        Each desk has an admin who can set a limit to the number of members and add signifiers such as language, age category,  and other factors.<br>
+        Users can sort desks based on their preferences (see: Private Desk), or join a random one (see: Public Desk).</li>
+        <li><strong>TEAM</strong><br>
+        Team refers to students in CP317 W21 Team 2.</li>
+        <li><strong>STUDY SPACE</strong><br>
+        Study Space refers to the web application created by the Team for the Initial Audience, Mr. David Brown.</li>
+        <li><strong>USER MATCH</strong><br>
+        Users have the option to enter information about themselves, such as various preferences, courses they&#x2019;re enrolled in, and their study habits.<br>
+        Users who are both members of the same group have the possibility of getting matched. The more preferences, common classes, and similar study habits two group members have, the more likely they are to be matched. When a User Match occurs, the matched users show up in each other&#x2019;s list of user matches, found on the page of the group they were matched from.</li>
+        <li><strong>STUDY GROUP</strong><br>
+        A group of Students.</li>
+        <li><strong>STUDENT</strong><br>
+        A Student is a user enrolled in any Canadian university, who seeks the use of a Desk.</li>
+        <li><strong>INITIAL AUDIENCE</strong><br>
+        This product was made for the use of Mr. David Brown, who is the initial User that is not part of the Team to use and test this application.</li>
+        <li><strong>TARGET AUDIENCE</strong><br>
+        This product was created to solve areas most commonly experienced by Students.</li>
+        <li><strong>CHAT</strong><br>
+        A Chat is a feature where all members of a Group can send text messages to each other. The Chat is viewed through a chat box on the Group&#x2019;s page.</li>
+        <li><strong>VOICE CHAT</strong><br>
+        A Voice Chat is a feature where all members of a Group call each other. The Voice Chat is viewed through a chat box on the Group&#x2019;s page.</li>
+        <li><strong>TUTOR</strong><br>
+        A Tutor can be a student, professor, or a 3rd party that offers teaching services to any student(s).</li>
+        <li><strong>PUBLIC DESK</strong><br>
+        A Desk that any Student can enter and collaborate in.</li>
+        <li><strong>PRIVATE DESK</strong><br>
+        A Desk designated for a particular Study Group.<br>
+        Students that are not part of that Study Group may not enter a Private Desk.</li>
+        <li><strong>FRIEND</strong><br>
+        Any two Users can become Friends if one sends a Friend Request and the other accepts it. When two Users are Friends, they are able to send private chats directly to one another.</li>
+        <li><strong>GROUP NAME</strong><br>
+        A Group Name is the name of a Group. The Group Name is set by a member of the Group. The Group Name must be unique so that other Users can easily discover the Group via Search.</li>
+        <li><strong>GROUP</strong><br>
+        A Group is a collection of two or more users who have connected through StudySpace either by Invitation or a User Match. All members of a Group automatically have access to a Chat upon joining.</li>
+        <li><strong>INVITATION</strong><br>
+        An Invitation is the opportunity for a User to join a Private Group. Any member of a Private Group can choose to send an Invitation to a User who isn&#x2019;t already a member.</li>
+        <li><strong>PAGE</strong><br>
+        A Page is where Posts are viewed. Each Group can have one or more Pages.</li>
+        <li><strong>POST</strong><br>
+        A Post is an object which can include photos and text. Posts are created by Users for all members of a Group to see. Users can make a Post about anything they wish, including: buying/selling textbooks, searching for a tutor, asking questions, looking for advice, etc. Users can write a Response to a Post.</li>
+        <li><strong>PRIVATE GROUP</strong><br>
+        A Private Group is a Group that is only accessible to Users who have either been Invited to the group by an existing member or User Matched to the group. Posts and Chats, and Pages within a Private Group are not visible to any User who is not a member of the Group.</li>
+        <li><strong>PUBLIC GROUP</strong><br>
+        A Public Group is a Group that is accessible to all Users and does not require an Invitation or User Match to join. All Posts and Chats, and Pages within a Public Group are visible to all Users.</li>
+        <li><strong>PROFILE</strong><br>
+        A page with personal information about the user. The Profile also provides functionality such as managing group memberships and accessing chats.</li>
+        <li><strong>RESPONSE</strong><br>
+        A Response is a text message which is linked to a Post.</li>
+        <li><strong>SEARCH</strong><br>
+        Search is a function of the app where Users can search and discover Groups by Group Name or Users by Username.</li>
+        <li><strong>USER</strong><br>
+        A User is someone who uses the application; likely a Student.</li>
+        <li><strong>USERNAME</strong><br>
+        A Username is part of a User&#x2019;s account information. A Username is the name by which a User is referred to on the app.</li>
+        </ol>
+        <h4 class="mume-header" id="14-references">1.4. References</h4>
+
+        <p>IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998</p>
+        <h4 class="mume-header" id="15-overview">1.5. Overview</h4>
+
+        <p>The rest of this document contains details about the overall description and specific requirements of the project. Section 2 contains information about the product perspective, product functions, user characteristics, constraints, and dependencies. Section 3 discusses external interfaces, functions, logical database requirements, and software system attributes.</p>
+        <h3 class="mume-header" id="2-overall-description">2. Overall Description</h3>
+
+        <h4 class="mume-header" id="21-product-perspective">2.1. Product Perspective</h4>
+
+        <p>StudySpace is an independent, self-contained web application. Core features are personalized profiles, groups, chats and pages in each group. It is a web application with 2 components: user interfaces (front end), and software interfaces (back end).</p>
+        <h5 class="mume-header" id="211-user-interfaces">2.1.1. User Interfaces</h5>
+
+        <p><strong>Search bar</strong><br>
+        StudySpace has a search bar along the top, icons to log in, and a home page with general information that appears upon entering the site. Users can use the search bar to navigate to groups that interest them.</p>
+        <p><strong>Profile</strong><br>
+        Once logged in, a user will see a link to their profile. This link remains present as the user navigates the website. On the left side of this page, users can view/edit their preferences and other personal information. On the right, there are two lists: a list of groups the user is a part of, and a list of users they are friends with. By clicking on one of the groups, the user is taken to the group page for that specific group. By clicking on one of the users, the user is taken to the profile page of that user. Since the users are friends, the friends&#x2019; profile page will contain a button near the top, labelled &#x201C;Message&#x201D;, which the User can click to send a direct chat to that friend.</p>
+        <p><strong>Create new post</strong><br>
+        On the group page, there is a button at the top that allows the user to create a new post. Taking up the centre of the group page is a list of titles corresponding to previously-published posts belonging to the group. The posts are sorted by popularity.</p>
+        <p><strong>Full-screen view of the post</strong><br>
+        Clicking on the title of a post brings the user to a page containing a full-screen view of the post, with the title and total number of upvotes/downvotes at the top, and the body of the post underneath. On either side of the upvotes/downvotes count are two arrow-shaped buttons; one pointing up and one pointing down. To upvote this post, the user must simply click the upward-pointing arrow. To downvote the post, the user must click the downward-pointing arrow. From this view, the responses to the post are also visible; they are displayed below the body of the original post. In between the body of the post and its responses, there is a textbox and a &#x201C;Reply&#x201D; button to the right of it. These features allow the user to submit a response to the post.</p>
+        <p><strong>Chat box</strong><br>
+        On the right-hand side of the group page is a chat box where members of the group can send text messages for others members to see.</p>
+        <p><strong>User pop-up</strong><br>
+        Any post, response, or chat displays a link which is the username of the user who sent/posted it. For posts, the username is displayed at the top next to the title. For responses and chat messages, the username of the sender is displayed directly above the body of the message. Clicking on the username brings the user to the profile of the user who sent/posted the item. Users can view the preferences and personal information of another user via their profile. While viewing another user&#x2019;s profile, a user also has the option to request to be their friend via a button in the top-right corner labelled &#x201C;Send Friend Request&#x201D;.</p>
+        <p><strong>User match bar</strong><br>
+        Along the left side of any group page is a list of user matches. User matches are based on the number of preferences two users have in common. Clicking on an entry in this list will bring the user to the profile of the matched user/suggested friend&#x2019;s page where they can send a friend request if they would like.</p>
+        <h5 class="mume-header" id="212-software-interfaces">2.1.2. Software Interfaces</h5>
+
+        <p>On the backend, clicking on groups, profiles, or posts sends a request to the database containing all information required by the site. The database must return said required information.</p>
+        <p>The chat function is also handled by the backend.</p>
+        <h4 class="mume-header" id="22-product-functions">2.2. Product Functions</h4>
+
+        <p>Users can create their own group with a desired set of members or a specific topic. New groups may not share a name with existing groups. Users can create posts, comment on posts, chat, log in, and send friend requests to other users.</p>
+        <p><strong>Private Group - Signed In Users</strong><br>
+        Posts are only visible to users who have joined the group. Thus, users who have not joined the group cannot vote, comment on, or create any posts.</p>
+        <p><strong>Private Group - Users Who Are Not Signed In</strong><br>
+        Posts are not visible. Thus, users who have not signed in cannot vote or comment on any posts.</p>
+        <p><strong>Public Group - Signed In Users</strong><br>
+        Posts are visible to everyone. Users who have not joined the group may still view the   group&#x2019;s posts. Thus, any user can vote and comment on any posts. Any user could also make a post in the group.</p>
+        <p><strong>Public Group - Users Who Are Not Signed In</strong><br>
+        Posts are visible to everyone. Users who are not signed in can only view the posts. They cannot comment or vote.</p>
+        <p><strong>Voting and Commenting On A Post</strong><br>
+        All users, including the post&#x2019;s author, can upvote or downvote only once. Only users who are members of a private group can vote and comment on posts in said private group. All signed-in users can vote on posts and make comment(s) in a public group.</p>
+        <h4 class="mume-header" id="23-user-characteristics">2.3. User Characteristics</h4>
+
+        <p>Post-secondary students are the intended users of this product. As such, it is assumed that the user is educated and has experience using a web browser and navigating websites. It is helpful -but not necessary- for the user to have experience with common social media platforms, such as Reddit, Instagram, or Twitter. This experience should aid the user in learning how some features of StudySpace work, such as chat, due to the similarities to other social media.</p>
+        <h4 class="mume-header" id="24-constraints">2.4. Constraints</h4>
+
+        <p>A large number of users must be able to access the website at once. To ensure the website is reliable, smooth, and feels responsive to the user, chat logs should update within a second whenever a user sends a chat.</p>
+        <h4 class="mume-header" id="25-assumptions-and-dependencies">2.5. Assumptions and Dependencies</h4>
+
+        <p>It is assumed that users have a functioning, web-capable device with a browser installed. Users are expected to have an internet connection for the entire duration of their session. StudySpace should be compatible with any operating system and it does not matter whether a mobile device or desktop is used.</p>
+        <h3 class="mume-header" id="3-specific-requirements">3. Specific Requirements</h3>
+
+        <h4 class="mume-header" id="31-external-interface">3.1. External Interface</h4>
+
+        <p>Layouts</p>
+        <ul>
+        <li>Mobile-responsive and adaptive for screens 320px in width (smallest screen for a device) and above.</li>
+        </ul>
+        <p>Posts</p>
+        <ul>
+        <li>Beside each post, there is an &#x201C;upvote&#x201D; or &#x201C;downvote&#x201D; icon.<br>
+        Upvoting a post increases the total number of upvotes/downvotes by 1, and downvoting decreases the total by 1.</li>
+        <li>Any user, including the author of the post, can only upvote or downvote a post once. The total number of upvotes/downvotes can be less than 0 if the number of downvotes exceeds the number of upvotes.</li>
+        <li>Only loading in a small amount of posts initially. More posts will load as the user scrolls up.</li>
+        <li>If no posts have been made to a group, a message is displayed which says, &#x201C;There are no posts here.&#x201D;</li>
+        <li>When creating a post, there are requirements that must be met before it can be published. All posts need a title and at least one character of body text.</li>
+        </ul>
+        <h4 class="mume-header" id="32-functions">3.2. Functions</h4>
+
+        <p>Creating, editing, deleting post</p>
+        <ul>
+        <li>Once a user has created a post, they can edit or delete the post by accessing it via the group page where it is posted.</li>
+        </ul>
+        <p>Searching</p>
+        <ul>
+        <li>Any additional spaces or misspelled words in the search bar must be understood. For example &#x201C;CP31 7 Wilfred&#x201D; must show the intended results of &#x201C;Cp317 Wilfrid&#x201D;.<br>
+        Implemented by a Full-Text-Search in the relational database which is part of the backend.</li>
+        </ul>
+        <p>User sign-in</p>
+        <ul>
+        <li>When users sign in, the email form must be in proper email format (eg; having &#x201C;@&#x201D; in their email address&#x201D;).</li>
+        <li>There are no password requirements.</li>
+        <li>Users stay logged in until they sign out.</li>
+        </ul>
+
+        <h4 class="mume-header" id="33-logical-database-requirements">3.3. Logical Database Requirements</h4>
+        <br>
+        <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>USERS:</th>
+            <th>contains a record for every user that has created a profile</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fields</td>
+                <td>
+                    <ul>
+                        <li>A User ID unique to the User</li>
+                        <li>A User's preferences</li>
+                        <li> A User's personal information (name, major)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Relationships</td>
+                <td>The User ID is the primary key of the USERS table.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>FRIENDS:</th>
+                <th>contains a record for every friendship relation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fields</td>
+                <td>
+                    <ul>
+                        <li>A unique Friendship ID for each Friendship</li>
+                        <li>Two User ID fields, one for each User involved in the friendship</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Relationships</td>
+                <td>The friendship ID is the primary key of the FRIENDS table.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>GROUPS:</th>
+                <th>contains a record for every group in the system</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fields</td>
+                <td>
+                    <ul>
+                        <li>A unique Group ID</li>
+                        <li>Group name</li>
+                        <li>Group members</li>
+                    </ul>
+                    <p>Note: the group members field contains all the members of a group assigned to a record, which is a multivalued attribute</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Relationships</td>
+                <td>The group ID is the primary key of the GROUPS table.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>POSTS:</th>
+                <th>contains a record for every post that has ever been published</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fields</td>
+                <td>
+                    <ul>
+                        <li>A unique Post ID for each Post</li>
+                        <li>The ID of the group it was posted in</li>
+                        <li>The Post title</li>
+                        <li>The Post's body text</li>
+                        <li>The Post's total number of upvotes</li>
+                        <li>The Post's total number of downvotes</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Relationships</td>
+                <td>The post ID is the primary key of the POSTS table.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>RESPONSES:</th>
+                <th>contains a record for every response that has ever been made to a post</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fields</td>
+                <td>
+                    <ul>
+                        <li>A unique Response ID</li>
+                        <li>The text stored in the Response</li>
+                        <li>The ID of the Post it is associated with</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Relationships</td>
+                <td>The response ID is the primary key of the RESPONSES table.</td>
+            </tr>
+        </tbody>
+        </table>
+        <br>
+        <h3 class="mume-header" id="4-software-system-attributes">4. Software System Attributes</h3>
+
+        <h4 class="mume-header" id="41-security">4.1. Security</h4>
+
+        <p>Any access to the StudySpace backend needs to be verified to ensure that only authorized administrators/moderators have access. Authorization involves entering a valid username and password to an account with administrator privileges. When an administrator or moderator logs into the system, they are granted permissions to edit, create, and delete content.</p>
+        <h4 class="mume-header" id="42-portability">4.2. Portability</h4>
+
+        <p>StudySpace must be accessible on any mobile or desktop device that is web-capable and has a browser. Therefore, StudySpace must be compatible with any operating system, including Windows, Mac OS, Linux, iOS and Android. The product must also be compatible with any browser, including Chrome, Firefox, Internet Explorer, Edge, and Safari.</p>
+        <h3 class="mume-header" id="5-versions">5. Versions</h3>
+
+        <h5 class="mume-header" id="version-10-19012021">Version 1.0 - 19/01/2021</h5>
+
+        <p>Author(s)</p>
+        <ul>
+        <li>Arvin</li>
+        <li>Brian</li>
+        <li>David</li>
+        <li>Mackenzie</li>
+        <li>Matthew</li>
+        <li>Muhammed</li>
+        <li>Shyam</li>
+        <li>Zeeshan</li>
+        </ul>
+        <p>Document conversion, re-formatting according to known standards, and cleanup</p>
+        <ul>
+        <li>Rohan</li>
+        </ul>
+        <h5> Version 1.2 - 25/01/2021 </h5>
+        <p>SQA</p>
+        <ul>
+        <li>Dayton</li>
+        </ul>
+        <p>Revision edits made by</p>
+        <ul>
+        <li>Janelle</li>
+        </ul>
+        <p>Document conversion, re-formatting according to known standards, and cleanup</p>
+        <ul>
+        <li>Janelle</li>
+        <li>Mackenzie</li>
+        <li>Matt</li>
+        <li>Ann</li>
+        </ul>
+
+        <h5> Version 1.4 - 28/01/2021 </h5>
+        <p>SQA</p>
+        <ul>
+        <li>Dayton</li>
+        </ul>
+        <p>Revision edits made by</p>
+        <ul>
+        <li>Janelle</li>
+        </ul>
+        <p>Document conversion, re-formatting according to known standards, and cleanup</p>
+        <ul>
+        <li>Ann</li>
+        </ul>
+
+        <h5> Version 1.5 - 30/01/2021 </h5>
+        <p>HTML reformatted according to bootstrap theme</p>
+        <ul>
+            <li>Rohan</li>
+        </ul>
+
+    </div>
+
+    </body>
+</html>
