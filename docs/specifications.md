@@ -22,7 +22,6 @@
   - [4.1. Security](#41-security)
   - [4.2. Portability](#42-portability)
 - [5. Versions](#5-versions)
-  - [Version 1.0 - 19/01/2021](#version-10---19012021)
 
 ### 1. Introduction
 StudySpace is a web application that provides post-secondary students with access to virtual spaces that foster unique social learning environments. The purpose of this project is to promote a sense of unity and community among students by helping them meet new peers, connect, and study together.
@@ -227,7 +226,7 @@ StudySpace must be accessible on any mobile or desktop device that is web-capabl
 
 ### 5. Versions
 
-#### Version 1.0 - 19/01/2021 
+<h5> Version 1.0 - 19/01/2021 </h5>
 
 Author(s)
 
@@ -259,7 +258,7 @@ Document conversion, re-formatting according to known standards, and cleanup
 - Matt
 - Ann
 
-<h5> Version 1.4 - 28/01/2021 </h5>
+<h5> Version 1.3 - 28/01/2021 </h5>
 
 SQA
 - Dayton 
