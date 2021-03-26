@@ -1,0 +1,958 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>StudySpace | CP317</title>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">StudySpace</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="../index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="specifications.html"
+            >Specifications</a
+          >
+          <a class="nav-item nav-link" href="spmp.html">SPMP</a>
+          <a class="nav-item nav-link" href="requirements.html">Requirements</a>
+          <a class="nav-item nav-link" href="#">Analysis</a>
+          <a class="nav-item nav-link active" href="design.html">Design</a>
+          <a class="nav-item nav-link" href="#">Implementation</a>
+          <a
+            class="nav-item nav-link disabled"
+            href="#"
+            tabindex="-1"
+            aria-disabled="true"
+            >Link to Web App</a
+          >
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div class="container">
+      <h1>Software Design</h1>
+      <p><em>Version 2.0</em></p>
+      <hr />
+      <h2>Table of Contents</h2>
+      <br />
+      <ul>
+        <li>
+          <a href="#1">1. Introduction</a>
+          <ul>
+            <li><a href="#11">1.1. Purpose</a></li>
+            <li><a href="#12">1.2. Audience</a></li>
+            <li>
+              <a href="#13">1.3. Scope</a>
+              <ul>
+                <li><a href="#131">1.3.1. Software Requirements</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#14">1.4. Feature Ranking</a>
+              <ul>
+                <li><a href="#141">1.4.1. Must-Haves</a></li>
+                <li><a href="#142">1.4.2. Nice-to-Haves</a></li>
+              </ul>
+            </li>
+            <li><a href="#15">1.5. Development Milestones</a></li>
+            <li><a href="#16">1.6. Definitions</a></li>
+            <li><a href="#17">1.7. Reference Materials</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#2">2. System Overview</a>
+          <ul>
+            <li><a href="#21">2.1. Brief Description</a></li>
+            <li>
+              <a href="#22">2.2. Key System Components</a>
+              <ul>
+                <li><a href="#221">2.2.1. Front-end</a></li>
+                <li><a href="#222">2.2.2. Back-end</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#23">2.3. Key System Functionalities</a>
+              <ul>
+                <li><a href="#231">2.3.1. Setting Interests</a></li>
+                <li><a href="#232">2.3.2. Pages and Desks</a></li>
+                <li><a href="#233">2.3.3. User Matching</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#24">2.4. Key UI Components</a>
+              <ul>
+                <li><a href="#241">2.4.1. Bars</a></li>
+                <li><a href="#242">2.4.2. Containers</a></li>
+                <li><a href="#243">2.4.3. Pages</a></li>
+                <li><a href="#244">2.4.4. Desks</a></li>
+                <li><a href="#245">2.4.5. Grids</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#3">3. Design Considerations</a>
+          <ul>
+            <li><a href="#31">3.1. Assumptions and Dependencies</a></li>
+            <li><a href="#32">3.2. End-user Characteristics</a></li>
+            <li><a href="#33">3.3. General Constraints and Limitations</a></li>
+            <li><a href="#34">3.4. Goals and Guidelines</a></li>
+            <li><a href="#35">3.5. Development Methods</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#4">4. Architectural Strategies</a>
+          <ul>
+            <li><a href="#41">4.1. Communication Mechanisms</a></li>
+            <li>
+              <a href="#42">4.2. Key System Components</a>
+              <ul>
+                <li><a href="#421">4.2.1. Back-end</a></li>
+                <li><a href="#422">4.2.2. Front-end</a></li>
+                <li><a href="#422">4.2.3. Miscellaneous</a></li>
+              </ul>
+            </li>
+            <li><a href="#43">4.3. Front-end Goals</a></li>
+            <li><a href="#44">4.4. Back-end Goals</a></li>
+            <li><a href="#45">4.5. Future Plans</a></li>
+            <li><a href="#46">4.6. User Interface Paradigms</a></li>
+            <li>
+              <a href="#47"
+                >4.7. External Database Management and Persistence</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#5">5. Design Decisions, Policies, and Tactics</a>
+          <ul>
+            <li><a href="#51">5.1. Deployment</a></li>
+            <li><a href="#52">5.2. Data Storage</a></li>
+            <li><a href="#53">5.3. Coding Guidelines and Conventions</a></li>
+            <li><a href="#54">5.4. Ensuring Requirements Traceability</a></li>
+            <li><a href="#55">5.5. Software Testing</a></li>
+            <li><a href="#56">5.6. Software Maintenance</a></li>
+            <li><a href="#57">5.7. File Structure Organization</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#6">6. System Architecture</a>
+          <ul>
+            <li><a href="#61">6.1. System Architecture Description</a></li>
+            <li><a href="#62">6.2. System Architecture Diagram</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#7">7. Architectural and Component-level Design</a>
+          <ul>
+            <li>
+              <a href="#71">7.1. Class Diagram</a>
+              <ul>
+                <li><a href="#711">7.1.1. Main Class</a></li>
+                <li><a href="#712">7.1.2. User Class</a></li>
+                <li><a href="#713">7.1.3. Moderator Class</a></li>
+                <li><a href="#714">7.1.4. Administrator Class</a></li>
+                <li><a href="#715">7.1.5. Friend Class</a></li>
+                <li><a href="#716">7.1.6. Group Class</a></li>
+                <li><a href="#717">7.1.7. Page Class</a></li>
+                <li><a href="#718">7.1.8. Desk Class</a></li>
+                <li><a href="#719">7.1.9. Post Class</a></li>
+                <li><a href="#7110">7.1.10. Events Class</a></li>
+                <li><a href="#7111">7.1.11. Chat Class</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#8">8. Data Design</a>
+          <ul>
+            <li>
+              <a href="#81">8.1. Data Structures</a>
+              <ul>
+                <li><a href="#811">8.1.1. Global Data Structure</a></li>
+                <li><a href="#812">8.1.2. Temporary Data Stucture</a></li>
+                <li><a href="#813">8.1.3. Database Description</a></li>
+              </ul>
+            </li>
+            <li><a href="#82">8.2. Database Diagram</a></li>
+            <li>
+              <a href="#83">8.3. Database Tables</a>
+              <ul>
+                <li><a href="#831">8.3.1. user Table</a></li>
+                <li><a href="#832">8.3.2. group Table</a></li>
+                <li><a href="#833">8.3.3. user_group Table</a></li>
+                <li><a href="#834">8.3.4. friend Table</a></li>
+                <li><a href="#835">8.3.5. chat Table</a></li>
+                <li><a href="#836">8.3.6. posts Table</a></li>
+                <li><a href="#837">8.3.7. response Table</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#9">9. User Interface Design</a>
+          <ul>
+            <li>
+              <a href="#91">9.1. User Interface Design</a>
+              <ul>
+                <li><a href="#911">9.1.1. Color Guidelines</a></li>
+                <li><a href="#912">9.1.2. Font Guidelines</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#92">9.2. User Interface Views</a>
+              <ul>
+                <li><a href="#921">9.2.1. Landing Page (logged out)</a></li>
+                <li><a href="#922">9.2.2. Sign Up View</a></li>
+                <li><a href="#923">9.2.3. Home Page (logged in)</a></li>
+                <li><a href="#924">9.2.4. Groups Home Page</a></li>
+                <li><a href="#925">9.2.5. Desk View</a></li>
+                <li><a href="#926">9.2.6. Posts View</a></li>
+                <li><a href="#927">9.2.7. User Profile Page</a></li>
+                <li><a href="#928">9.2.8. Profile Page (another user)</a></li>
+                <li><a href="#929">9.2.9. User Match View</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#10">10. Data Dictionary</a></li>
+        <li><a href="#tables">List of Tables</a></li>
+        <li><a href="#version-history">Version History</a></li>
+      </ul>
+      <br />
+      <hr />
+      <h2 id="tables">List of Tables</h2>
+      <br />
+      <h3>Section 1</h3>
+      <ul>
+        <li><a href="#131">1.3.1. Software Requirements</a></li>
+        <li><a href="#15">1.5. Development Milestones</a></li>
+      </ul>
+      <h3>Section 9</h3>
+      <ul>
+        <li><a href="#911">9.1.1. Color Guidelines</a></li>
+      </ul>
+      <h3>Section 10</h3>
+      <ul>
+        <li><a href="#10">10. Data Dictionary</a></li>
+      </ul>
+      <hr />
+      <h1 id="1">1. Introduction</h1>
+      <p>
+        This section provides an overview of the StudySpace Software Design
+        Document.
+      </p>
+      <h2 id="11">1.1 Purpose</h2>
+      <ul>
+        <li>
+          To provide a general description of the StudySpace software
+          architecture.
+        </li>
+        <li>
+          To describe the functional structure, data, and algorithms to be
+          implemented.
+        </li>
+        <li>To describe the behavioral requirements.</li>
+        <li>
+          To identify the required system resources needed by the system’s
+          software developers.
+        </li>
+        <li>
+          To demonstrate the means to fulfill the requirements as specified in
+          the StudySpace Software Requirements Specifications (SRS) document.
+        </li>
+        <li>
+          To serve as a reference and support for the software developers in the
+          creation of the StudySpace web application.
+        </li>
+      </ul>
+      <h2 id="12">1.2. Audience</h2>
+      <p>
+        The primary intended audience of this document is current and future
+        developers tasked with the creating, testing, and maintenance of the
+        StudySpace web application.
+      </p>
+      <p>
+        The secondary intended audience of this document is the project client,
+        Mr. David Brown.
+      </p>
+      <h2 id="13">1.3. Scope</h2>
+      <h3 id="131">1.3.1 Software Requirements</h3>
+      <img src="../img/design_img/131-1.png" width="700px" />
+      <img src="../img/design_img/131-2.png" width="700px" />
+      <img src="../img/design_img/131-3.png" width="700px" />
+      <img src="../img/design_img/131-4.png" width="700px" />
+      <img src="../img/design_img/131-5.png" width="700px" />
+      <br />
+      <br />
+      <h2 id="14">1.4. Feature Ranking</h2>
+      <h3 id="141">1.4.1 Must Haves</h3>
+      <ul>
+        <li>User Creation functionality</li>
+        <li>Group Creation functionality</li>
+        <li>
+          User Profile Page displaying the users:
+          <ol>
+            <li>Interests</li>
+            <li>User Matches</li>
+            <li>Joined Groups</li>
+          </ol>
+        </li>
+        <li>
+          Home Page with:
+          <ol>
+            <li>Main Navigation Bar</li>
+            <li>Sidebar</li>
+            <li>Top Groups Grid</li>
+            <li>Top Posts Grid</li>
+          </ol>
+        </li>
+        <li>
+          Groups Home Page with:
+          <ol>
+            <li>Main Navigation Bar, Sidebar, and Search Bar</li>
+            <li>Page Creation functionality</li>
+            <li>Desk Creation functionality</li>
+            <li>Post Creation functionality</li>
+          </ol>
+        </li>
+        <li>Friends Page display</li>
+        <li>Message History display</li>
+      </ul>
+      <h3 id="142">1.4.2 Nice-to-Haves</h3>
+      <ul>
+        <li>
+          Landing Page with:
+          <ul>
+            <li>Sign-in functionality</li>
+            <li>Sign-up functionality</li>
+          </ul>
+        </li>
+        <li>
+          User Profile Page with:
+          <ul>
+            <li>Setting Interests functionality</li>
+            <li>Setting Account Information functionality</li>
+          </ul>
+        </li>
+        <li>Adding Student Profile to Friends List functionality</li>
+        <li>Removing Student Profile from Friends List functionality</li>
+      </ul>
+      <br />
+      <h2 id="15">1.5. Development Milestones</h2>
+      <img src="../img/design_img/15.png" width="800px" />
+      <br />
+      <br />
+      <h2 id="16">1.6. Definitions</h2>
+      <img src="../img/design_img/16-1.png" width="700px" />
+      <img src="../img/design_img/16-2.png" width="700px" />
+      <img src="../img/design_img/16-3.png" width="700px" />
+      <img src="../img/design_img/16-4.png" width="700px" />
+      <img src="../img/design_img/16-5.png" width="700px" />
+      <br />
+      <br />
+      <h2 id="17">1.7. Reference Materials</h2>
+      <ul>
+        <li>
+          <a href="https://www.bradapp.com/docs/sdd.html#SEC11"
+            >A Software Design Specification Template</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="http://www.cs.iit.edu/~oaldawud/CS487/project/software_design_specification.htm"
+            >SOFTWARE DESIGN SPECIFICATION TEMPLATE</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="https://docs.google.com/document/d/1pgMutdDasJb6eN6yK6M95JM8gQ16IKacxxhPXgeL9WY/edit#heading=h.wk232hcifrl1"
+            >Software Design Document Template</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="http://portal.unimap.edu.my/portal/page/portal30/Lecture%20Notes/KEJURUTERAAN_KOMPUTER/Semester%202%20Sidang%20Akademik%2020112012/EKT420%20Software%20Engineering/Example%20of%20Software%20Design%20Document(SDD)/EDDISS.pdf"
+            >Software Design Document (SDD) Team O Event Driven DIS PDU Logger
+            (EDDIS system)</a
+          >
+        </li>
+
+        <li>
+          <a
+            href="https://perso.univ-st-etienne.fr/jacquene/gl/articles/IEEE-1016-2009.pdf"
+            >IEEE Standard for Information Technology—Systems Design— Software
+            Design Descriptions</a
+          >
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <h1 id="2">2. System Overview</h1>
+      <p>
+        StudySpace is a web application that provides students a digital space
+        to interact with other like-minded students.
+      </p>
+      <h3 id="21">2.1. Brief Description</h3>
+      <p>
+        At the highest level, the StudySpace web application is organized into
+        key system functionalities, key system components, and key UI
+        components.
+      </p>
+      <ul>
+        <li>
+          <span style="text-decoration: underline"
+            >Key System Functionalities
+          </span>
+        </li>
+        <ul>
+          <li>Setting Interests</li>
+          <li>User Matching</li>
+          <li>Group Interactions</li>
+        </ul>
+
+        <li>
+          <span style="text-decoration: underline">Key System Components</span>
+        </li>
+        <ul>
+          <li>Front-end</li>
+          <li>Back-end</li>
+        </ul>
+
+        <li>
+          <span style="text-decoration: underline"
+            >Key Visual Subcomponents</span
+          >
+        </li>
+        <ul>
+          <li>Main Navigation Bar</li>
+          <li>Sidebar</li>
+          <li>Search Bar</li>
+          <li>User Matches Container</li>
+          <li>Top Groups Grid</li>
+          <li>Pages</li>
+          <li>Desks</li>
+        </ul>
+      </ul>
+      <h3 id="22">2.2. Key System Components</h3>
+      <ul>
+        <li>
+          <h4 id="221">Front-end</h4>
+          <p>The front-end has the following functions:</p>
+          <ul>
+            <li>
+              Request data from the endpoints to populate subcomponents with
+              appropriate data.
+            </li>
+            <li>Populate UI with data requested from the back-end.</li>
+            <li>
+              Assemble pages with the appropriate UI subcomponents and relevant
+              data.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h4 id="222">Back-end</h4>
+          <p>The back-end has the following functions:</p>
+          <ul>
+            <li>Get data requested by the front-end.</li>
+            <li>Store data entered into user inputs into the database.</li>
+            <li>Update data previously existing in the database.</li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="23">2.3. Key System Functionalities</h3>
+      <ul>
+        <li>
+          2.3.1. Setting Interests
+          <ul>
+            <li>
+              Setting Interests is a functionality provided when users create an
+              account.
+            </li>
+            <li>
+              The user may only set a maximum of 3 interests. Refer to the
+              definition of Interests for more detail.
+            </li>
+          </ul>
+        </li>
+        <li>
+          2.3.2. Pages and Desks
+          <ul>
+            <li>
+              A single Group Home Page may have multiple Pages and each Page may
+              have the following:
+              <ul>
+                <li>Desks</li>
+                <li>Past Posts</li>
+                <li>Page Information Display</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          2.3.3. User Matching
+          <ul>
+            <li>
+              User Matching is a functionality occurring after user login where
+              the app displays the icons of students who have similar interests
+              and/or are in the same group(s) as the user.
+            </li>
+            <li>
+              User Matching takes into account the Interests set by the user
+              upon the sign-up process.
+            </li>
+            <li>
+              User Matching results in:
+              <ul>
+                <li>
+                  (i) user's being able to see suggested students that have a
+                  high similarity with the user's interests (User Matches)
+                </li>
+                <li>
+                  (ii) suggested groups that are aligned with the user’s
+                  Interests (Top Groups).
+                </li>
+              </ul>
+            </li>
+            <li>
+              Two users are considered to have a high similarity when:
+              <ul>
+                <li>
+                  The user and the student have at least 2 of the same
+                  interests.
+                </li>
+                <li>
+                  The user and the student have ranked their parameters in a
+                  similar order.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="24">2.4. Key UI Components</h3>
+      <ul>
+        <li>
+          2.4.1. Bars
+          <ul>
+            <li>
+              <span style="text-decoration: underline"
+                >Main Navigation Bar</span
+              >
+              — provides links to the user’s profile, message history, and
+              friendship list.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Sidebar</span> — provides
+              a view of the user’s joined groups (Joined Groups) and Friends
+              Online display.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Search Bar</span> —
+              allows users to search for groups and users related to their
+              Interests.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          2.4.2. Containers
+          <ul>
+            <li>
+              <u>User Matches Container</u> — displays the icons of the user’s
+              User Matches. The User Matches are obtained from the User Matching
+              process.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          2.4.3. Pages
+          <p>
+            Each Group Home Page may contain multiple Pages. Contained within a
+            single Page are the following:
+          </p>
+          <ul>
+            <li>
+              <span style="text-decoration: underline"
+                >Page Information Display</span
+              >
+              — a quick description of the Page.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Desks </span>— allows
+              members of a group to send and receive chat messages to and from
+              fellow group members.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline"
+                >Past Posts Container</span
+              >
+              — display past posts published to the group’s page.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          2.4.4. Desks
+          <p>Contained within a single Desk are the following:</p>
+          <ul>
+            <li>
+              <span style="text-decoration: underline">Text Chat</span> — chat
+              message display sent to and from fellow group members along with
+              the first name of each group member.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Icon Display</span> —
+              display of the icons of each participant in the chat.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Duration </span>— text
+              describing the duration Desk.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Status </span>— colored
+              icon describing the status of the Desk, whether or not it is live
+              or expired.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Take a Seat Button </span
+              >— a button that allows group members to become participants of
+              the Desk.
+            </li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          2.4.5. Grids
+          <ul>
+            <li>
+              <span style="text-decoration: underline">Top Groups Grid</span> —
+              displays top groups suggested to the user that they are not a
+              member of. The groups are obtained from the User Matching process.
+            </li>
+
+            <li>
+              <span style="text-decoration: underline">Top Posts Grid</span> —
+              displays most upvoted posts in the user’s joined groups.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <h1 id="3">3. Design Considerations</h1>
+
+      <ul>
+        <li>
+          3.1. Assumptions and Dependencies
+          <ul>
+            <li>User has a stable internet connection</li>
+            <li>Compatible with all browsers and operating systems</li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          3.2. End-user characteristics
+          <ul>
+            <li>Creation, editing, and modification of posts</li>
+            <li>Moderator has the ability to create, remove, and edit pages</li>
+            <li>Moderator can remove user reported comments</li>
+          </ul>
+        </li>
+        <br />
+        <li>
+          3.3. General Constraints and Limitations
+          <ul>
+            <li>
+              Time and resource limitations
+              <ul>
+                <li>Voice chat feature between users</li>
+              </ul>
+            </li>
+            <li>
+              Security Requirement
+              <ul>
+                <li>Authorization and password management</li>
+              </ul>
+            </li>
+            <li>Reliability of accurate matches between users</li>
+            <li>
+              All screens must be above 320px in order to meet usability
+              requirements
+            </li>
+          </ul>
+        </li>
+        <br />
+        <p>3.4. Goals and Guidelines</p>
+        <ul>
+          <li>Clean and simple UI</li>
+          <li>Efficient and doesn’t use excessive memory</li>
+          <li>Reliable and robust interface</li>
+          <li>Documentation of all the code</li>
+          <li>
+            Protection of website against third party attacks (security of user
+            data)
+          </li>
+        </ul>
+        <br />
+        <p>3.5. Development Methods</p>
+        <p>
+          The main software used for the design of the UI was Adobe XD. This
+          method was selected due to the rapid prototyping features that it
+          provides. It allows the pages to be distinct and resembling the final
+          design.
+        </p>
+        <ul>
+          <li>
+            UML diagrams were used to visualize the interactions between users,
+            moderators, and admin.
+          </li>
+          <li>
+            Multiple revisions were made at each stage of the software
+            development to ensure that the best possible outcome was achieved.
+          </li>
+          <li>
+            SQA performed to ensure that all developers were on the same page
+            and doing the desired task.
+          </li>
+        </ul>
+      </ul>
+      <br />
+      <hr />
+      <h1 id="4">4. Architectural Strategies</h1>
+      <h2>4.1. Communication Mechanisms</h2>
+      <p>
+        The front-end and back-end of the application will communicate via
+        RESTful API calls.
+      </p>
+      <h2>4.2. Technology Specifications</h2>
+      <br />
+      <h3>4.2.1. Back-end</h3>
+      <img src="../img/design_img/42-1.png" width="700px" />
+      <br />
+      <br />
+      <h3>4.2.2. Front-end</h3>
+      <img src="../img/design_img/42-2.png" width="700px" />
+      <br />
+      <br />
+      <br />
+      <h3>4.2.4. Miscellaneous</h3>
+      <img src="../img/design_img/42-3.png" width="700px" />
+      <br />
+      <br />
+      <h2>4.3. Front-end Goals</h2>
+      <ul>
+        <li>
+          The UI of the StudySpace web application will be hosted on Vercel as a
+          SPA.
+        </li>
+
+        <li>
+          The front-end of this application must be able to query and store data
+          in the database using Node.js.
+        </li>
+      </ul>
+      <h2>4.4. Back-end Goals</h2>
+      <ul>
+        <li>
+          The back-end of this application will implement a RESTful API
+          connected to an SQLite database.
+        </li>
+      </ul>
+      <h2 id="45">4.5. Future Plans</h2>
+      <p>
+        The StudySpace web application developed for the project client is meant
+        to be a proof-of-concept (see: Definitions) to demonstrate the team’s
+        understanding of various software design principles and workflows.
+      </p>
+      <h2 id="46">4.6. User Interface Paradigms</h2>
+      <p><u>ReactJS</u></p>
+      <p>
+        The main utility comes from easily creating reusable UI components. Each
+        React component has its own system, state, and life cycles.
+      </p>
+      <ul>
+        <li>
+          Stateless Components — data is fetched from a database and important
+          into the component.
+        </li>
+
+        <li>
+          Conditional Rendering — allows the developer to create distinct
+          components. One potential use for Conditional Rendering is the need to
+          create different error messages for different sources of error.
+        </li>
+
+        <li>
+          Render Props — reduces repetition by allowing components to
+          dynamically render other components.
+        </li>
+      </ul>
+      <p>
+        React aids the front-end developers in creating key reusable components
+        such as the Search Bar and the User Matches Container.
+      </p>
+      <p><u>React Redux</u></p>
+      <p>
+        This library allows React components to read data from a global 'store'
+        and allows components to dispatch actions to that store to update the
+        state data.
+      </p>
+      <h2>4.7. External Database Management and Persistence</h2>
+      <p>
+        The use of Heroku as the primary platform for deployment will resolve
+        the problem of database persistence. Every time a new user joins the
+        StudySpace web application, the database is updated and re-deployed to
+        Heroku.
+      </p>
+      <br />
+      <hr />
+      <h1 id="5">Design Decisions, Policies, and Tactics</h1>
+      <h2>5.1. Deployment</h2>
+      <p>
+        The StudySpace website will be deployed using vercel, and will be coded
+        in Javascript, HTML, CSS, PostCSS, and Tailwind. Backend is in
+        Python/Django and the database will be done using sqlite.
+      </p>
+      <h2>5.2. Data Storage</h2>
+      <p>Database will be on a server hosted by the StudySpace team</p>
+      <h2>5.3. Coding Guidelines and Conventions</h2>
+      <ul>
+        <li>Front end will be coded using redux and react</li>
+        <li>
+          Main coding languages for front end are Javascript, CSS, and HTML
+        </li>
+        <li>Backend will be coded using python and django</li>
+      </ul>
+      <h2>5.4. Ensuring Requirements Traceability</h2>
+      <p>
+        Requirement Traceability will be ensured using a traceability matrix
+      </p>
+      <h2>5.5. Software Testing</h2>
+      <p>
+        Software is regularly tested by the StudySpace team after every update
+      </p>
+      <ul>
+        <li>
+          Extensive debugging is done to ensure a smooth and reliable user
+          experience
+        </li>
+      </ul>
+      <p>
+        Github used for version control and postman used to test API endpoints.
+        White box testing handled by the StudySpace team until April 12, 2021.
+      </p>
+      <h2>5.6. Software Maintenance</h2>
+      <p>Software is maintained by the StudySpace team until April 12, 2021.</p>
+      <h2>5.7. File Structure Organization</h2>
+      <img src="../img/design_img/57.png" width="700px" />
+      <br />
+      <hr />
+      <h1 id="6">6. System Architecture</h1>
+      <h2>6.1. System Architecture Description</h2>
+      <ul>
+        <li>
+          Sign in Interface is the first page, where the user enters credentials
+          to log into their account
+        </li>
+
+        <li>
+          Home page directs the user to other significant pages like Messages,
+          User profile, Groups
+        </li>
+
+        <li>
+          Search can be used from the homepage to find Matches, Users, Groups,
+          or Desks
+        </li>
+      </ul>
+      <br />
+      <h2>6.2. System Architecture Diagram</h2>
+      <img src="../img/design_img/62.png" width="900px" />
+      <br />
+      <hr />
+      <h1 id="7">7. Architectural and Component-level Design</h1>
+      <h2>7.1. Class Diagram</h2>
+      <img src="../img/design_img/7.png" width="900px" />
+      <br />
+      <br />
+      <h3>7.1.1. Main Class</h3>
+      <img src="../img/design_img/71.png" width="600px" />
+      <br />
+      <h3>7.1.2. User Class</h3>
+      <img src="../img/design_img/72.png" width="600px" />
+      <br />
+      <h3>7.1.3. Moderator Class</h3>
+      <img src="../img/design_img/73.png" width="600px" />
+      <br />
+      <h3>7.1.4. Administrator Class</h3>
+      <img src="../img/design_img/74.png" width="600px" />
+      <br />
+      <h3>7.1.5. Friend Class</h3>
+      <img src="../img/design_img/75.png" width="600px" />
+      <br />
+      <h3>7.1.6. Group Class</h3>
+      <img src="../img/design_img/76.png" width="600px" />
+      <br />
+      <h3>7.1.7. Page Class</h3>
+      <img src="../img/design_img/77.png" width="600px" />
+      <br />
+      <h3>7.1.8. Desk Class</h3>
+      <img src="../img/design_img/78.png" width="600px" />
+      <br />
+      <h3>7.1.9. Post Class</h3>
+      <img src="../img/design_img/79.png" width="600px" />
+      <br />
+      <h3>7.1.10. Events Class</h3>
+      <img src="../img/design_img/710.png" width="600px" />
+      <br />
+      <h3>7.1.11. Chat Class</h3>
+      <img src="../img/design_img/711.png" width="600px" />
+      <br />
+      <hr />
+    </div>
+    <br />
+    <br />
+    <br />
+  </body>
+</html>
