@@ -42,8 +42,8 @@
           >
           <a class="nav-item nav-link" href="spmp.html">SPMP</a>
           <a class="nav-item nav-link" href="requirements.html">Requirements</a>
-          <a class="nav-item nav-link" href="#">Analysis</a>
-          <a class="nav-item nav-link active" href="design.html">Design</a>
+          <a class="nav-item nav-link" href="analysis.html">Analysis</a>
+          <a class="nav-item nav-link active" href="#">Design</a>
           <a class="nav-item nav-link" href="#">Implementation</a>
           <a
             class="nav-item nav-link disabled"
@@ -58,11 +58,12 @@
     <br />
     <div class="container">
       <h1>Software Design</h1>
-      <p><em>Version 2.0</em></p>
+      <p><em>Version 3.0</em></p>
       <hr />
       <h2>Table of Contents</h2>
       <br />
       <ul>
+        <li><a href="#tables">List of Tables</a></li>
         <li>
           <a href="#1">1. Introduction</a>
           <ul>
@@ -243,7 +244,6 @@
           </ul>
         </li>
         <li><a href="#10">10. Data Dictionary</a></li>
-        <li><a href="#tables">List of Tables</a></li>
         <li><a href="#version-history">Version History</a></li>
       </ul>
       <br />
@@ -563,7 +563,7 @@
       </ul>
       <h3 id="24">2.4. Key UI Components</h3>
       <ul>
-        <li>
+        <li id="241">
           2.4.1. Bars
           <ul>
             <li>
@@ -588,7 +588,7 @@
           </ul>
         </li>
         <br />
-        <li>
+        <li id="242">
           2.4.2. Containers
           <ul>
             <li>
@@ -599,7 +599,7 @@
           </ul>
         </li>
         <br />
-        <li>
+        <li id="243">
           2.4.3. Pages
           <p>
             Each Group Home Page may contain multiple Pages. Contained within a
@@ -628,7 +628,7 @@
           </ul>
         </li>
         <br />
-        <li>
+        <li id="244">
           2.4.4. Desks
           <p>Contained within a single Desk are the following:</p>
           <ul>
@@ -662,7 +662,7 @@
           </ul>
         </li>
         <br />
-        <li>
+        <li id="245">
           2.4.5. Grids
           <ul>
             <li>
@@ -683,7 +683,7 @@
       <h1 id="3">3. Design Considerations</h1>
 
       <ul>
-        <li>
+        <li id="31">
           3.1. Assumptions and Dependencies
           <ul>
             <li>User has a stable internet connection</li>
@@ -691,7 +691,7 @@
           </ul>
         </li>
         <br />
-        <li>
+        <li id="32">
           3.2. End-user characteristics
           <ul>
             <li>Creation, editing, and modification of posts</li>
@@ -700,7 +700,7 @@
           </ul>
         </li>
         <br />
-        <li>
+        <li id="33">
           3.3. General Constraints and Limitations
           <ul>
             <li>
@@ -723,7 +723,7 @@
           </ul>
         </li>
         <br />
-        <p>3.4. Goals and Guidelines</p>
+        <p id="34">3.4. Goals and Guidelines</p>
         <ul>
           <li>Clean and simple UI</li>
           <li>Efficient and doesn’t use excessive memory</li>
@@ -735,7 +735,7 @@
           </li>
         </ul>
         <br />
-        <p>3.5. Development Methods</p>
+        <p id="35">3.5. Development Methods</p>
         <p>
           The main software used for the design of the UI was Adobe XD. This
           method was selected due to the rapid prototyping features that it
@@ -760,27 +760,27 @@
       <br />
       <hr />
       <h1 id="4">4. Architectural Strategies</h1>
-      <h2>4.1. Communication Mechanisms</h2>
+      <h2 id="41">4.1. Communication Mechanisms</h2>
       <p>
         The front-end and back-end of the application will communicate via
         RESTful API calls.
       </p>
-      <h2>4.2. Technology Specifications</h2>
+      <h2 id="42">4.2. Technology Specifications</h2>
       <br />
-      <h3>4.2.1. Back-end</h3>
+      <h3 id="421">4.2.1. Back-end</h3>
       <img src="../img/design_img/42-1.png" width="700px" />
       <br />
       <br />
-      <h3>4.2.2. Front-end</h3>
+      <h3 id="422">4.2.2. Front-end</h3>
       <img src="../img/design_img/42-2.png" width="700px" />
       <br />
       <br />
       <br />
-      <h3>4.2.4. Miscellaneous</h3>
+      <h3 id="424">4.2.4. Miscellaneous</h3>
       <img src="../img/design_img/42-3.png" width="700px" />
       <br />
       <br />
-      <h2>4.3. Front-end Goals</h2>
+      <h2 id="43">4.3. Front-end Goals</h2>
       <ul>
         <li>
           The UI of the StudySpace web application will be hosted on Vercel as a
@@ -792,7 +792,7 @@
           in the database using Node.js.
         </li>
       </ul>
-      <h2>4.4. Back-end Goals</h2>
+      <h2 id="44">4.4. Back-end Goals</h2>
       <ul>
         <li>
           The back-end of this application will implement a RESTful API
@@ -838,7 +838,7 @@
         and allows components to dispatch actions to that store to update the
         state data.
       </p>
-      <h2>4.7. External Database Management and Persistence</h2>
+      <h2 id="47">4.7. External Database Management and Persistence</h2>
       <p>
         The use of Heroku as the primary platform for deployment will resolve
         the problem of database persistence. Every time a new user joins the
@@ -848,15 +848,15 @@
       <br />
       <hr />
       <h1 id="5">Design Decisions, Policies, and Tactics</h1>
-      <h2>5.1. Deployment</h2>
+      <h2 id="51">5.1. Deployment</h2>
       <p>
         The StudySpace website will be deployed using vercel, and will be coded
         in Javascript, HTML, CSS, PostCSS, and Tailwind. Backend is in
         Python/Django and the database will be done using sqlite.
       </p>
-      <h2>5.2. Data Storage</h2>
+      <h2 id="52">5.2. Data Storage</h2>
       <p>Database will be on a server hosted by the StudySpace team</p>
-      <h2>5.3. Coding Guidelines and Conventions</h2>
+      <h2 id="53">5.3. Coding Guidelines and Conventions</h2>
       <ul>
         <li>Front end will be coded using redux and react</li>
         <li>
@@ -864,11 +864,11 @@
         </li>
         <li>Backend will be coded using python and django</li>
       </ul>
-      <h2>5.4. Ensuring Requirements Traceability</h2>
+      <h2 id="54">5.4. Ensuring Requirements Traceability</h2>
       <p>
         Requirement Traceability will be ensured using a traceability matrix
       </p>
-      <h2>5.5. Software Testing</h2>
+      <h2 id="55">5.5. Software Testing</h2>
       <p>
         Software is regularly tested by the StudySpace team after every update
       </p>
@@ -882,14 +882,14 @@
         Github used for version control and postman used to test API endpoints.
         White box testing handled by the StudySpace team until April 12, 2021.
       </p>
-      <h2>5.6. Software Maintenance</h2>
+      <h2 id="56">5.6. Software Maintenance</h2>
       <p>Software is maintained by the StudySpace team until April 12, 2021.</p>
-      <h2>5.7. File Structure Organization</h2>
+      <h2 id="57">5.7. File Structure Organization</h2>
       <img src="../img/design_img/57.png" width="700px" />
       <br />
       <hr />
       <h1 id="6">6. System Architecture</h1>
-      <h2>6.1. System Architecture Description</h2>
+      <h2 id="61">6.1. System Architecture Description</h2>
       <ul>
         <li>
           Sign in Interface is the first page, where the user enters credentials
@@ -907,49 +907,234 @@
         </li>
       </ul>
       <br />
-      <h2>6.2. System Architecture Diagram</h2>
+      <h2 id="62">6.2. System Architecture Diagram</h2>
       <img src="../img/design_img/62.png" width="900px" />
       <br />
       <hr />
       <h1 id="7">7. Architectural and Component-level Design</h1>
-      <h2>7.1. Class Diagram</h2>
+      <h2 id="71">7.1. Class Diagram</h2>
       <img src="../img/design_img/7.png" width="900px" />
       <br />
       <br />
-      <h3>7.1.1. Main Class</h3>
+      <h3 id="711">7.1.1. Main Class</h3>
       <img src="../img/design_img/71.png" width="600px" />
       <br />
-      <h3>7.1.2. User Class</h3>
+      <h3 id="712">7.1.2. User Class</h3>
       <img src="../img/design_img/72.png" width="600px" />
       <br />
-      <h3>7.1.3. Moderator Class</h3>
+      <h3 id="713">7.1.3. Moderator Class</h3>
       <img src="../img/design_img/73.png" width="600px" />
       <br />
-      <h3>7.1.4. Administrator Class</h3>
+      <h3 id="714">7.1.4. Administrator Class</h3>
       <img src="../img/design_img/74.png" width="600px" />
       <br />
-      <h3>7.1.5. Friend Class</h3>
+      <h3 id="715">7.1.5. Friend Class</h3>
       <img src="../img/design_img/75.png" width="600px" />
       <br />
-      <h3>7.1.6. Group Class</h3>
+      <h3 id="716">7.1.6. Group Class</h3>
       <img src="../img/design_img/76.png" width="600px" />
       <br />
-      <h3>7.1.7. Page Class</h3>
+      <h3 id="717">7.1.7. Page Class</h3>
       <img src="../img/design_img/77.png" width="600px" />
       <br />
-      <h3>7.1.8. Desk Class</h3>
+      <h3 id="718">7.1.8. Desk Class</h3>
       <img src="../img/design_img/78.png" width="600px" />
       <br />
-      <h3>7.1.9. Post Class</h3>
+      <h3 id="719">7.1.9. Post Class</h3>
       <img src="../img/design_img/79.png" width="600px" />
       <br />
-      <h3>7.1.10. Events Class</h3>
+      <h3 id="7110">7.1.10. Events Class</h3>
       <img src="../img/design_img/710.png" width="600px" />
       <br />
-      <h3>7.1.11. Chat Class</h3>
+      <h3 id="7111">7.1.11. Chat Class</h3>
       <img src="../img/design_img/711.png" width="600px" />
       <br />
       <hr />
+      <h1 id="8">8. Data Design</h1>
+      <h2 id="81">8.1. Data Structures</h2>
+      <h3 id="811">8.1.1. Global Data Structure</h3>
+      <p>
+        The database will be used globally to retrieve information regarding
+        many components of StudySpace. Each table in the database has its own
+        respective class. The classes representing the data from the database
+        will also be used globally.
+      </p>
+      <h3 id="812">8.1.2. Temporary Data Structure</h3>
+      <p>
+        Data structures for and regarding the DESK feature will be all
+        temporary. Since each DESK instance is only temporary; the data
+        structures related to the DESK feature will also be temporary. As soon
+        as people stop using the DESK, every file/data structure will be
+        deleted.
+      </p>
+      <h3 id="813">8.1.3. Database Description</h3>
+      <p>
+        For the database, we start with the user’s general information and
+        assign the user a unique ID. With a user’s ID we will be able to link
+        the user’s friends, preferences, groups the user is part of to the user.
+        To keep track of a user’s private messages with other users, we would
+        also need a table keeping track of messages between any given two users.
+        A post table and a response table would be able to keep track of posts
+        made by a group as well as the comments made on the post.
+      </p>
+      <h2 id="82">8.2. Database Diagram</h2>
+      <img src="../img/design_img/82.png" width="800px" />
+      <br />
+      <br />
+      <h2 id="83">8.3. Database Tables</h2>
+      <h3 id="831">8.3.1.</h3>
+      <img src="../img/design_img/831.png" width="600px" />
+      <br />
+      <h3 id="832">8.3.2.</h3>
+      <img src="../img/design_img/832.png" width="600px" />
+      <br />
+      <h3 id="833">8.3.3.</h3>
+      <img src="../img/design_img/833.png" width="600px" />
+      <br />
+      <h3 id="834">8.3.4.</h3>
+      <img src="../img/design_img/834.png" width="600px" />
+      <br />
+      <h3 id="835">8.3.5.</h3>
+      <img src="../img/design_img/835.png" width="600px" />
+      <br />
+      <h3 id="836">8.3.6.</h3>
+      <img src="../img/design_img/836.png" width="600px" />
+      <br />
+      <h3 id="837">8.3.7.</h3>
+      <img src="../img/design_img/837.png" width="600px" />
+      <br />
+      <br />
+      <hr />
+      <h1 id="9">9. User Interface Design</h1>
+      <h2 id="91">9.1. User Interface Design</h2>
+      <h3 id="911">9.1.1. Color Guidelines</h3>
+      <img src="../img/design_img/911.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="912">9.1.2. Font Guidelines</h3>
+      <p>
+        We will use default fonts as provided by Tailwind CSS. "San Fransico"
+        and "system-ui" for OSX, "Roboto" for Windows.
+      </p>
+      <br />
+      <br />
+      <h2 id="92">9.2. User Interface Views</h2>
+      <h3 id="921">9.2.1. Landing Page (logged out)</h3>
+      <img src="../img/design_img/921.jpg" width="900px" />
+      <img src="../img/design_img/921t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="922">9.2.2. Sign Up View</h3>
+      <img src="../img/design_img/922.png" width="900px" />
+      <img src="../img/design_img/922t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="923">9.2.3. Home Page (logged in)</h3>
+      <img src="../img/design_img/923.jpg" width="900px" />
+      <img src="../img/design_img/923t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="924">9.2.4. Groups Home Page</h3>
+      <img src="../img/design_img/924.jpg" width="900px" />
+      <img src="../img/design_img/924t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="925">9.2.5. Desk View</h3>
+      <img src="../img/design_img/925.png" width="900px" />
+      <img src="../img/design_img/925t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="926">9.2.6. Posts View</h3>
+      <img src="../img/design_img/926.png" width="900px" />
+      <img src="../img/design_img/926t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="927">9.2.7. User Profile Page</h3>
+      <img src="../img/design_img/927.jpg" width="900px" />
+      <img src="../img/design_img/927t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="928">9.2.8. Profile Page (another user)</h3>
+      <img src="../img/design_img/928.jpg" width="900px" />
+      <img src="../img/design_img/928t.png" width="600px" />
+      <br />
+      <br />
+      <h3 id="929">9.2.9. User Match View</h3>
+      <img src="../img/design_img/929.png" width="900px" />
+      <img src="../img/design_img/929t.png" width="600px" />
+      <br />
+      <br />
+      <hr />
+      <h1 id="10">10. Data Dictionary</h1>
+      <img src="../img/design_img/10-1.png" width="600px" />
+      <img src="../img/design_img/10-2.png" width="600px" />
+      <img src="../img/design_img/10-3.png" width="600px" />
+      <br />
+      <br />
+      <hr />
+      <h1 id="version-history">Version History</h1>
+      <h3>Version 1.0 - March 6th, 2021</h3>
+      <p>Design document outline created by:</p>
+      <ul>
+        <li>Ann Baldonasa</li>
+      </ul>
+      <p>Initial Design document authored by:</p>
+      <ul>
+        <li>Ann Baldonasa: Sections 1,2,4</li>
+        <li>Arvin Benipal: Section 9</li>
+        <li>Kevin Lin: Section 8</li>
+        <li>Muhammad Hashir: Sections 3,5,6,10</li>
+        <li>Zeeshan Jafri: Sections 6,7</li>
+      </ul>
+      <p>First round of SQA conducted by:</p>
+      <ul>
+        <li>Janelle Tait</li>
+        <li>Mackenzie Van Zanden</li>
+        <li>Dayton Talarico</li>
+        <li>Brian Carvalho</li>
+        <li>Rohan Uddin</li>
+      </ul>
+      <br />
+      <h3>Version 2.0 - March 21st, 2021</h3>
+      <p>Adjustments:</p>
+      <ul>
+        <li>
+          Ann Baldonasa: Made changes to sections 1, 2, 4 upon SQA suggestions
+        </li>
+        <li>
+          Arvin Benipal: Made changes to UI design (section 9) upon SQA
+          suggestions
+        </li>
+        <li>Kevin Lin: Made changes to section 8 upon SQA suggestions</li>
+        <li>
+          Muhammad Hashir: Made changes to section 3,5,6,10 upon SQA suggestions
+        </li>
+        <li>
+          Zeeshan Jafri: Made changes to Class Diagrams based on SQA, and to
+          Section 7
+        </li>
+      </ul>
+      <p>Second round of SQA conducted by: (roles switched this time)</p>
+      <ul>
+        <li>Janelle Tait</li>
+        <li>Mackenzie Van Zanden</li>
+        <li>Dayton Talarico</li>
+        <li>Brian Carvalho</li>
+        <li>Rohan Uddin</li>
+      </ul>
+      <br />
+      <h3>Version 3.0 - March 24th, 2021</h3>
+      <p>Final edits:</p>
+      <ul>
+        <li>
+          Ann Baldonasa: Made changes to sections 1, 2, 4 upon SQA suggestions
+        </li>
+        <li>Kevin Lin: Made changes to section 8 upon SQA suggestions</li>
+        <li>
+          Muhammad Hashir: Made changes to section 3,5,6,10 upon SQA suggestions
+        </li>
+      </ul>
+      <p>Document reformatted and converted to HTML by Rohan Uddin.</p>
     </div>
     <br />
     <br />
