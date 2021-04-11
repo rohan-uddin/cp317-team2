@@ -149,7 +149,7 @@ StudySpace is an independent, self-contained web application. Core features are 
 
 #### 2.1.1.1. Landing Page (logged out)
 
-![](landing_page.png)
+![](p_2111.png)
 ![](2111.png)
 
 #### 2.1.1.2. Sign Up View
