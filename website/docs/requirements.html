@@ -1,59 +1,38 @@
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-            crossorigin="anonymous"
-        />
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-        <title>StudySpace | CP317</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">StudySpace</a>
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <title>StudySpace | CP317</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">StudySpace</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="../index.html"
-                        >Home <span class="sr-only">(current)</span></a
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a
                     >
                     <a class="nav-item nav-link" href="specifications.html"
                         >Specifications</a
                     >
                     <a class="nav-item nav-link" href="spmp.html">SPMP</a>
-                    <a class="nav-item nav-link active" href="#"
-                        >Requirements</a
+                <a class="nav-item nav-link active" href="#">Requirements</a
                     >
                     <a class="nav-item nav-link" href="analysis.html"
                         >Analysis</a
                     >
                     <a class="nav-item nav-link" href="design.html">Design</a>
-                    <a class="nav-item nav-link" href="#">Implementation</a>
-                    <a
-                        class="nav-item nav-link disabled"
-                        href="#"
-                        tabindex="-1"
-                        aria-disabled="true"
-                        >Link to Web App</a
+                <a class="nav-item nav-link" href="#">Implementation</a>
+                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link to Web App</a
                     >
                 </div>
             </div>
@@ -61,1114 +40,449 @@
         <br />
         <div class="container">
             <h1>Software Requirements Specifications</h1>
-            <p><i>Version 1.3</i></p>
+            <p><i>Version 1.5</i></p>
             <hr />
             <ul>
-                <li>
-                    <a href="#1-introduction">1. Introduction</a>
-                    <ul>
-                        <li><a href="#11-purpose">1.1. Purpose</a></li>
-                        <li><a href="#12-scope">1.2. Scope</a></li>
-                        <li><a href="#13-definitions">1.3. Definitions</a></li>
-                        <li><a href="#14-references">1.4. References</a></li>
-                        <li><a href="#15-overview">1.5. Overview</a></li>
-                    </ul>
+<li><a href="#1-introduction">1. Introduction</a>
+                <ul>
+                    <li><a href="#11-purpose">1.1. Purpose</a></li>
+                    <li><a href="#12-scope">1.2. Scope</a></li>
+                    <li><a href="#13-definitions">1.3. Definitions</a></li>
+                    <li><a href="#14-references">1.4. References</a></li>
+                    <li><a href="#15-overview">1.5. Overview</a></li>
+                </ul>
                 </li>
-                <li>
-                    <a href="#2-overall-description">2. Overall Description</a>
+                <li><a href="#2-overall-description">2. Overall Description</a>
                     <ul>
-                        <li>
-                            <a href="#21-product-perspective"
-                                >2.1. Product Perspective</a
-                            >
+                        <li><a href="#21-product-perspective">2.1. Product Perspective</a>
                             <ul>
-                                <li>
-                                    <a href="#211-user-interfaces"
-                                        >2.1.1. User Interfaces</a
-                                    >
-                                </li>
-                                <ul>
-                                    <li>
-                                        <a href="#2111-sign-up-page"
-                                            >2.1.1.1. Sign-Up Page</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#2111-home-page"
-                                            >2.1.1.2. Home Page</a
-                                        >
-                                    </li>
-                                    <li>
-                                        <a href="#2111-group-home-pages"
-                                            >2.1.1.3. Group Home Pages</a
-                                        >
-                                    </li>
-                                </ul>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <a href="#22-product-functions"
-                                >2.2. Product Functions</a
-                            >
-                        </li>
-                        <li>
-                            <a href="#23-actors-and-use-cases"
-                                >2.3. Actors and Use Cases</a
-                            >
-                        </li>
-
-                        <li>
-                            <a href="#24-user-characteristics"
-                                >2.4. User Characteristics</a
-                            >
-                        </li>
-                        <li><a href="#25-constraints">2.5. Constraints</a></li>
-                        <li>
-                            <a href="#26-assumptions-and-dependencies"
-                                >2.6. Assumptions and Dependencies</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#3-specific-requirements"
-                        >3. Specific Requirements</a
-                    >
-                    <ul>
-                        <li>
-                            <a href="#32-logical-database-requirements"
-                                >3.2. Logical Database Requirements</a
-                            >
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#33-software-system-attributes"
-                        >3.3. Software System Attributes</a
-                    >
-                    <ul>
-                        <li><a href="#332-security">3.3.2 Security</a></li>
-                        <li>
-                            <a href="#333-portability">3.3.3 Portability</a>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#5-versions">4. Versions</a></li>
-            </ul>
-            <h3 class="mume-header" id="1-introduction">1. Introduction</h3>
-
-            <p>
-                StudySpace is a web application that provides post-secondary
-                students with access to virtual spaces that foster unique social
-                learning environments. The purpose of this project is to promote
-                a sense of unity and community among students by helping them
-                meet new peers, connect, and study together.
-            </p>
-            <h4 class="mume-header" id="11-purpose">1.1. Purpose</h4>
-
-            <p>
-                The purpose of this document is to establish the requirements of
-                the project from an implementation perspective. Additionally,
-                this document lays the foundation for all group processes from
-                start to finish by outlining the vision for the project. This
-                document is intended to be used by developers, users, and any
-                other individual who wants to learn the concept of this
-                application and how it’s features work.
-            </p>
-            <h4 class="mume-header" id="12-scope">1.2. Scope</h4>
-
-            <p>
-                StudySpace allows users to search for and join virtual study
-                groups. User benefits include improving academic success, making
-                friends, and gaining a sense of community among peers. The
-                objective of StudySpace is to help students find groups of
-                like-minded individuals who they can collaborate with
-                -regardless of their physical locations. Through the use of this
-                product, students who are enrolled in online courses do not miss
-                out on the benefits of group work and peer discussion.
-            </p>
-            <h4 class="mume-header" id="13-definitions">1.3. Definitions</h4>
-
-            <ol>
-                <li>
-                    <strong>CHAT</strong><br />
-                    A Chat is a feature where all members of a Group can send
-                    text messages to each other. The Chat is viewed through a
-                    chat box on the Group’s page.
-                </li>
-                <li>
-                    <strong>DESK</strong><br />
-                    A Desk is a virtual space wherein students may collaborate.
-                    Each desk is temporary; it only exists as long as there are
-                    people using it. After everyone leaves the desk, it is
-                    removed from memory<br />
-                    Each desk has an admin who can set a limit to the number of
-                    members and can add signifiers such as language, age
-                    category, and other factors.<br />
-                </li>
-                <li>
-                    <strong>FRIEND</strong><br />
-                    Any two Users can become Friends if one sends a Friend
-                    Request and the other accepts it. When two Users are
-                    Friends, they are able to send private chats directly to one
-                    another.
-                </li>
-                <li>
-                    <strong>GROUP</strong><br />
-                    A Group is a collection of two or more users who have
-                    connected through StudySpace either by Invitation or a User
-                    Match. All members of a Group automatically have access to a
-                    Chat upon joining.
-                </li>
-                <li>
-                    <strong>GROUP NAME</strong><br />
-                    A Group Name is the name of a Group. The Group Name is set
-                    by a member of the Group. The Group Name must be unique so
-                    that other Users can easily discover the Group via Search.
-                </li>
-                <li>
-                    <strong>INITIAL AUDIENCE</strong><br />
-                    This product is for David Brown, who is the initial User.
-                </li>
-                <li>
-                    <strong>INTERESTS</strong><br />
-                    Interests refer to the parameters that the user has chosen
-                    and the ranking of these parameters. The choice and ranking
-                    of parameters are key to determining User Matches.
-                    <br />
-                    Example: Alice has chosen the following parameters:
-                    <ul>
-                        <li>Friends</li>
-                        <li>CP104</li>
-                        <li>Programming</li>
-                        <li>Co-op</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>INVITATION</strong><br />
-                    An Invitation is the opportunity for a User to join a Group.
-                    Any member of a Group can choose to send an Invitation to a
-                    User who isn’t already a member.
-                </li>
-                <li>
-                    <strong>PAGE</strong><br />
-                    A Page is where Posts are viewed. Each Group can have one or
-                    more Pages.
-                </li>
-                <li>
-                    <strong>POST</strong><br />
-                    A Post is an object which can include photos and text. Posts
-                    are created by Users for all members of a Group to see.
-                    Users can make a Post about anything they wish, including:
-                    buying/selling textbooks, asking questions, looking for
-                    advice, etc. Users can write a Response to a Post.
-                </li>
-                <li>
-                    <strong>PROFILE</strong><br />
-                    A Profile is a page with personal information about the
-                    user. The Profile also provides functionality such as
-                    managing group memberships and accessing chats.
-                </li>
-                <li>
-                    <strong>RESPONSE</strong><br />
-                    A Response is a text message which is linked to a Post.
-                </li>
-                <li>
-                    <strong>SEARCH</strong><br />
-                    Search is a function of the app where Users can search and
-                    discover Groups by Group Name or Users by Username.
-                </li>
-                <li>
-                    <strong>STUDY SPACE</strong><br />
-                    StudySpace refers to the web application created by the Team
-                    for the Initial Audience, David Brown.
-                </li>
-                <li>
-                    <strong>TARGET AUDIENCE</strong><br />
-                    Students are the intended users of this product.
-                </li>
-                <li>
-                    <strong>TEAM</strong><br />
-                    Team refers to students in CP317 W21 Team 2.
-                </li>
-                <li>
-                    <strong>USER</strong><br />
-                    A User is someone who uses the application; likely a
-                    Student.
-                </li>
-                <li>
-                    <strong>USER MATCH</strong><br />
-                    Users have the option to enter their interests, such as
-                    various preferences, courses they are enrolled in, and their
-                    study habits. Users who are both members of the same group
-                    have the possibility of getting matched. The more common
-                    interetss, the more likely they are to be matched. When a
-                    User Match occurs, the matched users show up in each other’s
-                    list of user matches, found on the page of the group they
-                    were matched in.
-                </li>
-                <li>
-                    <strong>USERNAME</strong><br />
-                    A Username is part of a User’s account information. A
-                    Username is the name by which a User is referred to on the
-                    app.
-                </li>
-            </ol>
-            <h4 class="mume-header" id="14-references">1.4. References</h4>
-
-            <p>
-                IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software
-                Requirements Specifications. IEEE Computer Society, 1998
-            </p>
-            <h4 class="mume-header" id="15-overview">1.5. Overview</h4>
-
-            <p>
-                The rest of this document contains details about the overall
-                description and specific requirements of the project. Section 2
-                contains information about the product perspective, product
-                functions, user characteristics, constraints, and dependencies.
-                Section 3 discusses external interfaces, functions, logical
-                database requirements, and software system attributes.
-            </p>
-            <h3 class="mume-header" id="2-overall-description">
-                2. Overall Description
-            </h3>
-            <br />
-
-            <h4 class="mume-header" id="21-product-perspective">
-                2.1. Product Perspective
-            </h4>
-
-            <p>
-                StudySpace is an independent, self-contained web application.
-                Core features are personalized profiles, groups, chats and pages
-                in each group. It is a web application with 2 components: user
-                interfaces (front end), and software interfaces (back end).
-            </p>
-            <br />
-            <h4 class="mume-header" id="211-user-interfaces">
-                2.1.1. User Interfaces
-            </h4>
-            <br />
-            <h5 class="mume-header" id="2111-sign-up-page">
-                2.1.1.1. Sign-Up Page
-            </h5>
-            <div style="display: block; margin: auto">
-                <img src="../img/sign-up.png" width="600" />
-            </div>
-            <ul>
-                <strong>User sign-up </strong
-                ><br />
-                <li>
-                    Upon entering the domain of StudySpace, guests will be
-                    prompted to create a username and enter an email and
-                    password that will be used as their login credentials.
-                </li>
-                <li>
-                    Once signed up, users will have the option to enter
-                    interests or begin manually searching for StudySpace
-                    matches.<br />
-                </li>
-                <li>
-                    Users will be able to choose usernames, educational
-                    institutions, and other personal information in their
-                    profile settings.
-                    <br />
-                </li>
-            </ul>
-            <ul>
-                <strong>User sign-in </strong
-                ><br />
-                <li>
-                    The Sign in here link enables existing users to log-in
-                    assuming they have already completed the User sign-up
-                    process.
-                </li>
-            </ul>
-            <h5 class="mume-header" id="2111-home-page">2.1.1.2. Home Page</h5>
-            <br />
-            <div style="display: block; margin: auto">
-                <img src="../img/homepage.png" width="600" />
-            </div>
-            <br />
-            <ul>
-                <strong>Profile</strong
-                ><br />
-                <li>
-                    Located on the left sidebar, and remains present as users
-                    navigate the application.
-                </li>
-                <li>
-                    After clicking the Profile button, signed-in users may have
-                    the option of reviewing and changing user account
-                    information. User information available for editing are the
-                    user’s username, password, educational institution and
-                    interests for potential user matches and group
-                    recommendations.
-                </li>
-            </ul>
-            <ul>
-                <strong>Friends</strong
-                ><br />
-                <li>
-                    Located on the left sidebar, and remains present as users
-                    navigate the application.
-                </li>
-                <li>
-                    After clicking the Friends button, a pop-up containing a
-                    list of the user’s friends’ profiles will surface. To the
-                    side of each friend’s profile is a set of buttons (Add,
-                    Remove, View Profile, Send Message) that will give the user
-                    the options to change their friendship status with each
-                    friend, view their profile and posts, and send a message.
-                </li>
-            </ul>
-            <ul>
-                <strong>Messages</strong
-                ><br />
-                <li>
-                    Located on the left sidebar, and remains present as users
-                    navigate the application.
-                </li>
-                <li>
-                    After clicking the Messages button, a pop-up will surface
-                    containing a list of the user’s messages with other users of
-                    the app.
-                </li>
-                <li>Contains all user chat logs, both past and active.</li>
-            </ul>
-            <ul>
-                <strong>Search bar</strong
-                ><br />
-                <li>
-                    Located at the top of the application, and remains active
-                    throughout user navigation.
-                </li>
-                <li>
-                    After clicking the Search bar, a view will be expanded
-                    containing potential groups of interest that the user may
-                    request to join or the posts of which the user may view.
-                </li>
-                <li>
-                    Allows users to search for groups of interest to join or
-                    view posts.
-                </li>
-            </ul>
-            <ul>
-                <strong>Groups bar</strong
-                ><br />
-                <li>
-                    Located on the right sidebar; remains present as users
-                    navigate the application.
-                </li>
-                <li>
-                    Scrollable sidebar containing the icons of all groups the
-                    user is a member of.
-                </li>
-                <li>
-                    After clicking the Your Groups link, an expanded view of the
-                    user’s groups containing each group name will appear,
-                    similar to how they appear under the Top Groups section.
-                </li>
-            </ul>
-            <ul>
-                <strong>Top Groups</strong
-                ><br />
-                <li>Links to groups in which the user is most active in.</li>
-                <li>
-                    Will be measured by the amount of posts the user has
-                    published in each of their groups.
-                </li>
-            </ul>
-            <ul>
-                <strong> StudySpace Blog </strong
-                ><br />
-                <li>
-                    Allows users to view StudySpace patch notes and version
-                    history.
-                </li>
-            </ul>
-
-            <h5 class="mume-header" id="2111-group-home-pages">
-                2.1.1.3. Group Home Pages
-            </h5>
-            <br />
-            <div style="display: block; margin: auto">
-                <img src="../img/group-home-pages.jpg" width="600" />
-            </div>
-            <br />
-            <ul>
-                <strong>Posts</strong
-                ><br />
-                <li>Allows users to create posts for the selected group.</li>
-                <li>
-                    Posts are sorted chronologically (newest to oldest) or by
-                    popularity (most popular to least popular) depending on user
-                    settings.
-                </li>
-                <li>
-                    Group members may respond to any posts within said group.
-                </li>
-                <li>
-                    If a user clicks on a post, they will be brought to a new
-                    page consisting of the post and it’s responses.
-                </li>
-                <li>
-                    Only a small number of posts are loaded initially to fit the
-                    users screen. More posts will load as the user scrolls down.
-                </li>
-                <li>
-                    If no posts have been made to a group, a message is
-                    displayed which says, “There are no posts here.”
-                </li>
-                <li>
-                    When creating a post, there are requirements that must be
-                    met before it can be published. All posts need a title and
-                    at least one character of body text.
-                </li>
-            </ul>
-            <ul>
-                <strong>Live Chat</strong
-                ><br />
-                <li>
-                    Online chatting service available to all group members where
-                    active online users may converse without the need to create
-                    posts.
-                </li>
-            </ul>
-            <ul>
-                <strong>Top Groups</strong
-                ><br />
-                <li>
-                    Contains profiles of group members that express similar
-                    interests to the user.
-                </li>
-                <li>
-                    Users can view their match's interests in-order to judge if
-                    they are an appropriate match.
-                </li>
-                <li>
-                    Both parties will be notified that they are a match and may
-                    message or add the matched user as a friend.
-                </li>
-            </ul>
-
-            <h4 class="mume-header" id="22-product-functions">
-                2.2. Product Functions
-            </h4>
-            <p>
-                Users can create their own group with a desired set of members
-                or a specific topic. New groups may not share a name with
-                existing groups. Users can create posts, comment on posts, chat,
-                log in, and send friend requests to other users.
-            </p>
-            <h4 class="mume-header" id="23-actors-and-use-cases">
-                2.3. Actors and Use Cases
-            </h4>
-            <br />
-            <div style="display: block; margin: auto">
-                <img src="../img/use_case_final_1.jpg" width="1200" />
-            </div>
-            <br />
-            <h4 class="mume-header" id="231-admin-functions">
-                2.3.1. Administrator Functions
-            </h4>
-
-            <ul>
-                <li>
-                    <strong>2.3.1.1</strong>
-                    Create Moderator: Involves selecting the “Create User”
-                    option and adding a username and password to the list of
-                    users with moderator rights to the website.
-                </li>
-                <li>
-                    <strong>2.3.1.2</strong> Delete Moderator: Involves
-                    selecting the “Remove Moderator” option and entering the
-                    username of the moderator to be removed from the moderator
-                    list.
-                </li>
-                <li>
-                    <strong>2.3.1.3</strong> Delete User Profile: Involves
-                    selecting the “Delete User” option and entering the username
-                    of the general user to be deleted.
-                </li>
-                <li>
-                    <strong>2.3.1.4</strong> Edit Home Page: Involves selecting
-                    “Edit Page” and then selecting “Home Page” and changing the
-                    text, photos, posts, and other content on the home page.
-                </li>
-            </ul>
-
-            <h4 class="mume-header" id="232-mod-functions">
-                2.3.2. Moderator Functions
-            </h4>
-
-            <ul>
-                <li>
-                    <strong>2.3.2.1</strong>
-                    Report User: Involves selecting the “Manage User” option and
-                    entering the username of the user to be reported.
-                </li>
-                <li>
-                    <strong>2.3.2.2</strong> Send Warning: Involves selecting
-                    the “Manage User” option and entering the username of the
-                    user who needs to be sent a warning.
-                </li>
-                <li>
-                    <strong>2.3.2.3</strong> Involves selecting the “Manage
-                    Group” option and entering the name of the group from which
-                    a user needs to be removed. From there, select the user from
-                    the list of group members that needs to be removed from the
-                    group.
-                </li>
-                <li>
-                    <strong>2.3.2.4</strong> Involves selecting the “Manage
-                    Group” option and entering the name of the group from which
-                    the group chat needs to be deleted.
-                </li>
-            </ul>
-
-            <h4 class="mume-header" id="232-user-functions">
-                2.3.2. User functions
-            </h4>
-
-            <ul>
-                <li>
-                    <strong>2.3.3.1</strong>
-                    Search: Involves using the search bar to find groups, posts,
-                    and users.
-                </li>
-                <li>
-                    <strong>2.3.3.2</strong> Create Group: Involves selecting
-                    the “Create” option and filling in the name of the new group
-                    and selecting moderators.
-                </li>
-                <li>
-                    <strong>2.3.3.3</strong>Join Group: Involves searching for a
-                    group and selecting “join”, or accepting an invite to the
-                    group.
-                </li>
-                <li>
-                    <strong>2.3.3.4</strong> Involves navigating to a group page
-                    and selecting “create new post” and entering a title and
-                    body text.
-                </li>
-                <li>
-                    <strong>2.3.3.5</strong> Edit Post: Involves selecting the
-                    post to be edited and selecting “edit”. Note: only the
-                    author of a post can edit it.
-                </li>
-                <li>
-                    <strong>2.3.3.6</strong> Delete Post: Involves selecting the
-                    post to be edited and selecting “delete”. Note: only the
-                    author of a post can delete it.
-                </li>
-                <li>
-                    <strong>2.3.3.7</strong> View Post: Navigate to the page
-                    where the post has been published.
-                </li>
-                <li>
-                    <strong>2.3.3.8</strong> Comment: Navigate to the post,
-                    select the post, then select “comment”.
-                </li>
-                <li>
-                    <strong>2.3.3.9</strong> Create Profile: If not already
-                    logged in, the user will be presented with the sign-up page
-                    where they can select “sign up” and from there they will
-                    create a new profile.
-                </li>
-                <li>
-                    <strong>2.3.3.10</strong> Edit Profile: Involves selecting
-                    “Profile”, selecting “Edit Profile” and allows users to edit
-                    their username, password, educational institute, interests,
-                    and other personal information.
-                </li>
-                <li>
-                    <strong>2.3.3.11</strong> Delete Profile: Involves selecting
-                    “Profile”, selecting “Edit Profile”, and then selecting
-                    “Delete Profile”.
-                </li>
-                <li>
-                    <strong>2.3.3.12</strong> Send Invite: Involves searching
-                    for a user from the group page, selecting their profile, and
-                    then selecting “Send Invite”. This will send the user an
-                    invitation to the group from which the invitation was sent.
-                </li>
-                <li>
-                    <strong>2.3.3.13</strong> View Recommended Users: Involves
-                    navigating to a group’s main page. The list of recommended
-                    users based on membership in this group will appear on the
-                    right side of the screen.
-                </li>
-                <li>
-                    <strong>2.3.3.14</strong> Match with Recommended Users:
-                    Involves selecting a user from a list of recommended users
-                    and then after getting redirected to their profile,
-                    selecting “Accept Match”.
-                </li>
-                <li>
-                    <strong>2.3.3.15</strong> Pass on Matching with Recommended
-                    User: Involves selecting a user from a list of recommended
-                    users and then after getting redirected to their profile,
-                    selecting “Decline Match”.
-                </li>
-                <li>
-                    <strong>2.3.3.16</strong> Send Chat: Involves navigating a
-                    chat box (direct message or group chats), entering a
-                    message, and selecting “Send”.
-                </li>
-                <li>
-                    <strong>2.3.3.17</strong> Add Friend: Involves selecting a
-                    user account and selecting “Add Friend” to add that profile
-                    to the user's friend list.
-                </li>
-                <li>
-                    <strong>2.3.3.18</strong> Remove Friend: Involves selecting
-                    a friend’s profile and selecting “Remove Friend” to remove
-                    that profile from the user's friend list.
-                </li>
-            </ul>
-
-            <h4 class="mume-header" id="24-user-characteristics">
-                2.4. User Characteristics
-            </h4>
-
-            <p>
-                Post-secondary students are the intended users of this product.
-                As such, it is assumed that the user has experience using a web
-                browser and navigating websites. It is helpful — but not
-                necessary — for the user to have experience with common social
-                media applications, such as Reddit, Instagram, or Twitter. This
-                experience should aid the user in learning how certain features
-                of StudySpace work, such as chat, due to the similarities to
-                other social media applications.
-            </p>
-            <h4 class="mume-header" id="25-constraints">2.5. Constraints</h4>
-
-            <p>
-                A large number of users must be able to access the website at
-                once. To ensure the website is reliable, smooth, and feels
-                responsive to the user, chat logs should update within a second
-                whenever a user sends a chat.
-            </p>
-            <h4 class="mume-header" id="26-assumptions-and-dependencies">
-                2.6. Assumptions and Dependencies
-            </h4>
-
-            <p>
-                It is assumed that users have a functioning, web-capable
-                computer (desktop or laptop) with a browser installed. Users are
-                expected to have an internet connection for the entire duration
-                of their session. StudySpace should be compatible with any
-                desktops operating system.
-            </p>
-            <h3 class="mume-header" id="3-specific-requirements">
-                3. Specific Requirements
-            </h3>
-            <h4 class="mume-header" id="31-func-req">
-                3.1. Function Requirements
-            </h4>
-            <ul>
-                <strong>Creating, editing, deleting post</strong>
-                <li>
-                    Once a user has created a post, they can edit or delete the
-                    post by accessing it via the group page where it is posted.
-                </li>
-            </ul>
-
-            <ul>
-                <strong>Searching</strong>
-                <li>
-                    Any additional spaces or misspelled words in the search bar
-                    must be understood. For example “CP31 7 Wilfred” must show
-                    the intended results of “Cp317 Wilfrid”.
-                </li>
-                <li>
-                    Implemented by a Full-Text-Search in the relational database
-                    which is part of the backend.
-                </li>
-            </ul>
-
-            <ul>
-                <strong>User sign-in</strong>
-                <li>
-                    When users sign in, the email form must be in proper email
-                    format (eg; having “@” in their email address”).
-                </li>
-                <li>There are no password requirements.</li>
-                <li>Users stay logged in until they sign out.</li>
-            </ul>
-
-            <br />
-
-            <h4 class="mume-header" id="32-logical-database-requirements">
-                3.2. Logical Database Requirements
-            </h4>
-            <br />
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>USER:</th>
-                        <th>
-                            contains a record for every user that has created a
-                            profile
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fields</td>
-                        <td>
-                            <ul>
-                                <li>
-                                    userID - A unique ID given to all users who
-                                    sign up for StudySpace.
-                                </li>
-
-                                <li>
-                                    username - The username in which the user is
-                                    referred to on the app.
-                                </li>
-
-                                <li>firstName - The first name of the user.</li>
-
-                                <li>lastName - The last name of the user.</li>
-
-                                <li>email - The email address of the user.</li>
-
-                                <li>password - The password of the user.</li>
-                                <li>
-                                    registerDate - The date the user created an
-                                    account on StudySpace.
-                                </li>
-                                <li>
-                                    interest1 - An interest of the user used for
-                                    generating User Matches.
-                                </li>
-                                <li>
-                                    interest2 - An interest of the user used for
-                                    generating User Matches.
-                                </li>
-                                <li>
-                                    interest3 - An interest of the user used for
-                                    generating User Matches.
-                                </li>
-                                <li>
-                                    program - The academic program which the
-                                    user is enrolled in.
-                                </li>
-                                <li>
-                                    picture - A picture that the user can upload
-                                    for their display picture.
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Relationships</td>
-                        <td>
-                            The User ID is the primary key of the USER table.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br />
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>FRIENDS:</th>
-                        <th>contains a record for every friendship relation</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fields</td>
-                        <td>
-                            <ul>
-                                <li>userID - The unique ID of a user.</li>
-                                <li>
-                                    friendID - The unique id of a user who is
-                                    friends with the user associated with
-                                    user_id.
-                                </li>
-                                <li>
-                                    startDate - The date on which the two users
-                                    with user IDs matching user_id and friend_id
-                                    became friends on the platform.
-                                </li>
-                                <li>
-                                    Status - There are 3 possible statuses of a
-                                    friend request:
+                                <li><a href="#211-user-interfaces">2.1.1. User Interfaces</a>
                                     <ul>
-                                        <li>
-                                            Send friend request (not yet
-                                            friends)
-                                        </li>
-                                        <li>
-                                            Pending friend request (request sent
-                                            but not accepted)
-                                        </li>
-                                        <li>
-                                            - Friends (request accepted; users
-                                            are now friends)
-                                        </li>
+                                        <li><a href="#2111-landing-page-logged-out">2.1.1.1. Landing Page (logged out)</a></li>
+                                        <li><a href="#2112-sign-up-view">2.1.1.2. Sign Up View</a></li>
+                                        <li><a href="#2113-home-page-logged-in">2.1.1.3. Home Page (Logged In)</a></li>
+                                        <li><a href="#2114-groups-home-page">2.1.1.4. Groups Home Page</a></li>
+                                        <li><a href="#2115-desk-view">2.1.1.5. Desk View</a></li>
+                                        <li><a href="#2116-posts-view">2.1.1.6. Posts View</a></li>
+                                        <li><a href="#2117-user-profile-page">2.1.1.7. User Profile Page</a></li>
+                                        <li><a href="#2118-profile-page-another-user">2.1.1.8. Profile Page (another user)</a></li>
+                                        <li><a href="#2119-user-match-view">2.1.1.9. User Match View</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Relationships</td>
-                        <td>
-                            The friend ID is the primary key of the FRIEND
-                            table.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br />
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>GROUP:</th>
-                        <th>contains a record for every group in the system</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fields</td>
-                        <td>
+                        </li>
+                        <li><a href="#22-product-functions">2.2. Product Functions</a></li>
+                        <li><a href="#23-actors-and-use-cases">2.3. Actors and Use Cases</a>
                             <ul>
-                                <li>
-                                    groupID - A unique ID given to a group when
-                                    it is created.
-                                </li>
-                                <li>groupName - The name of the group.</li>
-                                <li>
-                                    picture - A picture that a group member
-                                    uploaded for the group's display
-                                </li>
-                                <li>
-                                    creationDate - The date the group was
-                                    created
-                                </li>
+                                <li><a href="#231-administrator-functions">2.3.1. Administrator Functions</a></li>
+                                <li><a href="#232-moderator-functions">2.3.2. Moderator Functions</a></li>
+                                <li><a href="#233-user-functions">2.3.3. User Functions</a></li>
                             </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Relationships</td>
-                        <td>
-                            The group ID is the primary key of the GROUPS table.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br />
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>POSTS:</th>
-                        <th>
-                            contains a record for every post that has ever been
-                            published
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fields</td>
-                        <td>
+                        </li>
+                        <li><a href="#24-user-characteristics">2.4. User Characteristics</a></li>
+                        <li><a href="#25-constraints">2.5. Constraints</a></li>
+                        <li><a href="#26-assumptions-and-dependencies">2.6. Assumptions and Dependencies</a></li>
+                    </ul>
+                </li>
+                <li><a href="#3-specific-requirements">3. Specific Requirements</a>
+                    <ul>
+                        <li><a href="#31-function-requirements">3.1. Function Requirements</a></li>
+                        <li><a href="#32-logical-database-requirements">3.2. Logical Database Requirements</a></li>
+                        <li><a href="#33-software-system-attributes">3.3. Software System Attributes</a>
                             <ul>
-                                <li>postID - The unique ID of the post.</li>
-                                <li>
-                                    groupID - The unique ID of the group that
-                                    uploaded the post.
-                                </li>
-                                <li>title - The title of the post.</li>
-                                <li>
-                                    body - The actual body/message of the post.
-                                </li>
-                                <li>
-                                    postTimestamp - The date and time the post
-                                    was posted.
-                                </li>
+                                <li><a href="#331-performance-requirements">3.3.1. Performance Requirements</a></li>
+                                <li><a href="#332-security">3.3.2. Security</a></li>
+                                <li><a href="#333-portability">3.3.3. Portability</a></li>
                             </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Relationships</td>
-                        <td>
-                            The post ID is the primary key of the POSTS table.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <br />
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>RESPONSES:</th>
-                        <th>
-                            contains a record for every response that has ever
-                            been made to a post
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fields</td>
-                        <td>
-                            <ul>
-                                <li>
-                                    responseID - The unique ID of the response
-                                    on a given post.
-                                </li>
-                                <li>
-                                    body - The body/message of the response.
-                                </li>
-                                <li>postID - The unique ID of the post.</li>
-                                <li>
-                                    responseTimestamp - The date and time the
-                                    response was posted.
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Relationships</td>
-                        <td>
-                            The response ID is the primary key of the RESPONSES
-                            table.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#4-version-history">4. Version History</a></li>
+                </ul>
+                <h1 class="mume-header" id="1-introduction">1. Introduction</h1>
 
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>USER_GROUP:</th>
-                        <th>
-                            contains a record for every member of every group.
-                        </th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Fields</td>
-                        <td>
-                            <ul>
-                                <li>groupID - The unique ID of the group.</li>
-                                <li>
-                                    Moderator - Boolean value representing
-                                    whether the user is a moderator.
-                                </li>
-                                <li>
-                                    userID - The unique ID of the user that is
-                                    in the group.
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Relationships</td>
-                        <td>
-                            groupID and userID are the foreign keys for the
-                            USER_GROUP table.
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                <p>StudySpace is a web application that provides post-secondary students with access to virtual spaces that foster unique social learning environments. The purpose of this project is to promote a sense of unity and community among students
+                    by helping them meet new peers, connect, and study together.</p>
+                <h2 class="mume-header" id="11-purpose">1.1. Purpose</h2>
 
-            <br />
-            <h3 class="mume-header" id="33-software-system-attributes">
-                3.3. Software System Attributes
-            </h3>
+                <p>The purpose of this document is to establish the requirements of the project from an implementation perspective. Additionally, this document lays the foundation for all group processes from start to finish by outlining the vision for the
+                    project. This document is intended to be used by developers, users, and any other individual who wants to learn the concept of this application and how its features work.</p>
+                <h2 class="mume-header" id="12-scope">1.2. Scope</h2>
 
-            <h4 class="mume-header" id="331-security">
-                Performance Requirements
-            </h4>
-            <p>
-                The website must be quick and responsive to all screens above
-                320px in order to meet usability requirements. From the
-                front-end perspective, content must load quickly and transitions
-                between pages should be seamless. 95% of the transactions shall
-                be processed in less than 1 second.
-            </p>
-            <h4 class="mume-header" id="332-security">3.3.2. Security</h4>
+                <p>StudySpace allows users to search for and join virtual study groups. User benefits include improving academic success, making friends, and gaining a sense of community among peers. The objective of StudySpace is to help students find groups
+                    of like-minded individuals with whom they can collaborate &#x2014; regardless of their physical locations. Through the use of this product, students who are enrolled in online courses do not miss out on the benefits of group work and
+                    peer discussion.</p>
+                <h2 class="mume-header" id="13-definitions">1.3. Definitions</h2>
 
-            <p>
-                Any access to the StudySpace backend needs to be verified to
-                ensure that only authorized administrators/moderators have
-                access. Authorization involves entering a valid username and
-                password to an account with administrator privileges. When an
-                administrator or moderator logs into the system, they are
-                granted permissions to edit, create, and delete content.
-            </p>
-            <h4 class="mume-header" id="333-portability">3.3.3. Portability</h4>
+                <style type="text/css">
+                    .tg {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                    }
+                    
+                    .tg td {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+                    
+                    .tg th {
+                        border-color: black;
+                        border-style: solid;
+                        border-width: 1px;
+                        font-family: Arial, sans-serif;
+                        font-size: 14px;
+                        font-weight: normal;
+                        overflow: hidden;
+                        padding: 10px 5px;
+                        word-break: normal;
+                    }
+                    
+                    .tg .tg-1wig {
+                        font-weight: bold;
+                        text-align: left;
+                        vertical-align: top
+                    }
+                    
+                    .tg .tg-citn {
+                        background-color: #FFF;
+                        color: #333;
+                        text-align: left;
+                        vertical-align: top
+                    }
+                    
+                    .tg .tg-dgl5 {
+                        background-color: #FFF;
+                        font-weight: bold;
+                        text-align: left;
+                        vertical-align: top
+                    }
+                    
+                    .tg .tg-0lax {
+                        text-align: left;
+                        vertical-align: top
+                    }
+                </style>
+                <table class="tg">
+                    <thead>
+                        <tr>
+                            <th class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">DESK</span></th>
+                            <th class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Desk is a virtual space wherein students may collaborate. Each Desk is temporary; it only exists as long as the Desk is in use. After everyone leaves the Desk, it is removed from memory. Each Desk has an admin who can set a limit to the number of members and can add signifiers such as language, age category, and other factors.</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">FRIEND</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">Any two Users can become Friends if one sends a Friend Request and the other accepts it. When two Users are Friends, they can send private chats directly to one another.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">GROUP</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Group is a collection of two or more users who have connected through StudySpace either by Invitation or a User Match. All members of a Group automatically have access to a Chat upon joining.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">GROUP NAME</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Group Name is the name of a Group. The Group Name is set by a member of the Group. The Group Name must be unique so that other Users can easily discover the Group via Search.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">INITIAL AUDIENCE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">This product is for David Brown, who is the initial User and the project client.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-1wig"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">INTERESTS</span></td>
+                            <td class="tg-0lax" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Interests refer to the parameters that the user has chosen and the ranking of these parameters. The choice and ranking of parameters are key to determining User Matches.</span><br>
+                                <span style="font-weight:400;font-style:italic;text-decoration:none;color:#000;background-color:transparent">Example.</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">Alice has chosen the following parameters: Co-op, Friends, CP104, Programming and she has the following Interests:</span><br>
+                                <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;1. Co-op</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;2. Friends</span><br>
+                                <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;3. CP104</span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;4. Programming</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">INVITATION</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">An Invitation is the opportunity for a User to join a Group. Any member of a Group can choose to send an Invitation to a User who isn&#x2019;t already a member.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">PAGE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Page is where Posts are viewed. Each Group can have one or more Pages.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">POST</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Post is an object which can include photos and text. Posts are created by Users for all members of a Group to see. Users can make a Post about anything they wish, including: buying/selling textbooks, asking questions, looking for advice, etc. Users can also write a Response to a Post.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">PROFILE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Profile is a page with personal information about the user. The Profile also provides functionality such as managing group memberships and accessing chats.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">RESPONSE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Response is a text message which is linked to a Post.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">SEARCH</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">Search is a function of the app where Users can search and discover Groups by Group Name or Users by Username.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">STUDYSPACE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">StudySpace refers to the web application created by the Team for the Initial Audience, David Brown.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">TARGET AUDIENCE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">Students are the intended users of this product.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">USER</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A User is someone who uses the application, such as a Student.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">USER MATCH</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">Users have the option to enter their Interests, such as various preferences, courses they are enrolled in, and their study habits. Users who are both members of the same group have the possibility of getting matched. The more common Interests, the more likely they are to be matched. When a User Match occurs, the matched users show up in each other&#x2019;s list of user matches, found on the page of the group they were matched in.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">USERNAME</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">A Username is part of a User&#x2019;s account information. A Username is the name by which a User is referred to on the app.</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tg-dgl5"><span style="font-weight:700;font-style:normal;text-decoration:none;color:#000;background-color:transparent">UPVOTE/DOWNVOTE</span></td>
+                            <td class="tg-citn" colspan="8"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#333;background-color:transparent">Users can express whether or not they like a post or agree with it by giving it an Upvote or Downvote. Upvoting is equivalent to &#x201C;liking&#x201D; the post, and Downvoting is the same as &#x201C;disliking&#x201D; the post.</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 class="mume-header" id="14-references">1.4. References</h2>
 
-            <p>
-                StudySpace must be accessible on any desktop device that is
-                web-capable and has a browser. Therefore, StudySpace must be
-                compatible with any operating system, including Windows, MacOS
-                and Linux. The product must also be compatible with any browser,
-                including Chrome, Firefox, Internet Explorer, Edge, and Safari.
-            </p>
-            <h3 class="mume-header" id="5-versions">4. Versions</h3>
+                <ul>
+                    <li><em>IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998</em></li>
+                </ul>
+                <h2 class="mume-header" id="15-overview">1.5. Overview</h2>
 
-            <h5 class="mume-header" id="version-10-0902021">
-                Version 1.0 - 09/02/2021
-            </h5>
+                <p>The rest of this document contains details about the overall description and specific requirements of the project. Section 2 contains information about the product perspective, product functions, user characteristics, constraints, and
+                    dependencies. Section 3 discusses external interfaces, functions, logical database requirements, and software system attributes.</p>
+                <h1 class="mume-header" id="2-overall-description">2. Overall Description</h1>
 
-            <p>Author(s)</p>
-            <p>Initial Requirements document created</p>
-            <ul>
-                <li>Dayton Talarico</li>
-                <li>Rohan Uddin</li>
-                <li>Arvin Benipal</li>
-                <li>Muhammad Hashir</li>
-                <li>Mackenzie Van Zanden</li>
-            </ul>
-            <h5 class="mume-header" id="version-11-1002021">
-                Version 1.1 - 10/02/2021
-            </h5>
-            <p>Document reformatted and expanded use case definitions</p>
-            <ul>
-                <li>Dayton Talarico</li>
-                <li>Janelle Tait</li>
-            </ul>
-            <h5>Version 1.2 - 11/02/2021</h5>
-            <p>Adjusted document upon SQA suggestions</p>
-            <ul>
-                <li>Dayton Talarico</li>
-                <li>Janelle Tait</li>
-                <li>Rohan Uddin</li>
-                <li>Arvin Benipal</li>
-                <li>Muhammad Hashir</li>
-            </ul>
-            <p>Thanks to SQA by</p>
-            <ul>
-                <li>Ann Baldonasa</li>
-                <li>Arshdeep Sahi</li>
-                <li>Shyam Dave</li>
-                <li>David Rosien</li>
-                <li>Matthew Francis</li>
-                <li>Evan Surtel</li>
-            </ul>
-            <h5>Version 1.3 - 24/03/2021</h5>
-            <p>
-                Removed mention of tutors as this will no longer be a part of
-                the software
-            </p>
-            <ul>
-                <li>Dayton Talarico</li>
-                <li>Janelle Tait</li>
-            </ul>
-            <p>HTML reformatted according to bootstrap theme</p>
-            <ul>
-                <li>Matthew Francis</li>
-            </ul>
-        </div>
-    </body>
+                <h2 class="mume-header" id="21-product-perspective">2.1. Product Perspective</h2>
+
+                <p>StudySpace is an independent, self-contained web application. Core features are personalized profiles, groups, chats, and pages in each group. It is a web application with 2 components: user interfaces (frontend), and software interfaces
+                    (backend).
+                </p>
+                <h3 class="mume-header" id="211-user-interfaces">2.1.1. User Interfaces</h3>
+
+                <h4 class="mume-header" id="2111-landing-page-logged-out">2.1.1.1. Landing Page (logged out)</h4>
+
+                <p><img src="../img/requirements_img/landing_page.png" alt><br>
+                    <img src="2111.png" alt></p>
+                <h4 class="mume-header" id="2112-sign-up-view">2.1.1.2. Sign Up View</h4>
+
+                <p><img src="signupview.png" alt><br>
+                    <img src="2112.png" alt></p>
+                <h4 class="mume-header" id="2113-home-page-logged-in">2.1.1.3. Home Page (Logged In)</h4>
+
+                <p><img src="homepage_loggedin.png" alt><br>
+                    <img src="2113.png" alt></p>
+                <h4 class="mume-header" id="2114-groups-home-page">2.1.1.4. Groups Home Page</h4>
+
+                <p><img src="groupshomepage.png" alt><br>
+                    <img src="2114.png" alt></p>
+                <h4 class="mume-header" id="2115-desk-view">2.1.1.5. Desk View</h4>
+
+                <p><img src="deskview.png" alt><br>
+                    <img src="2115.png" alt></p>
+                <h4 class="mume-header" id="2116-posts-view">2.1.1.6. Posts View</h4>
+
+                <p><img src="postsview.png" alt><br>
+                    <img src="2116.png" alt></p>
+                <h4 class="mume-header" id="2117-user-profile-page">2.1.1.7. User Profile Page</h4>
+
+                <p><img src="userprofilepage.png" alt><br>
+                    <img src="2117.png" alt></p>
+                <h4 class="mume-header" id="2118-profile-page-another-user">2.1.1.8. Profile Page (another user)</h4>
+
+                <p><img src="profilepage_anotheruser.png" alt><br>
+                    <img src="2118.png" alt></p>
+                <h4 class="mume-header" id="2119-user-match-view">2.1.1.9. User Match View</h4>
+
+                <p><img src="usermatchview.png" alt><br>
+                    <img src="2119.png" alt></p>
+                <h2 class="mume-header" id="22-product-functions">2.2. Product Functions</h2>
+
+                <p>Users can create their own group with a desired set of members or a specific topic. New groups may not share a name with existing groups. Users can create posts, comment on posts, chat, log in, and send friend requests to other users.</p>
+                <h2 class="mume-header" id="23-actors-and-use-cases">2.3. Actors and Use Cases</h2>
+
+                <p><img src="actorsandusecases.png" alt></p>
+                <h3 class="mume-header" id="231-administrator-functions">2.3.1. Administrator Functions</h3>
+
+                <ul>
+                    <li><strong>Create Moderator:</strong> Involves selecting the &#x201C;Create User&#x201D; option and adding a username and password to the list of users with moderator rights to the website.</li>
+                    <li><strong>Delete Moderator:</strong> Involves selecting the &#x201C;Remove Moderator&#x201D; option and entering the username of the moderator to be removed from the moderator list.</li>
+                    <li><strong>Delete User Profile:</strong> Involves selecting the &#x201C;Delete User&#x201D; option and entering the username of the general user to be deleted.</li>
+                    <li><strong>Edit Home Page:</strong> Involves selecting &#x201C;Edit Page&#x201D; and then select &#x201C;Home Page&#x201D; and change the text, photos, posts, and other content on the Home Page.</li>
+                </ul>
+                <h3 class="mume-header" id="232-moderator-functions">2.3.2. Moderator Functions</h3>
+
+                <ul>
+                    <li><strong>Report User:</strong> Involves selecting the &#x201C;Manage User&#x201D; option and entering the username of the user to be reported.</li>
+                    <li><strong>Send Warning:</strong> Involves selecting the &#x201C;Manage User&#x201D; option and entering the username of the user who needs to be sent a warning.</li>
+                    <li><strong>Remove User:</strong> Involves selecting the &#x201C;Manage Group&#x201D; option and entering the name of the group from which a user needs to be removed. From there, select the user from the list of group members that needs
+                        to be removed from the group.</li>
+                    <li><strong>Delete Group Chat:</strong> Involves selecting the &#x201C;Manage Group&#x201D; option and entering the name of the group from which the group chat needs to be deleted.</li>
+                </ul>
+                <h3 class="mume-header" id="233-user-functions">2.3.3. User Functions</h3>
+
+                <ul>
+                    <li><strong>Search</strong>: Involves using the search bar to find groups, posts, and users.</li>
+                    <li><strong>Create Group</strong>: Involves selecting the &#x201C;Create&#x201D; option and filling in the name of the new group and selecting moderators.</li>
+                    <li><strong>Join Group:</strong> Involves searching for a group and selecting &#x201C;join&#x201D;, or accepting an invite to the group.</li>
+                    <li><strong>Create Post:</strong> Involves navigating to a group page and selecting &#x201C;create new post&#x201D; and entering a title and body text.</li>
+                    <li><strong>Edit Post:</strong> Involves selecting the post to be edited and selecting &#x201C;edit&#x201D;. Note: only the author of a post can edit it.</li>
+                    <li><strong>Delete Post:</strong> Involves selecting the post to be edited and selecting &#x201C;delete&#x201D;. Note: only the author of a post can delete it.</li>
+                    <li><strong>View Post:</strong> Navigate to the page where the post has been published.</li>
+                    <li><strong>Comment:</strong> Navigate to the post, select the post, then select &#x201C;comment&#x201D;.</li>
+                    <li><strong>Create Profile:</strong> If not already logged in, the user will be presented with the sign-up page where they can select &#x201C;sign up&#x201D; and from there they will create a new profile.</li>
+                    <li><strong>Edit Profile:</strong> Involves selecting &#x201C;Profile&#x201D;, selecting &#x201C;Edit Profile&#x201D; and allows users to edit their username, password, educational institute, Interests, and other personal information.</li>
+                    <li><strong>Delete Profile:</strong> Involves selecting &#x201C;Profile&#x201D;, selecting &#x201C;Edit Profile&#x201D;, and then selecting &#x201C;Delete Profile&#x201D;.</li>
+                    <li><strong>Send Invite:</strong> Involves searching for a user from the group page, selecting their profile, and then selecting &#x201C;Send Invite&#x201D;. This will send the user an invitation to the group from which the invitation
+                        was sent.</li>
+                    <li><strong>View Recommended Users:</strong> Involves navigating to a group&#x2019;s main page. The list of recommended users based on membership in this group will appear on the right side of the screen.</li>
+                    <li><strong>Match with Recommended Users:</strong> Involves selecting a user from a list of recommended users and then after getting redirected to their profile, selecting &#x201C;Accept Match&#x201D;.</li>
+                    <li><strong>Pass on Matching with Recommended User</strong>: Involves selecting a user from a list of recommended users and then after getting redirected to their profile, selecting &#x201C;Decline Match&#x201D;.</li>
+                    <li><strong>Send Chat</strong>: Involves navigating a chat box (direct message or group chats), entering a message, and selecting &#x201C;Send&#x201D;.</li>
+                    <li><strong>Add Friend:</strong> Involves selecting a user account and selecting &#x201C;Add Friend&#x201D; to add that profile to the user&apos;s friend list.</li>
+                    <li><strong>Remove Friend:</strong> Involves selecting a friend&#x2019;s profile and selecting &#x201C;Remove Friend&#x201D; to remove that profile from the user&apos;s friend list.</li>
+                </ul>
+                <h2 class="mume-header" id="24-user-characteristics">2.4. User Characteristics</h2>
+
+                <p>Post-secondary students are the intended users of this product. As such, it is assumed that the user has experience using a web browser and navigating websites. It is helpful &#x2014; but not necessary &#x2014; for the user to have experience
+                    with common social media applications, such as Reddit, Instagram, or Twitter. This experience should aid the user in learning how certain features of StudySpace work, such as chat, due to the similarities to other social media applications.</p>
+                <h2 class="mume-header" id="25-constraints">2.5. Constraints</h2>
+
+                <p>A large number of users must be able to access the website at once. To ensure the website is reliable, smooth, and feels responsive to the user, chat logs should update within a second whenever a user sends a chat.</p>
+                <h2 class="mume-header" id="26-assumptions-and-dependencies">2.6. Assumptions and Dependencies</h2>
+
+                <p>It is assumed that users have a functioning, web-capable computer (desktop or laptop) with a browser installed. Users are expected to have an internet connection for the entire duration of their session. StudySpace should be compatible
+                    with any desktop operating system.</p>
+                <h1 class="mume-header" id="3-specific-requirements">3. Specific Requirements</h1>
+
+                <h2 class="mume-header" id="31-function-requirements">3.1. Function Requirements</h2>
+
+                <ul>
+                    <li><strong>Creating, editing, deleting posts</strong>
+                        <ul>
+                            <li>Once a user has created a post, they can edit or delete the post by accessing it via the group page where it is posted.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Searching</strong>
+                        <ul>
+                            <li>Any additional spaces or misspelled words in the search bar must be understood. For example &#x201C;CP31 7 Wilfred&#x201D; must show the intended results of &#x201C;Cp317 Wilfrid&#x201D;.</li>
+                            <li>Implemented by a Full-Text-Search in the relational database which is part of the backend.</li>
+                        </ul>
+                    </li>
+                    <li><strong>User sign-in</strong>
+                        <ul>
+                            <li>When users sign in, the email form must be in proper email format (eg; having &#x201C;@&#x201D; in their email address&#x201D;).</li>
+                            <li>Passwords must contain at least 8 characters, one symbol, and one number.</li>
+                            <li>Users stay logged in until they sign out.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h2 class="mume-header" id="32-logical-database-requirements">3.2. Logical Database Requirements</h2>
+                <p>
+                    <img src="../img/requirements_img/users.png" alt><br>
+                    <img src="friends.png " alt><br>
+                    <img src="groups.png " alt><br>
+                    <img src="posts.png " alt><br>
+                    <img src="responses.png " alt><br>
+                    <img src="user_groups.png " alt></p>
+                <h2 class="mume-header " id="33-software-system-attributes ">3.3. Software System Attributes</h2>
+
+                <h3 class="mume-header " id="331-performance-requirements ">3.3.1. Performance Requirements</h3>
+
+                <p>The website must be quick and responsive to all screens above 320px to meet usability requirements. From the front-end perspective, content must load quickly and transitions between pages should be seamless. 95% of the transactions shall
+                    be processed in less than 1 second.</p>
+                <h3 class="mume-header " id="332-security ">3.3.2. Security</h3>
+
+                <p>Any access to the StudySpace backend needs to be verified to ensure that only authorized administrators/moderators have access. Authorization involves entering a valid username and password to an account with administrator privileges.
+                    When an administrator or moderator logs into the system, they are granted permissions to edit, create, and delete content.</p>
+                <h3 class="mume-header " id="333-portability ">3.3.3. Portability</h3>
+
+                <p>StudySpace must be accessible on any desktop device that is web-capable and has a browser. Therefore, StudySpace must be compatible with any operating system, including Windows, macOS, and Linux. The product must also be compatible with
+                    any browser, including Chrome, Firefox, Internet Explorer, Edge, and Safari.</p>
+                <h1 class="mume-header " id="4-version-history ">4. Version History</h1>
+
+                <h3> Version 1.0 - 09/02/2021 </h3>
+                <p>Initial Requirements document created</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                    <li>Rohan Uddin</li>
+                    <li>Arvin Benipal</li>
+                    <li>Muhammad Hashir</li>
+                    <li>Mackenzie Van Zanden</li>
+                </ul>
+                <h3>Version 1.1 - 10/02/2021 </h3>
+                <p>Document reformatted and expanded use case definitions</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                    <li>Janelle Tait</li>
+                </ul>
+                <h3>Version 1.2 - 11/02/2021</h3>
+                <p>Adjusted document upon SQA suggestions</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                    <li>Janelle Tait</li>
+                    <li>Rohan Uddin</li>
+                    <li>Arvin Benipal</li>
+                    <li>Muhammad Hashir</li>
+                </ul>
+                <p>Thanks to SQA by</p>
+                <ul>
+                    <li>Ann Baldonasa</li>
+                    <li>Arshdeep Sahi</li>
+                    <li>Shyam Dave</li>
+                    <li>David Rosien</li>
+                    <li>Matthew Francis</li>
+                    <li>Evan Surtel</li>
+                </ul>
+                <h3>Version 1.3 - 24/03/2021</h3>
+                <p>Performed SQA on consistency with previous docs and grammar checks</p>
+                <ul>
+                    <li>Ann Baldonasa</li>
+                </ul>
+                <p>Removed mention of tutors as this will no longer be a part of the software</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                </ul>
+                <p>Added Interests definition and changed any previous mentioning of &#x201C;user preferences&#x201D; to &#x201C;Interests&#x201D;</p>
+                <ul>
+                    <li>Janelle Tait</li>
+                    <li>Dayton Talarico</li>
+                </ul>
+                <p>Updated section 3.2 to match the Design document</p>
+                <ul>
+                    <li>Janelle Tait</li>
+                </ul>
+                <h3>Version 1.4 - 07/04/2021</h3>
+                <p>Added Upvote/Downvote definition to be consistent with other documents</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                </ul>
+                <h3>Version 1.5 - 10/04/2021</h3>
+                <p>Updated Section 2.1.1 User Interfaces to match the Design document</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                </ul>
+                <p>Updated Section 2.3 Use Case Diagram based on David Brown&#x2019;s suggestion to separate Create Moderator and Delete Moderator cases</p>
+                <ul>
+                    <li>Dayton Talarico</li>
+                </ul>
+                <p>Updated Section 3.1 to clarify password requirements</p>
+                <ul>
+                    <li>Janelle Tait</li>
+                </ul>
+                <p>Reformatted and converted to HTML</p>
+                <ul>
+                    <li>Ann Baldonasa</li>
+                </ul>
+
+            </div>
+</body>
+
 </html>
