@@ -388,13 +388,492 @@
                     </li>
                 </ul>
                 <h2 class="mume-header" id="32-logical-database-requirements">3.2. Logical Database Requirements</h2>
-                <p>
-                    <img src="../img/specifications_img/users.png" alt><br>
-                    <img src="../img/specifications_img/friends.png" alt><br>
-                    <img src="../img/specifications_img/groups.png" alt><br>
-                    <img src="../img/specifications_img/posts.png" alt><br>
-                    <img src="../img/specifications_img/responses.png" alt><br>
-                    <img src="../img/specifications_img/user_groups.png" alt></p>
+                <!-- TABLESTART -->
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-s4ws {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                text-decoration: underline;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">USER: contains a record for every user that has created a profile</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">userID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A unique ID given to all users who sign up for StudySpace.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">username - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The username to which the user is referred to on the app.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">firstName - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The first name of the user.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">lastName - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The last name of the user.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">email - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The email address of the user.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">password - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The password of the user.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">registerDate - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date the user </span>
+                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:transparent">created an account on</span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent"> StudySpace.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">interest1 - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">An interest of the user </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">used for generating User Matches</span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">interest2 - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">An interest of the user </span>
+                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">used for generating User Matches</span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">interest3 - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">An interest of the user </span>
+                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">used for generating User Matches</span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">program - </span>
+                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">The academic program which the user is enrolled in</span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">picture - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A picture that the user can upload for </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">their </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">display picture.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The user id is the primary key of the USER table.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- FRIENDS -->
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">FRIEND: contains a record for every friendship relation </span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">userID - </span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The unique </span>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">ID of a user.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">friendID - </span>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">The unique id of a user who is friends with the user associated with user_id.</span><br>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">startDate - </span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">The date on which the two users with user IDs matching user_id and friend_id became friends on the platform.</span><br>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">Status - </span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">There are 3 possible statuses of a friend request</span>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">:</span><br>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent"> Send friend request (</span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">not yet friends</span>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">)</span><br>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent"> - Pending friend request (request sent but </span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">                           not accepted)</span><br>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent"> - Friends (</span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">request accepted; users are now</span><br>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF"> friends</span>
+                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The friendID is the primary key of the FRIEND table.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- GROUPS TABLE -->
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">GROUP: contains a record for every group in the system</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A unique ID given to a group when it is created.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupName - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The name of the group.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">picture - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A picture that a group member uploaded for the </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">group's</span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent"> display </span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">creationDate - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date the group was created.</span></td>
+                </tr>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">The groupID is the primary key of the GROUP table.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- POSTS  TABLE -->
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">POSTS: contains a record for every post that has ever been published</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">postID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the post.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">the group that uploaded the post</span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">title - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The title of the post.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">body - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The actual body/message of the post.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">postTimestamp - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date and time the post was posted.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The postID is the primary key of the POSTS table.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- RESPONSES  TABLE -->
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">RESPONSE: contains a record for every response that has ever been made to a post</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">responseID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the response on a given post.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">body - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The body/message of the response.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">postID - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the post.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">responseTimestamp - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date and time the response was posted.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The responseID is the primary key of the RESPONSE table.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- USER GROUPS  TABLE -->
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+            
+            .tg .tg-pys6 {
+                background-color: #FFF;
+                color: #24292E;
+                text-align: left;
+                vertical-align: top
+            }
+            
+            .tg .tg-hcrr {
+                background-color: #FFF;
+                color: #24292E;
+                font-style: italic;
+                text-align: left;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">USER_GROUP: contains a record for every member of every group.</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the group.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">Moderator - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">Boolean value representing whether the user is a moderator.</span><br>
+                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">userID - </span>
+                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the user that is in the group.</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
+                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> groupID and userID are the foreign keys for the USER_GROUP table.</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <!-- TABLEEND -->
                 <h2 class="mume-header " id="33-software-system-attributes">3.3. Software System Attributes</h2>
 
                 <h3 class="mume-header " id="331-performance-requirements">3.3.1. Performance Requirements</h3>
