@@ -1,943 +1,2473 @@
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <title>StudySpace | CP317</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">StudySpace</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link active" href="#">Specifications</a>
-                <a class="nav-item nav-link" href="spmp.html">SPMP</a>
-                <a class="nav-item nav-link" href="requirements.html">Requirements</a>
-                <a class="nav-item nav-link" href="analysis.html">Analysis</a>
-                <a class="nav-item nav-link" href="design.html">Design</a>
-                <a class="nav-item nav-link" href="#">Implementation</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link to Web App</a>
-            </div>
+      <a class="navbar-brand" href="#">StudySpace</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="../index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link active" href="#">Specifications</a>
+          <a class="nav-item nav-link" href="spmp.html">SPMP</a>
+          <a class="nav-item nav-link" href="requirements.html">Requirements</a>
+          <a class="nav-item nav-link" href="analysis.html">Analysis</a>
+          <a class="nav-item nav-link" href="design.html">Design</a>
+          <a class="nav-item nav-link" href="https://study-space.vercel.app/"
+            >Implementation</a
+          >
+          <a class="nav-item nav-link" href="https://study-space.vercel.app/"
+            >Link to Web App</a
+          >
         </div>
+      </div>
     </nav>
-    <br>
+    <br />
     <div class="container">
-        <h1>Software Requirements Specifications</h1>
-        <p><i>Version 1.7</i></p>
-        <hr>
-        <ul>
-            <li><a href="#1-introduction">1. Introduction</a>
-                <ul>
-                    <li><a href="#11-purpose">1.1. Purpose</a></li>
-                    <li><a href="#12-scope">1.2. Scope</a></li>
-                    <li><a href="#13-definitions">1.3. Definitions</a></li>
-                    <li><a href="#14-references">1.4. References</a></li>
-                    <li><a href="#15-overview">1.5. Overview</a></li>
-                </ul>
+      <h1>Software Requirements Specifications</h1>
+      <p><i>Version 1.7</i></p>
+      <hr />
+      <ul>
+        <li>
+          <a href="#1-introduction">1. Introduction</a>
+          <ul>
+            <li><a href="#11-purpose">1.1. Purpose</a></li>
+            <li><a href="#12-scope">1.2. Scope</a></li>
+            <li><a href="#13-definitions">1.3. Definitions</a></li>
+            <li><a href="#14-references">1.4. References</a></li>
+            <li><a href="#15-overview">1.5. Overview</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#2-overall-description">2. Overall Description</a>
+          <ul>
+            <li>
+              <a href="#21-product-perspective">2.1. Product Perspective</a>
+              <ul>
+                <li>
+                  <a href="#211-user-interfaces">2.1.1. User Interfaces</a>
+                </li>
+                <li>
+                  <a href="#212-software-interfaces"
+                    >2.1.2. Software Interfaces</a
+                  >
+                </li>
+              </ul>
             </li>
-            <li><a href="#2-overall-description">2. Overall Description</a>
-                <ul>
-                    <li><a href="#21-product-perspective">2.1. Product Perspective</a>
-                        <ul>
-                            <li><a href="#211-user-interfaces">2.1.1. User Interfaces</a></li>
-                            <li><a href="#212-software-interfaces">2.1.2. Software Interfaces</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#22-product-functions">2.2. Product Functions</a></li>
-                    <li><a href="#23-user-characteristics">2.3. User Characteristics</a></li>
-                    <li><a href="#24-constraints">2.4. Constraints</a></li>
-                    <li><a href="#25-assumptions-and-dependencies">2.5. Assumptions and Dependencies</a></li>
-                </ul>
+            <li><a href="#22-product-functions">2.2. Product Functions</a></li>
+            <li>
+              <a href="#23-user-characteristics">2.3. User Characteristics</a>
             </li>
-            <li><a href="#3-specific-requirements">3. Specific Requirements</a>
-                <ul>
-                    <li><a href="#31-external-interface">3.1. External Interface</a></li>
-                    <li><a href="#32-functions">3.2. Functions</a></li>
-                    <li><a href="#33-logical-database-requirements">3.3. Logical Database Requirements</a></li>
-                    <li><a href="#34-software-system-attributes">3.4. Software System Attributes</a>
-                        <ul>
-                            <li><a href="#341-security">3.4.1. Security</a></li>
-                            <li><a href="#342-portability">3.4.2. Portability</a></li>
-                        </ul>
-                    </li>
-                </ul>
+            <li><a href="#24-constraints">2.4. Constraints</a></li>
+            <li>
+              <a href="#25-assumptions-and-dependencies"
+                >2.5. Assumptions and Dependencies</a
+              >
             </li>
-            <li><a href="#4-version-history">4. Version History</a></li>
-        </ul>
-        <hr>
-        <h1 class="mume-header" id="1-introduction">1. Introduction</h1>
-
-        <p>StudySpace is a web application that provides post-secondary students with access to virtual spaces that foster unique social learning environments. The purpose of this project is to promote a sense of unity and community among students by helping
-            them meet new peers, connect, and study together.</p>
-        <h2 class="mume-header" id="11-purpose">1.1. Purpose</h2>
-
-        <p>The purpose of this document is to establish the requirements of the project from an implementation perspective. Additionally, this document lays the foundation for all group processes from start to finish by outlining the vision for the project.
-            This document is intended to be used by developers, users, and any other individual who wants to learn the concept of this application and how its features work.</p>
-        <h2 class="mume-header" id="12-scope">1.2. Scope</h2>
-
-        <p>StudySpace allows users to search for and join virtual study groups. User benefits include improving academic success, making friends, and gaining a sense of community among peers. The objective of StudySpace is to help students to find groups
-            of like-minded individuals with who they can collaborate &#x2014; regardless of their physical locations. Through the use of this product, even students who are enrolled in online courses do not miss out on the benefits of group work and peer
-            discussion. StudySpace is distinct from other social media platforms because it is directed towards students and allows them to match with one another based on interests.</p>
-        <h2 class="mume-header" id="13-definitions">1.3. Definitions</h2>
-
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-d02k {
-                background-color: #FFF;
-                border-color: inherit;
-                color: #333;
-                text-align: left;
-                vertical-align: bottom
-            }
-            
-            .tg .tg-pdeq {
-                background-color: #FFF;
-                border-color: inherit;
-                font-weight: bold;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-za14 {
-                border-color: inherit;
-                text-align: left;
-                vertical-align: bottom
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">DESK</span></th>
-                    <th class="tg-za14" colspan="8">A Desk is a virtual space wherein students may collaborate privately or publicly.<br><br>Each desk is temporary; it only exists so long as it is in use. After everyone leaves the desk, it is purged from memory.<br><br>Each desk has
-                        an admin who can set a limit to the number of members and add signifiers such as language, age category, and other factors.<br><br>Users can sort desks based on their preferences (see: Private Desk), or join a random one (see:
-                        Public Desk).<br></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">TEAM</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">The Team refers to students in CP317 W21 Team 2.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">STUDY SPACE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">Study Space refers to the web application created by the Team for the Initial Audience, Mr. David Brown.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">USER MATCH</span></td>
-                    <td class="tg-za14" colspan="8">Users have the option to enter information about themselves, such as various preferences, courses they&#x2019;re enrolled in, and their study habits.<br><br>Users who are both members of the same group have the possibility of getting
-                        matched. The more preferences, common classes, and similar study habits two group members have, the more likely they are to be matched. When a User Match occurs, the matched users show up in each other&#x2019;s list of user matches,
-                        found on the page of the group they were matched from.</td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">STUDY GROUP</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A group of Students.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">STUDENT</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Student is a user enrolled in any Canadian university, who seeks the use of a Desk.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">INITIAL AUDIENCE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">This product was made for the use of Mr. David Brown, who is the initial User that is not part of the Team to use and test this application.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">TARGET AUDIENCE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">This product was created to solve areas most commonly experienced by Students.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">CHAT</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Chat is a feature where all members of a Group can send text messages to each other. The Chat is viewed through a chatbox on the Group&#x2019;s page.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">PUBLIC DESK</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Desk that any Student can enter and collaborate in.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">PRIVATE DESK</span></td>
-                    <td class="tg-za14" colspan="8">A Desk designated for a particular Study Group.<br><br>Students that are not part of that Study Group may not enter a Private Desk.</td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">FRIEND</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">Any two Users can become Friends if one sends a Friend Request and the other accepts it. When two Users are Friends, they can send private chat messages directly to one another.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">GROUP NAME</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Group Name is the name of a Group. The Group Name is set by a member of the Group. The Group Name must be unique so that other Users can easily discover the Group via Search.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">GROUP</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Group is a collection of two or more users who have connected through StudySpace either by Invitation or a User Match. All members of a Group automatically have access to a Chat upon joining.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">INVITATION</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">An Invitation is an opportunity for a User to join a Group. Any member of a Group can choose to send an Invitation to a User who isn&#x2019;t already a member.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">PAGE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Page is where Posts are viewed. Each Group can have one or more Pages.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">POST</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Post is an object which can include photos and text. Posts are created by Users for all members of a Group to see. Users can make a Post about anything they wish, including buying/selling textbooks, searching for a tutor, asking questions, looking for advice, etc. Users can write a Response to a Post.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">PROFILE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A page with personal information about the user. The Profile also provides functions such as managing group memberships and accessing chats.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">RESPONSE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Response is a text message which is linked to a Post.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">SEARCH</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">Search is a function of the app where Users can search and discover Groups by Group Name or Users by Username.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">USER</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A User is someone who uses the application; likely a Student.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">USERNAME</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">A Username is part of a User&#x2019;s account information. A Username is the name by which a User is referred to on the app.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-pdeq"><span style="font-weight:bold;color:#000;background-color:#FFF">UPVOTE/DOWNVOTE</span></td>
-                    <td class="tg-d02k" colspan="8"><span style="color:#333;background-color:#FFF">Users can express whether or not they like a post or agree with it by giving it an Upvote or Downvote. Upvoting is equivalent to &#x201C;liking&#x201D; the post, and Downvoting is the same as &#x201C;disliking&#x201D; the post.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <h2 class="mume-header" id="14-references">1.4. References</h2>
-
-        <ul>
-            <li><em>IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998</em></li>
-        </ul>
-        <h2 class="mume-header" id="15-overview">1.5. Overview</h2>
-
-        <p>The rest of this document contains details about the overall description and specific requirements of the project. Section 2 contains information about the product perspective, product functions, user characteristics, constraints, and dependencies.
-            Section 3 discusses external interfaces, functions, logical database requirements, and software system attributes.</p>
-        <hr>
-        <h1 class="mume-header" id="2-overall-description">2. Overall Description</h1>
-
-        <h2 class="mume-header" id="21-product-perspective">2.1. Product Perspective</h2>
-
-        <p>StudySpace is an independent, self-contained web application. Core features are personalized profiles, groups, chats, and pages in each group. It is a web application with 2 components: user interfaces (front end), and software interfaces (back
-            end).
-        </p>
-        <h3 class="mume-header" id="211-user-interfaces">2.1.1. User Interfaces</h3>
-
-        <ul>
-            <li><strong>Search bar</strong><br> StudySpace has a search bar along the top, icons to log in, and a home page with general information that appears upon entering the site. Users can use the search bar to navigate to groups that interest them.</li>
-            <li><strong>Profile</strong><br> Once logged in, a user will see a link to their profile. This link remains present as the user navigates the website. On the left side of this page, users can view/edit their preferences and other personal information.
-                On the right, there are two lists: a list of groups the user is a part of, and a list of users they are friends with. By clicking on one of the groups, the user is taken to the group page for that specific group. By clicking on one of
-                the users, the user is taken to the profile page of that user. Since the users are friends, the friends&#x2019; profile page will contain a button near the top, labelled &#x201C;Message&#x201D;, which the User can click to send a direct
-                chat to that friend.</li>
-            <li><strong>Create new post</strong><br> On the group page, there is a button at the top that allows the user to create a new post. Taking up the center of the group page is a list of titles corresponding to group posts that were previously published.
-                The posts are sorted by popularity.</li>
-            <li><strong>Post</strong>
-                <ul>
-                    <li><strong>Full-screen view of the post</strong><br> Clicking on the title of a post brings the user to a page containing a full-screen view of the post, with the title and the total number of upvotes/downvotes at the top, and the body
-                        of the post underneath. On either side of the upvotes/downvotes count are two arrow-shaped buttons; one pointing up and one pointing down. To upvote this post, the user must simply click the upward-pointing arrow. To downvote the
-                        post, the user must click the downward-pointing arrow. From this view, the responses to the post are also visible; they are displayed below the body of the original post. In between the body of the post and its responses, there
-                        is a textbox and a &#x201C;Reply&#x201D; button to the right of it. These features allow the user to submit a response to the post.</li>
-                    <li><strong>Chat box</strong><br> On the right-hand side of the group page is a chat box where members of the group can send text messages for others members to see.</li>
-                    <li><strong>User pop-up</strong><br> Any post, response, or chat displays a link that is the username of the user who sent/posted it. For posts, the username is displayed at the top next to the title. For responses and chat messages, the
-                        username of the sender is displayed directly above the body of the message. Clicking on the username brings the user to the profile of the user who sent/posted the item. Users can view the preferences and personal information of
-                        another user via their profile. While viewing another user&#x2019;s profile, a user also has the option to request to be their friend via a button in the top-right corner labelled &#x201C;Send Friend Request.&quot;</li>
-                </ul>
+          </ul>
+        </li>
+        <li>
+          <a href="#3-specific-requirements">3. Specific Requirements</a>
+          <ul>
+            <li>
+              <a href="#31-external-interface">3.1. External Interface</a>
             </li>
-            <li><strong>User match bar</strong><br> Along the left side of any group page is a list of user matches. User matches are based on the number of preferences two users have in common. Clicking on an entry in this list will bring the user to the
-                profile of the matched user/suggested friend&#x2019;s page where they can send a friend request if they would like.</li>
-        </ul>
-        <h3 class="mume-header" id="212-software-interfaces">2.1.2. Software Interfaces</h3>
-
-        <p>On the backend, clicking on groups, profiles, or posts sends a request to the database containing all information required by the site. The database must return said required information.</p>
-        <p>The chat function is also handled by the backend.</p>
-        <h2 class="mume-header" id="22-product-functions">2.2. Product Functions</h2>
-
-        <p>Users can create a group with a desired set of members or a specific topic. New groups may not share a name with existing groups. Users can create posts, comment on posts, chat, log in, and send friend requests to other users.</p>
-        <p><strong>Group - Signed In Users</strong><br> Posts are visible to everyone. Users who have not joined the group may still view the group&#x2019;s posts. Thus, any user can vote and comment on any posts. Any user could also make a post in the group.
-            _
-        </p>
-        <p><strong>Group - Users Who Are Not Signed In</strong><br> Posts are visible to everyone. Users who are not signed in can only view the posts. They cannot comment or vote.</p>
-        <p><strong>Voting and Commenting On A Post</strong><br> All users, including the post&#x2019;s author, can upvote or downvote only once. All signed-in users that are a part of the group can vote on posts and make comment(s) in said group.</p>
-        <h2 class="mume-header" id="23-user-characteristics">2.3. User Characteristics</h2>
-
-        <p>Post-secondary students are the intended users of this product. As such, it is assumed that the user is educated and has experience using a web browser and navigating websites. It is helpful -but not necessary- for the user to have experience
-            with common social media platforms, such as Reddit, Instagram, or Twitter. This experience should aid the user in learning how some features of StudySpace work, such as chat, due to the similarities to other social media.</p>
-        <h2 class="mume-header" id="24-constraints">2.4. Constraints</h2>
-
-        <p>A large number of users must be able to access the website at once. To ensure the website is reliable, smooth, and feels responsive to the user, chat logs should update within a second whenever a user sends a chat.</p>
-        <h2 class="mume-header" id="25-assumptions-and-dependencies">2.5. Assumptions and Dependencies</h2>
-
-        <p>It is assumed that users have a functioning, web-capable desktop computer with a browser installed. Users are expected to have an internet connection for the entire duration of their session. StudySpace should be compatible with any desktop operating
-            system.
-        </p>
-        <hr>
-        <h1 class="mume-header" id="3-specific-requirements">3. Specific Requirements</h1>
-
-        <h2 class="mume-header" id="31-external-interface">3.1. External Interface</h2>
-
-        <ul>
-            <li><strong>Posts</strong>
-                <ul>
-                    <li>Beside each post, there is an &#x201C;upvote&#x201D; or &#x201C;downvote&#x201D; icon.</li>
-                    <li>Upvoting a post increases the total number of upvotes/downvotes by 1, and downvoting decreases the total by 1.</li>
-                    <li>Any user, including the author of the post, can only upvote or downvote a post once. The total number of upvotes/downvotes can be less than 0 if the number of downvotes exceeds the number of upvotes.</li>
-                    <li>Only loading in a small amount of posts initially. More posts will load as the user scrolls up.</li>
-                    <li>If no posts have been made to a group, a message is displayed which says, &#x201C;There are no posts here.&#x201D;</li>
-                    <li>When creating a post, there are requirements that must be met before it can be published. All posts need a title and at least one character of body text.</li>
-                </ul>
+            <li><a href="#32-functions">3.2. Functions</a></li>
+            <li>
+              <a href="#33-logical-database-requirements"
+                >3.3. Logical Database Requirements</a
+              >
             </li>
-        </ul>
-        <h2 class="mume-header" id="32-functions">3.2. Functions</h2>
-
-        <ul>
-            <li><strong>Creating, editing, deleting posts</strong>
-                <ul>
-                    <li>Once a user has created a post, they can edit or delete the post by accessing it via the group page where it is posted.</li>
-                </ul>
+            <li>
+              <a href="#34-software-system-attributes"
+                >3.4. Software System Attributes</a
+              >
+              <ul>
+                <li><a href="#341-security">3.4.1. Security</a></li>
+                <li><a href="#342-portability">3.4.2. Portability</a></li>
+              </ul>
             </li>
-            <li><strong>Searching</strong>
-                <ul>
-                    <li>Any additional spaces or misspelled words in the search bar must be understood. For example &#x201C;CP31 7 Wilfred&#x201D; must show the intended results of &#x201C;Cp317 Wilfrid&#x201D;.</li>
-                    <li>Implemented by a Full-Text-Search in the relational database which is part of the backend.</li>
-                </ul>
+          </ul>
+        </li>
+        <li><a href="#4-version-history">4. Version History</a></li>
+      </ul>
+      <hr />
+      <h1 class="mume-header" id="1-introduction">1. Introduction</h1>
+
+      <p>
+        StudySpace is a web application that provides post-secondary students
+        with access to virtual spaces that foster unique social learning
+        environments. The purpose of this project is to promote a sense of unity
+        and community among students by helping them meet new peers, connect,
+        and study together.
+      </p>
+      <h2 class="mume-header" id="11-purpose">1.1. Purpose</h2>
+
+      <p>
+        The purpose of this document is to establish the requirements of the
+        project from an implementation perspective. Additionally, this document
+        lays the foundation for all group processes from start to finish by
+        outlining the vision for the project. This document is intended to be
+        used by developers, users, and any other individual who wants to learn
+        the concept of this application and how its features work.
+      </p>
+      <h2 class="mume-header" id="12-scope">1.2. Scope</h2>
+
+      <p>
+        StudySpace allows users to search for and join virtual study groups.
+        User benefits include improving academic success, making friends, and
+        gaining a sense of community among peers. The objective of StudySpace is
+        to help students to find groups of like-minded individuals with who they
+        can collaborate &#x2014; regardless of their physical locations. Through
+        the use of this product, even students who are enrolled in online
+        courses do not miss out on the benefits of group work and peer
+        discussion. StudySpace is distinct from other social media platforms
+        because it is directed towards students and allows them to match with
+        one another based on interests.
+      </p>
+      <h2 class="mume-header" id="13-definitions">1.3. Definitions</h2>
+
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-d02k {
+          background-color: #fff;
+          border-color: inherit;
+          color: #333;
+          text-align: left;
+          vertical-align: bottom;
+        }
+
+        .tg .tg-pdeq {
+          background-color: #fff;
+          border-color: inherit;
+          font-weight: bold;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-za14 {
+          border-color: inherit;
+          text-align: left;
+          vertical-align: bottom;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >DESK</span
+              >
+            </th>
+            <th class="tg-za14" colspan="8">
+              A Desk is a virtual space wherein students may collaborate
+              privately or publicly.<br /><br />Each desk is temporary; it only
+              exists so long as it is in use. After everyone leaves the desk, it
+              is purged from memory.<br /><br />Each desk has an admin who can
+              set a limit to the number of members and add signifiers such as
+              language, age category, and other factors.<br /><br />Users can
+              sort desks based on their preferences (see: Private Desk), or join
+              a random one (see: Public Desk).<br />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >TEAM</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >The Team refers to students in CP317 W21 Team 2.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >STUDY SPACE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >Study Space refers to the web application created by the Team
+                for the Initial Audience, Mr. David Brown.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >USER MATCH</span
+              >
+            </td>
+            <td class="tg-za14" colspan="8">
+              Users have the option to enter information about themselves, such
+              as various preferences, courses they&#x2019;re enrolled in, and
+              their study habits.<br /><br />Users who are both members of the
+              same group have the possibility of getting matched. The more
+              preferences, common classes, and similar study habits two group
+              members have, the more likely they are to be matched. When a User
+              Match occurs, the matched users show up in each other&#x2019;s
+              list of user matches, found on the page of the group they were
+              matched from.
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >STUDY GROUP</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A group of Students.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >STUDENT</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Student is a user enrolled in any Canadian university, who
+                seeks the use of a Desk.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >INITIAL AUDIENCE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >This product was made for the use of Mr. David Brown, who is
+                the initial User that is not part of the Team to use and test
+                this application.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >TARGET AUDIENCE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >This product was created to solve areas most commonly
+                experienced by Students.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >CHAT</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Chat is a feature where all members of a Group can send text
+                messages to each other. The Chat is viewed through a chatbox on
+                the Group&#x2019;s page.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >PUBLIC DESK</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Desk that any Student can enter and collaborate in.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >PRIVATE DESK</span
+              >
+            </td>
+            <td class="tg-za14" colspan="8">
+              A Desk designated for a particular Study Group.<br /><br />Students
+              that are not part of that Study Group may not enter a Private
+              Desk.
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >FRIEND</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >Any two Users can become Friends if one sends a Friend Request
+                and the other accepts it. When two Users are Friends, they can
+                send private chat messages directly to one another.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >GROUP NAME</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Group Name is the name of a Group. The Group Name is set by a
+                member of the Group. The Group Name must be unique so that other
+                Users can easily discover the Group via Search.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >GROUP</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Group is a collection of two or more users who have connected
+                through StudySpace either by Invitation or a User Match. All
+                members of a Group automatically have access to a Chat upon
+                joining.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >INVITATION</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >An Invitation is an opportunity for a User to join a Group. Any
+                member of a Group can choose to send an Invitation to a User who
+                isn&#x2019;t already a member.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >PAGE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Page is where Posts are viewed. Each Group can have one or
+                more Pages.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >POST</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Post is an object which can include photos and text. Posts
+                are created by Users for all members of a Group to see. Users
+                can make a Post about anything they wish, including
+                buying/selling textbooks, searching for a tutor, asking
+                questions, looking for advice, etc. Users can write a Response
+                to a Post.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >PROFILE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A page with personal information about the user. The Profile
+                also provides functions such as managing group memberships and
+                accessing chats.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >RESPONSE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Response is a text message which is linked to a Post.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >SEARCH</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >Search is a function of the app where Users can search and
+                discover Groups by Group Name or Users by Username.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >USER</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A User is someone who uses the application; likely a
+                Student.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >USERNAME</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >A Username is part of a User&#x2019;s account information. A
+                Username is the name by which a User is referred to on the
+                app.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-pdeq">
+              <span
+                style="font-weight: bold; color: #000; background-color: #fff"
+                >UPVOTE/DOWNVOTE</span
+              >
+            </td>
+            <td class="tg-d02k" colspan="8">
+              <span style="color: #333; background-color: #fff"
+                >Users can express whether or not they like a post or agree with
+                it by giving it an Upvote or Downvote. Upvoting is equivalent to
+                &#x201C;liking&#x201D; the post, and Downvoting is the same as
+                &#x201C;disliking&#x201D; the post.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="mume-header" id="14-references">1.4. References</h2>
+
+      <ul>
+        <li>
+          <em
+            >IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software
+            Requirements Specifications. IEEE Computer Society, 1998</em
+          >
+        </li>
+      </ul>
+      <h2 class="mume-header" id="15-overview">1.5. Overview</h2>
+
+      <p>
+        The rest of this document contains details about the overall description
+        and specific requirements of the project. Section 2 contains information
+        about the product perspective, product functions, user characteristics,
+        constraints, and dependencies. Section 3 discusses external interfaces,
+        functions, logical database requirements, and software system
+        attributes.
+      </p>
+      <hr />
+      <h1 class="mume-header" id="2-overall-description">
+        2. Overall Description
+      </h1>
+
+      <h2 class="mume-header" id="21-product-perspective">
+        2.1. Product Perspective
+      </h2>
+
+      <p>
+        StudySpace is an independent, self-contained web application. Core
+        features are personalized profiles, groups, chats, and pages in each
+        group. It is a web application with 2 components: user interfaces (front
+        end), and software interfaces (back end).
+      </p>
+      <h3 class="mume-header" id="211-user-interfaces">
+        2.1.1. User Interfaces
+      </h3>
+
+      <ul>
+        <li>
+          <strong>Search bar</strong><br />
+          StudySpace has a search bar along the top, icons to log in, and a home
+          page with general information that appears upon entering the site.
+          Users can use the search bar to navigate to groups that interest them.
+        </li>
+        <li>
+          <strong>Profile</strong><br />
+          Once logged in, a user will see a link to their profile. This link
+          remains present as the user navigates the website. On the left side of
+          this page, users can view/edit their preferences and other personal
+          information. On the right, there are two lists: a list of groups the
+          user is a part of, and a list of users they are friends with. By
+          clicking on one of the groups, the user is taken to the group page for
+          that specific group. By clicking on one of the users, the user is
+          taken to the profile page of that user. Since the users are friends,
+          the friends&#x2019; profile page will contain a button near the top,
+          labelled &#x201C;Message&#x201D;, which the User can click to send a
+          direct chat to that friend.
+        </li>
+        <li>
+          <strong>Create new post</strong><br />
+          On the group page, there is a button at the top that allows the user
+          to create a new post. Taking up the center of the group page is a list
+          of titles corresponding to group posts that were previously published.
+          The posts are sorted by popularity.
+        </li>
+        <li>
+          <strong>Post</strong>
+          <ul>
+            <li>
+              <strong>Full-screen view of the post</strong><br />
+              Clicking on the title of a post brings the user to a page
+              containing a full-screen view of the post, with the title and the
+              total number of upvotes/downvotes at the top, and the body of the
+              post underneath. On either side of the upvotes/downvotes count are
+              two arrow-shaped buttons; one pointing up and one pointing down.
+              To upvote this post, the user must simply click the
+              upward-pointing arrow. To downvote the post, the user must click
+              the downward-pointing arrow. From this view, the responses to the
+              post are also visible; they are displayed below the body of the
+              original post. In between the body of the post and its responses,
+              there is a textbox and a &#x201C;Reply&#x201D; button to the right
+              of it. These features allow the user to submit a response to the
+              post.
             </li>
-            <li><strong>User sign-in</strong>
-                <ul>
-                    <li>When users sign in, the email form must be in proper email format (eg; having &#x201C;@&#x201D; in their email address&#x201D;).</li>
-                    <li>Passwords must contain at least 8 characters, one symbol, and one number.</li>
-                    <li>Users stay logged in until they sign out.</li>
-                </ul>
+            <li>
+              <strong>Chat box</strong><br />
+              On the right-hand side of the group page is a chat box where
+              members of the group can send text messages for others members to
+              see.
             </li>
-        </ul>
-        <h2 class="mume-header" id="33-logical-database-requirements">3.3. Logical Database Requirements</h2>
-        <!-- TABLESTART -->
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-s4ws {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                text-decoration: underline;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">USER: contains a record for every user that has created a profile</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">userID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A unique ID given to all users who sign up for StudySpace.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">username - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The username to which the user is referred to on the app.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">firstName - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The first name of the user.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">lastName - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The last name of the user.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">email - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The email address of the user.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">password - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The password of the user.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">registerDate - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date the user </span>
-                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:transparent">created an account on</span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent"> StudySpace.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">interest1 - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">An interest of the user </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">used for generating User Matches</span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">interest2 - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">An interest of the user </span>
-                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">used for generating User Matches</span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">interest3 - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">An interest of the user </span>
-                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">used for generating User Matches</span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">program - </span>
-                        <span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">The academic program which the user is enrolled in</span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">picture - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A picture that the user can upload for </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">their </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">display picture.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The user id is the primary key of the USER table.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- FRIENDS -->
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">FRIEND: contains a record for every friendship relation </span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">userID - </span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">The unique </span>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">ID of a user.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">friendID - </span>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">The unique id of a user who is friends with the user associated with user_id.</span><br>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">startDate - </span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">The date on which the two users with user IDs matching user_id and friend_id became friends on the platform.</span><br>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">Status - </span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">There are 3 possible statuses of a friend request</span>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">:</span><br>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent"> Send friend request (</span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">not yet friends</span>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">)</span><br>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent"> - Pending friend request (request sent but </span><br><span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">                           not accepted)</span><br>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent"> - Friends (</span><span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF">request accepted; users are now</span><br>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#3C4043;background-color:#FFF"> friends</span>
-                        <span style="font-weight:400;font-style:normal;text-decoration:none;color:#000;background-color:transparent">)</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The friendID is the primary key of the FRIEND table.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- GROUPS TABLE -->
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">GROUP: contains a record for every group in the system</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A unique ID given to a group when it is created.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupName - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The name of the group.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">picture - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">A picture that a group member uploaded for the </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">group's</span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent"> display </span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">creationDate - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date the group was created.</span></td>
-                </tr>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">The groupID is the primary key of the GROUP table.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- POSTS  TABLE -->
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">POSTS: contains a record for every post that has ever been published</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">postID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the post.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of </span><span style="font-weight:400;font-style:normal;color:#3C4043;background-color:#FFF">the group that uploaded the post</span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">title - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The title of the post.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">body - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The actual body/message of the post.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">postTimestamp - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date and time the post was posted.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The postID is the primary key of the POSTS table.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- RESPONSES  TABLE -->
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">RESPONSE: contains a record for every response that has ever been made to a post</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">responseID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the response on a given post.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">body - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The body/message of the response.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">postID - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the post.</span><br><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">responseTimestamp - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The date and time the response was posted.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> The responseID is the primary key of the RESPONSE table.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- USER GROUPS  TABLE -->
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-            
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-            
-            .tg .tg-pys6 {
-                background-color: #FFF;
-                color: #24292E;
-                text-align: left;
-                vertical-align: top
-            }
-            
-            .tg .tg-hcrr {
-                background-color: #FFF;
-                color: #24292E;
-                font-style: italic;
-                text-align: left;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg">
-            <thead>
-                <tr>
-                    <th class="tg-pys6" colspan="2"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF">USER_GROUP: contains a record for every member of every group.</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Fields</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">groupID - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the group.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">Moderator - </span><span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">Boolean value representing whether the user is a moderator.</span><br>
-                        <span style="font-weight:400;font-style:normal;color:#24292E;background-color:#FFF">userID - </span>
-                        <span style="font-weight:400;font-style:normal;color:#000;background-color:transparent">The unique ID of the user that is in the group.</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tg-hcrr"><span style="font-weight:400;font-style:italic;text-decoration:none;color:#24292E;background-color:#FFF">Relationships</span></td>
-                    <td class="tg-pys6"><span style="font-weight:400;font-style:normal;text-decoration:none;color:#24292E;background-color:#FFF"> groupID and userID are the foreign keys for the USER_GROUP table.</span></td>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <!-- TABLEEND -->
-        <h2 class="mume-header" id="34-software-system-attributes">3.4. Software System Attributes</h2>
+            <li>
+              <strong>User pop-up</strong><br />
+              Any post, response, or chat displays a link that is the username
+              of the user who sent/posted it. For posts, the username is
+              displayed at the top next to the title. For responses and chat
+              messages, the username of the sender is displayed directly above
+              the body of the message. Clicking on the username brings the user
+              to the profile of the user who sent/posted the item. Users can
+              view the preferences and personal information of another user via
+              their profile. While viewing another user&#x2019;s profile, a user
+              also has the option to request to be their friend via a button in
+              the top-right corner labelled &#x201C;Send Friend Request.&quot;
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>User match bar</strong><br />
+          Along the left side of any group page is a list of user matches. User
+          matches are based on the number of preferences two users have in
+          common. Clicking on an entry in this list will bring the user to the
+          profile of the matched user/suggested friend&#x2019;s page where they
+          can send a friend request if they would like.
+        </li>
+      </ul>
+      <h3 class="mume-header" id="212-software-interfaces">
+        2.1.2. Software Interfaces
+      </h3>
 
-        <h3 class="mume-header" id="341-security">3.4.1. Security</h3>
+      <p>
+        On the backend, clicking on groups, profiles, or posts sends a request
+        to the database containing all information required by the site. The
+        database must return said required information.
+      </p>
+      <p>The chat function is also handled by the backend.</p>
+      <h2 class="mume-header" id="22-product-functions">
+        2.2. Product Functions
+      </h2>
 
-        <p>Any access to the StudySpace backend needs to be verified to ensure that only authorized administrators/moderators have access. Authorization involves entering a valid username and password to an account with administrator privileges. When an
-            administrator or moderator logs into the system, they are granted permissions to edit, create, and delete content.</p>
-        <h3 class="mume-header" id="342-portability">3.4.2. Portability</h3>
+      <p>
+        Users can create a group with a desired set of members or a specific
+        topic. New groups may not share a name with existing groups. Users can
+        create posts, comment on posts, chat, log in, and send friend requests
+        to other users.
+      </p>
+      <p>
+        <strong>Group - Signed In Users</strong><br />
+        Posts are visible to everyone. Users who have not joined the group may
+        still view the group&#x2019;s posts. Thus, any user can vote and comment
+        on any posts. Any user could also make a post in the group. _
+      </p>
+      <p>
+        <strong>Group - Users Who Are Not Signed In</strong><br />
+        Posts are visible to everyone. Users who are not signed in can only view
+        the posts. They cannot comment or vote.
+      </p>
+      <p>
+        <strong>Voting and Commenting On A Post</strong><br />
+        All users, including the post&#x2019;s author, can upvote or downvote
+        only once. All signed-in users that are a part of the group can vote on
+        posts and make comment(s) in said group.
+      </p>
+      <h2 class="mume-header" id="23-user-characteristics">
+        2.3. User Characteristics
+      </h2>
 
-        <p>StudySpace must be accessible on any desktop that is web-capable and has a browser. Therefore, StudySpace must be compatible with any operating system, including Windows, Mac OS, Linux, iOS, and Android. The product must also be compatible with
-            any browser, including Chrome, Firefox, Internet Explorer, Edge, and Safari.</p>
-        <hr>
-        <h1 class="mume-header" id="4-version-history">4. Version History</h1>
+      <p>
+        Post-secondary students are the intended users of this product. As such,
+        it is assumed that the user is educated and has experience using a web
+        browser and navigating websites. It is helpful -but not necessary- for
+        the user to have experience with common social media platforms, such as
+        Reddit, Instagram, or Twitter. This experience should aid the user in
+        learning how some features of StudySpace work, such as chat, due to the
+        similarities to other social media.
+      </p>
+      <h2 class="mume-header" id="24-constraints">2.4. Constraints</h2>
 
-        <h3> Version 1.0 - 19/01/2021 </h3>
-        <p>Document created by</p>
-        <ul>
-            <li>Arvin Benipal</li>
-            <li>Brian Carvalho</li>
-            <li>David Rosien</li>
-            <li>Mackenzie Van Zanden</li>
-            <li>Matth Francis</li>
-            <li>Muhammad Hashir</li>
-            <li>Shyam Dave</li>
-            <li>Zeeshan Jafri</li>
-        </ul>
-        <h3> Version 1.1 - 20/01/2021 </h3>
-        <p>Ported document to markdown, cleaned, and formatted some of the language.</p>
-        <ul>
-            <li>Rohan Uddin</li>
-        </ul>
-        <h3>Version 1.2 - 25/01/2021 </h3>
-        <p>Adjusted document upon SQA suggestions</p>
-        <ul>
-            <li>Janelle Tait</li>
-        </ul>
-        <p>Thanks to SQA by</p>
-        <ul>
-            <li>Dayton Talarico</li>
-        </ul>
-        <h3>Version 1.3 - 27/01/2021</h3>
-        <p>Document reformatted and expanded to follow IEEE standards</p>
-        <ul>
-            <li>Janelle Tait</li>
-            <li>Mackenzie Van Zanden</li>
-            <li>Matt Francis</li>
-            <li>Ann Baldonasa</li>
-        </ul>
-        <h3>Version 1.4 - 28/01/2021</h3>
-        <p>Adjusted document upon SQA suggestions</p>
-        <ul>
-            <li>Janelle Tait</li>
-        </ul>
-        <p>Thanks to SQA by</p>
-        <ul>
-            <li>Dayton Talarico</li>
-        </ul>
-        <h3>Version 1.5 - 30/01/2021</h3>
-        <p>Ported document to Markdown</p>
-        <ul>
-            <li>Rohan Uddin</li>
-        </ul>
-        <h3> Version 1.6 - 07/04/2021</h3>
-        <p>Performed SQA to check for consistency with other documents and grammar checks</p>
-        <ul>
-            <li>Ann Baldonasa</li>
-        </ul>
-        <p>Updated document based on David Brown&#x2019;s comments as well as consistency with other documents</p>
-        <ul>
-            <li>Dayton Talarico</li>
-            <li>Janelle Tait</li>
-        </ul>
-        <p>Removed Public/Private Groups as we are no longer including this feature</p>
-        <ul>
-            <li>Dayton Talarico</li>
-        </ul>
-        <p>Removed layouts section from specific requirements</p>
-        <ul>
-            <li>Janelle Tait</li>
-        </ul>
-        <p>Removed Voice Chat and Tutors as we are no longer including these features</p>
-        <ul>
-            <li>Janelle Tait</li>
-        </ul>
-        <p>Updated Section 3.3 to match the Design document</p>
-        <ul>
-            <li>Dayton Talarico</li>
-        </ul>
-        <p>Removed mentioning of mobile device compatibility</p>
-        <ul>
-            <li>Janelle Tait</li>
-        </ul>
-        <p>Reformatted and converted to HTML</p>
-        <ul>
-            <li>Ann Baldonasa</li>
-        </ul>
-        <h3>Version 1.7 - 16/04/2021</h3>
-        <p>Reformatted tables</p>
-        <ul>
-            <li>Ann Baldonsa</li>
-        </ul>
+      <p>
+        A large number of users must be able to access the website at once. To
+        ensure the website is reliable, smooth, and feels responsive to the
+        user, chat logs should update within a second whenever a user sends a
+        chat.
+      </p>
+      <h2 class="mume-header" id="25-assumptions-and-dependencies">
+        2.5. Assumptions and Dependencies
+      </h2>
 
+      <p>
+        It is assumed that users have a functioning, web-capable desktop
+        computer with a browser installed. Users are expected to have an
+        internet connection for the entire duration of their session. StudySpace
+        should be compatible with any desktop operating system.
+      </p>
+      <hr />
+      <h1 class="mume-header" id="3-specific-requirements">
+        3. Specific Requirements
+      </h1>
+
+      <h2 class="mume-header" id="31-external-interface">
+        3.1. External Interface
+      </h2>
+
+      <ul>
+        <li>
+          <strong>Posts</strong>
+          <ul>
+            <li>
+              Beside each post, there is an &#x201C;upvote&#x201D; or
+              &#x201C;downvote&#x201D; icon.
+            </li>
+            <li>
+              Upvoting a post increases the total number of upvotes/downvotes by
+              1, and downvoting decreases the total by 1.
+            </li>
+            <li>
+              Any user, including the author of the post, can only upvote or
+              downvote a post once. The total number of upvotes/downvotes can be
+              less than 0 if the number of downvotes exceeds the number of
+              upvotes.
+            </li>
+            <li>
+              Only loading in a small amount of posts initially. More posts will
+              load as the user scrolls up.
+            </li>
+            <li>
+              If no posts have been made to a group, a message is displayed
+              which says, &#x201C;There are no posts here.&#x201D;
+            </li>
+            <li>
+              When creating a post, there are requirements that must be met
+              before it can be published. All posts need a title and at least
+              one character of body text.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="mume-header" id="32-functions">3.2. Functions</h2>
+
+      <ul>
+        <li>
+          <strong>Creating, editing, deleting posts</strong>
+          <ul>
+            <li>
+              Once a user has created a post, they can edit or delete the post
+              by accessing it via the group page where it is posted.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Searching</strong>
+          <ul>
+            <li>
+              Any additional spaces or misspelled words in the search bar must
+              be understood. For example &#x201C;CP31 7 Wilfred&#x201D; must
+              show the intended results of &#x201C;Cp317 Wilfrid&#x201D;.
+            </li>
+            <li>
+              Implemented by a Full-Text-Search in the relational database which
+              is part of the backend.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>User sign-in</strong>
+          <ul>
+            <li>
+              When users sign in, the email form must be in proper email format
+              (eg; having &#x201C;@&#x201D; in their email address&#x201D;).
+            </li>
+            <li>
+              Passwords must contain at least 8 characters, one symbol, and one
+              number.
+            </li>
+            <li>Users stay logged in until they sign out.</li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="mume-header" id="33-logical-database-requirements">
+        3.3. Logical Database Requirements
+      </h2>
+      <!-- TABLESTART -->
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-s4ws {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          text-decoration: underline;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pys6" colspan="2">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >USER: contains a record for every user that has created a
+                profile</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Fields</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >userID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >A unique ID given to all users who sign up for
+                StudySpace.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >username - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The username to which the user is referred to on the app.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >firstName -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The first name of the user.</span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >lastName -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The last name of the user.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >email - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The email address of the user.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >password -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The password of the user.</span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >registerDate -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The date the user
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: transparent;
+                "
+                >created an account on</span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+              >
+                StudySpace.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >interest1 -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >An interest of the user </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >used for generating User Matches</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >interest2 - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >An interest of the user
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >used for generating User Matches</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >.</span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >interest3 -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >An interest of the user
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >used for generating User Matches</span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >program -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >The academic program which the user is enrolled in</span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >picture -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >A picture that the user can upload for </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >their
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >display picture.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Relationships</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+              >
+                The user id is the primary key of the USER table.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- FRIENDS -->
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pys6" colspan="2">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >FRIEND: contains a record for every friendship relation
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Fields</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >userID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >ID of a user.</span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >friendID -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >The unique id of a user who is friends with the user associated
+                with user_id.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >startDate - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >The date on which the two users with user IDs matching user_id
+                and friend_id became friends on the platform.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Status - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >There are 3 possible statuses of a friend request</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >:</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+              >
+                Send friend request (</span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >not yet friends</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >)</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+              >
+                - Pending friend request (request sent but </span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+              >
+                not accepted)</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+              >
+                - Friends (</span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >request accepted; users are now</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+              >
+                friends</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >)</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Relationships</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+              >
+                The friendID is the primary key of the FRIEND table.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- GROUPS TABLE -->
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pys6" colspan="2">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >GROUP: contains a record for every group in the system</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Fields</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >groupID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >A unique ID given to a group when it is created.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >groupName - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The name of the group.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >picture -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >A picture that a group member uploaded for the </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >group's</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+              >
+                display </span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >creationDate - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The date the group was created.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Relationships</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >The groupID is the primary key of the GROUP table.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- POSTS  TABLE -->
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pys6" colspan="2">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >POSTS: contains a record for every post that has ever been
+                published</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Fields</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >postID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique ID of the post.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >groupID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique ID of </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #3c4043;
+                  background-color: #fff;
+                "
+                >the group that uploaded the post</span
+              >
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >.</span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >title - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The title of the post.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >body - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The actual body/message of the post.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >postTimestamp -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The date and time the post was posted.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Relationships</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+              >
+                The postID is the primary key of the POSTS table.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- RESPONSES  TABLE -->
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pys6" colspan="2">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >RESPONSE: contains a record for every response that has ever
+                been made to a post</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Fields</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >responseID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique ID of the response on a given post.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >body - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The body/message of the response.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >postID -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique ID of the post.</span
+              ><br /><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >responseTimestamp -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The date and time the response was posted.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Relationships</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+              >
+                The responseID is the primary key of the RESPONSE table.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- USER GROUPS  TABLE -->
+      <style type="text/css">
+        .tg {
+          border-collapse: collapse;
+          border-spacing: 0;
+        }
+
+        .tg td {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg th {
+          border-color: black;
+          border-style: solid;
+          border-width: 1px;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          font-weight: normal;
+          overflow: hidden;
+          padding: 10px 5px;
+          word-break: normal;
+        }
+
+        .tg .tg-pys6 {
+          background-color: #fff;
+          color: #24292e;
+          text-align: left;
+          vertical-align: top;
+        }
+
+        .tg .tg-hcrr {
+          background-color: #fff;
+          color: #24292e;
+          font-style: italic;
+          text-align: left;
+          vertical-align: top;
+        }
+      </style>
+      <table class="tg">
+        <thead>
+          <tr>
+            <th class="tg-pys6" colspan="2">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >USER_GROUP: contains a record for every member of every
+                group.</span
+              >
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Fields</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >groupID - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique ID of the group.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Moderator - </span
+              ><span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >Boolean value representing whether the user is a
+                moderator.</span
+              ><br />
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >userID -
+              </span>
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  color: #000;
+                  background-color: transparent;
+                "
+                >The unique ID of the user that is in the group.</span
+              >
+            </td>
+          </tr>
+          <tr>
+            <td class="tg-hcrr">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: italic;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+                >Relationships</span
+              >
+            </td>
+            <td class="tg-pys6">
+              <span
+                style="
+                  font-weight: 400;
+                  font-style: normal;
+                  text-decoration: none;
+                  color: #24292e;
+                  background-color: #fff;
+                "
+              >
+                groupID and userID are the foreign keys for the USER_GROUP
+                table.</span
+              >
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <!-- TABLEEND -->
+      <h2 class="mume-header" id="34-software-system-attributes">
+        3.4. Software System Attributes
+      </h2>
+
+      <h3 class="mume-header" id="341-security">3.4.1. Security</h3>
+
+      <p>
+        Any access to the StudySpace backend needs to be verified to ensure that
+        only authorized administrators/moderators have access. Authorization
+        involves entering a valid username and password to an account with
+        administrator privileges. When an administrator or moderator logs into
+        the system, they are granted permissions to edit, create, and delete
+        content.
+      </p>
+      <h3 class="mume-header" id="342-portability">3.4.2. Portability</h3>
+
+      <p>
+        StudySpace must be accessible on any desktop that is web-capable and has
+        a browser. Therefore, StudySpace must be compatible with any operating
+        system, including Windows, Mac OS, Linux, iOS, and Android. The product
+        must also be compatible with any browser, including Chrome, Firefox,
+        Internet Explorer, Edge, and Safari.
+      </p>
+      <hr />
+      <h1 class="mume-header" id="4-version-history">4. Version History</h1>
+
+      <h3>Version 1.0 - 19/01/2021</h3>
+      <p>Document created by</p>
+      <ul>
+        <li>Arvin Benipal</li>
+        <li>Brian Carvalho</li>
+        <li>David Rosien</li>
+        <li>Mackenzie Van Zanden</li>
+        <li>Matth Francis</li>
+        <li>Muhammad Hashir</li>
+        <li>Shyam Dave</li>
+        <li>Zeeshan Jafri</li>
+      </ul>
+      <h3>Version 1.1 - 20/01/2021</h3>
+      <p>
+        Ported document to markdown, cleaned, and formatted some of the
+        language.
+      </p>
+      <ul>
+        <li>Rohan Uddin</li>
+      </ul>
+      <h3>Version 1.2 - 25/01/2021</h3>
+      <p>Adjusted document upon SQA suggestions</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>Thanks to SQA by</p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <h3>Version 1.3 - 27/01/2021</h3>
+      <p>Document reformatted and expanded to follow IEEE standards</p>
+      <ul>
+        <li>Janelle Tait</li>
+        <li>Mackenzie Van Zanden</li>
+        <li>Matt Francis</li>
+        <li>Ann Baldonasa</li>
+      </ul>
+      <h3>Version 1.4 - 28/01/2021</h3>
+      <p>Adjusted document upon SQA suggestions</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>Thanks to SQA by</p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <h3>Version 1.5 - 30/01/2021</h3>
+      <p>Ported document to Markdown</p>
+      <ul>
+        <li>Rohan Uddin</li>
+      </ul>
+      <h3>Version 1.6 - 07/04/2021</h3>
+      <p>
+        Performed SQA to check for consistency with other documents and grammar
+        checks
+      </p>
+      <ul>
+        <li>Ann Baldonasa</li>
+      </ul>
+      <p>
+        Updated document based on David Brown&#x2019;s comments as well as
+        consistency with other documents
+      </p>
+      <ul>
+        <li>Dayton Talarico</li>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>
+        Removed Public/Private Groups as we are no longer including this feature
+      </p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>Removed layouts section from specific requirements</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>
+        Removed Voice Chat and Tutors as we are no longer including these
+        features
+      </p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>Updated Section 3.3 to match the Design document</p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>Removed mentioning of mobile device compatibility</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>Reformatted and converted to HTML</p>
+      <ul>
+        <li>Ann Baldonasa</li>
+      </ul>
+      <h3>Version 1.7 - 16/04/2021</h3>
+      <p>Reformatted tables</p>
+      <ul>
+        <li>Ann Baldonsa</li>
+      </ul>
     </div>
-
-</body>
-
+  </body>
 </html>

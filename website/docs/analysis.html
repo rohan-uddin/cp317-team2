@@ -1,310 +1,492 @@
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
     <title>StudySpace | CP317</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">StudySpace</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a
-                    >
-                    <a class="nav-item nav-link" href="specifications.html"
-                        >Specifications</a
-                    >
-                    <a class="nav-item nav-link" href="spmp.html">SPMP</a>
-                <a class="nav-item nav-link" href="requirements.html">Requirements</a
-                    >
-                    <a class="nav-item nav-link active" href="#">Analysis</a>
-                <a class="nav-item nav-link" href="design.html">Design</a>
-                <a class="nav-item nav-link" href="#">Implementation</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link to Web App</a
-                    >
-                </div>
-            </div>
-        </nav>
-        <br />
-        <div class="container">
-            <h1>Software Analysis</h1>
-            <p><em>Version 1.5</em></p>
-            <hr>
-            <ul>
-<li><a href="#1-introduction">1. Introduction</a>
-                <ul>
-                    <li><a href="#11-project-summary">1.1. Project summary</a></li>
-                    <li><a href="#12-project-purpose">1.2. Project purpose</a></li>
-                </ul>
-                </li>
-                <li><a href="#2-object-classification">2. Object Classification</a>
-                    <ul>
-                        <li><a href="#21-object-diagram">2.1. Object diagram</a></li>
-                        <li><a href="#22-entity-objects">2.2. Entity Objects</a></li>
-                        <li><a href="#23-control-objects">2.3. Control Objects</a></li>
-                        <li><a href="#24-boundary-objects">2.4. Boundary Objects</a></li>
-                    </ul>
-                </li>
-                <li><a href="#3-controller-diagrams">3. Controller Diagrams</a>
-                    <ul>
-                        <li><a href="#31-user-controller-event-loop">3.1. User Controller Event Loop</a></li>
-                        <li><a href="#32-user-controller-class">3.2. User Controller Class</a></li>
-                        <li><a href="#33-group-controller-class">3.3. Group Controller Class</a></li>
-                        <li><a href="#34-event-controller-class">3.4. Event Controller Class</a></li>
-                    </ul>
-                </li>
-                <li><a href="#4-non-functional-attributes">4. Non Functional Attributes</a></li>
-                <li><a href="#5-classes">5. Classes</a></li>
-                <li><a href="#6-version-history">6. Version History</a></li>
-                </ul>
-                <hr>
-                <h1 class="mume-header" id="1-introduction">1. Introduction</h1>
+      <a class="navbar-brand" href="#">StudySpace</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="../index.html"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="specifications.html"
+            >Specifications</a
+          >
+          <a class="nav-item nav-link" href="spmp.html">SPMP</a>
+          <a class="nav-item nav-link" href="requirements.html">Requirements</a>
+          <a class="nav-item nav-link active" href="#">Analysis</a>
+          <a class="nav-item nav-link" href="design.html">Design</a>
+          <a class="nav-item nav-link" href="https://study-space.vercel.app/"
+            >Implementation</a
+          >
+          <a class="nav-item nav-link" href="https://study-space.vercel.app/"
+            >Link to Web App</a
+          >
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div class="container">
+      <h1>Software Analysis</h1>
+      <p><em>Version 1.5</em></p>
+      <hr />
+      <ul>
+        <li>
+          <a href="#1-introduction">1. Introduction</a>
+          <ul>
+            <li><a href="#11-project-summary">1.1. Project summary</a></li>
+            <li><a href="#12-project-purpose">1.2. Project purpose</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#2-object-classification">2. Object Classification</a>
+          <ul>
+            <li><a href="#21-object-diagram">2.1. Object diagram</a></li>
+            <li><a href="#22-entity-objects">2.2. Entity Objects</a></li>
+            <li><a href="#23-control-objects">2.3. Control Objects</a></li>
+            <li><a href="#24-boundary-objects">2.4. Boundary Objects</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#3-controller-diagrams">3. Controller Diagrams</a>
+          <ul>
+            <li>
+              <a href="#31-user-controller-event-loop"
+                >3.1. User Controller Event Loop</a
+              >
+            </li>
+            <li>
+              <a href="#32-user-controller-class">3.2. User Controller Class</a>
+            </li>
+            <li>
+              <a href="#33-group-controller-class"
+                >3.3. Group Controller Class</a
+              >
+            </li>
+            <li>
+              <a href="#34-event-controller-class"
+                >3.4. Event Controller Class</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#4-non-functional-attributes"
+            >4. Non Functional Attributes</a
+          >
+        </li>
+        <li><a href="#5-classes">5. Classes</a></li>
+        <li><a href="#6-version-history">6. Version History</a></li>
+      </ul>
+      <hr />
+      <h1 class="mume-header" id="1-introduction">1. Introduction</h1>
 
-                <h2 class="mume-header" id="11-project-summary">1.1. Project summary</h2>
+      <h2 class="mume-header" id="11-project-summary">1.1. Project summary</h2>
 
-                <p>StudySpace is a web application that provides post-secondary students with access to virtual spaces that foster unique social learning environments, promoting a sense of unity among students by helping them meet new peers, connect, and
-                    anstudy together.</p>
-                <h2 class="mume-header" id="12-project-purpose">1.2. Project purpose</h2>
+      <p>
+        StudySpace is a web application that provides post-secondary students
+        with access to virtual spaces that foster unique social learning
+        environments, promoting a sense of unity among students by helping them
+        meet new peers, connect, and anstudy together.
+      </p>
+      <h2 class="mume-header" id="12-project-purpose">1.2. Project purpose</h2>
 
-                <p>The following document will cover the analysis portion of StudySpace. It will explain features of the application and their respective uses. This document is intended to be used by developers, users, and any other individual who wants
-                    to learn the concept of this application and how it&#x2019;s features work.</p>
-                <hr>
-                <h1 class="mume-header" id="2-object-classification">2. Object Classification</h1>
+      <p>
+        The following document will cover the analysis portion of StudySpace. It
+        will explain features of the application and their respective uses. This
+        document is intended to be used by developers, users, and any other
+        individual who wants to learn the concept of this application and how
+        it&#x2019;s features work.
+      </p>
+      <hr />
+      <h1 class="mume-header" id="2-object-classification">
+        2. Object Classification
+      </h1>
 
-                <h2 class="mume-header" id="21-object-diagram">2.1. Object diagram</h2>
+      <h2 class="mume-header" id="21-object-diagram">2.1. Object diagram</h2>
 
-                <p><img src="../img/analysis_img/21.png" alt></p>
-                <h2 class="mume-header" id="22-entity-objects">2.2. Entity Objects</h2>
+      <p><img src="../img/analysis_img/21.png" alt /></p>
+      <h2 class="mume-header" id="22-entity-objects">2.2. Entity Objects</h2>
 
-                <ul>
-                    <li><strong>DESK</strong><br> A Desk is a virtual space wherein students may collaborate. Each desk is temporary; it only exists as long as there are people using it. After everyone leaves the desk, it is removed from memory. Each desk
-                        has an admin who can set a limit to the number of members and can add signifiers such as language, age category, and other factors.</li>
-                    <li><strong>FRIENDS</strong><br> Any two Users can become Friends if one sends a Friend Request and the other accepts it. When two Users are Friends, they are able to send private chats directly to one another.</li>
-                    <li><strong>GROUP</strong><br> A Group is a collection of two or more users who have connected through StudySpace either by Invitation or a User Match. All members of a Group automatically have access to a Chat upon joining.</li>
-                    <li><strong>INTERESTS</strong><br> Interests refer to the parameters that the user has chosen and the ranking of these parameters. The choice and ranking of parameters are key to determining User Matches.<br>
-                        <em>Example.</em><br> Alice has chosen the following parameters: Co-op, Friends, CP104, Programming and she has the following Interests:
-                        <ul>
-                            <li>Co-op</li>
-                            <li>Friends</li>
-                            <li>CP104</li>
-                            <li>Programming</li>
-                        </ul>
-                    </li>
-                    <li><strong>USER</strong><br> Typically a Student is a user enrolled in any Canadian university, who seeks the use of a Desk.</li>
-                    <li><strong>POST</strong><br> A Post is an object which can include photos and text. Posts are created by Users for all members of a Group to see. Users can make a Post about anything they wish, including: buying/selling textbooks, asking
-                        questions, looking for advice, etc. Users can also write a Response to a Post.</li>
-                    <li><strong>PAGE</strong><br> A Page is where Posts are viewed. Each Group can have one or more Pages</li>
-                    <li><strong>PROFILE</strong><br> A page with personal information about the user. The Profile also provides functionality such as managing group memberships and accessing chats.</li>
-                    <li><strong>TOP GROUPS</strong><br> The most popular groups that are similar to the user&#x2019;s interests.<br>
-                        <em>Example</em>.<br> If the user is interested in joining a group about co-op, there may be several groups named Co-opA and Co-opB that they are interested in potentially joining. However, if Co-opA has more users than Co-opB,
-                        then Co-opA will be featured in the user&#x2019;s suggested Top Groups shown in the Home Page.</li>
-                </ul>
-                <h2 class="mume-header" id="23-control-objects">2.3. Control Objects</h2>
+      <ul>
+        <li>
+          <strong>DESK</strong><br />
+          A Desk is a virtual space wherein students may collaborate. Each desk
+          is temporary; it only exists as long as there are people using it.
+          After everyone leaves the desk, it is removed from memory. Each desk
+          has an admin who can set a limit to the number of members and can add
+          signifiers such as language, age category, and other factors.
+        </li>
+        <li>
+          <strong>FRIENDS</strong><br />
+          Any two Users can become Friends if one sends a Friend Request and the
+          other accepts it. When two Users are Friends, they are able to send
+          private chats directly to one another.
+        </li>
+        <li>
+          <strong>GROUP</strong><br />
+          A Group is a collection of two or more users who have connected
+          through StudySpace either by Invitation or a User Match. All members
+          of a Group automatically have access to a Chat upon joining.
+        </li>
+        <li>
+          <strong>INTERESTS</strong><br />
+          Interests refer to the parameters that the user has chosen and the
+          ranking of these parameters. The choice and ranking of parameters are
+          key to determining User Matches.<br />
+          <em>Example.</em><br />
+          Alice has chosen the following parameters: Co-op, Friends, CP104,
+          Programming and she has the following Interests:
+          <ul>
+            <li>Co-op</li>
+            <li>Friends</li>
+            <li>CP104</li>
+            <li>Programming</li>
+          </ul>
+        </li>
+        <li>
+          <strong>USER</strong><br />
+          Typically a Student is a user enrolled in any Canadian university, who
+          seeks the use of a Desk.
+        </li>
+        <li>
+          <strong>POST</strong><br />
+          A Post is an object which can include photos and text. Posts are
+          created by Users for all members of a Group to see. Users can make a
+          Post about anything they wish, including: buying/selling textbooks,
+          asking questions, looking for advice, etc. Users can also write a
+          Response to a Post.
+        </li>
+        <li>
+          <strong>PAGE</strong><br />
+          A Page is where Posts are viewed. Each Group can have one or more
+          Pages
+        </li>
+        <li>
+          <strong>PROFILE</strong><br />
+          A page with personal information about the user. The Profile also
+          provides functionality such as managing group memberships and
+          accessing chats.
+        </li>
+        <li>
+          <strong>TOP GROUPS</strong><br />
+          The most popular groups that are similar to the user&#x2019;s
+          interests.<br />
+          <em>Example</em>.<br />
+          If the user is interested in joining a group about co-op, there may be
+          several groups named Co-opA and Co-opB that they are interested in
+          potentially joining. However, if Co-opA has more users than Co-opB,
+          then Co-opA will be featured in the user&#x2019;s suggested Top Groups
+          shown in the Home Page.
+        </li>
+      </ul>
+      <h2 class="mume-header" id="23-control-objects">2.3. Control Objects</h2>
 
-                <ul>
-                    <li><strong>AUTHENTICATOR</strong>
-                        <ul>
-                            <li>Authenticates the user, provided an email and password.</li>
-                        </ul>
-                    </li>
-                    <li><strong>USER INTERFACE</strong>
-                        <ul>
-                            <li>Controls the interface that the user interacts with, allowing them to perform various functions such as Chat, Send, Receive, Show, Usermatch, Search, and Invite.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <h2 class="mume-header" id="24-boundary-objects">2.4. Boundary Objects</h2>
+      <ul>
+        <li>
+          <strong>AUTHENTICATOR</strong>
+          <ul>
+            <li>Authenticates the user, provided an email and password.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>USER INTERFACE</strong>
+          <ul>
+            <li>
+              Controls the interface that the user interacts with, allowing them
+              to perform various functions such as Chat, Send, Receive, Show,
+              Usermatch, Search, and Invite.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h2 class="mume-header" id="24-boundary-objects">
+        2.4. Boundary Objects
+      </h2>
 
-                <ul>
-                    <li><strong>SEND</strong>
-                        <ul>
-                            <li>Enables Users to send chat messages to each other and amongst groups with the chat feature. Chat messages are sent, received and viewed through a chat box.</li>
-                        </ul>
-                    </li>
-                    <li><strong>RECEIVE</strong>
-                        <ul>
-                            <li>Users can receive messages from other users directly and from fellow group members in a group-wide discussion. Chat messages are sent, received and viewed through a chat box.</li>
-                        </ul>
-                    </li>
-                    <li><strong>SEARCH</strong>
-                        <ul>
-                            <li>Using a search bar, Users can search and discover Groups by Group Name or Users by Username. The search function uses full-text-search to search for results in the database that match the Search query.</li>
-                        </ul>
-                    </li>
-                    <li><strong>POST</strong>
-                        <ul>
-                            <li>Creates or edits a post for the group. When creating a new post, the user is prompted to enter the content of their post in a text box, and the title of their post in another text box.</li>
-                        </ul>
-                    </li>
-                    <li><strong>INVITE</strong>
-                        <ul>
-                            <li>Invites a member to the group. An Invitation is the opportunity for a User to join a Private Group. Any member of a Private Group can choose to send an Invitation to a User who isn&#x2019;t already a member. Through the group
-                                page, members are invited by clicking an &#x201C;Invite&#x201D; button next to their username in the search results for the user to be invited.</li>
-                        </ul>
-                    </li>
-                    <li><strong>USERMATCH</strong>
-                        <ul>
-                            <li>Matches user with another user. Suggested user matches are displayed in a list on a group page. To match with one of these suggested matches and add them as a friend, the user must click a &#x201C;Match&#x201D; button next
-                                to their username in this list.</li>
-                        </ul>
-                    </li>
-                    <li><strong>SHOW</strong>
-                        <ul>
-                            <li>Shows a room that users can join when a &#x2018;Desk&#x2019; is created.</li>
-                            <li>Shows a user&#x2019;s profile and their info.</li>
-                            <li>Shows all of a user&#x2019;s friends.</li>
-                            <li>Shows information about a group.</li>
-                            <li>Shows all members in a group.</li>
-                            <li>Shows posts in groups, the contents of a post, the person who posted it, and the comments on the post.</li>
-                        </ul>
-                    </li>
-                    <li><strong>AUTHENTICATE</strong>
-                        <ul>
-                            <li>Authenticates a user; verifies their identity by requiring the entry of a correct email and password combination. Upon logging in, the user will be required to enter their email and password in two separate text boxes.</li>
-                        </ul>
-                    </li>
-                    <li><strong>CHAT</strong>
-                        <ul>
-                            <li>A Chat is a feature where all members of a Group can send text messages to each other. Two users can also send direct chats to one another if they are friends. The Chat is viewed through a chat box on the Group&#x2019;s page,
-                                or through the user&#x2019;s main page in the case of direct chat conversations.</li>
-                        </ul>
-                    </li>
-                </ul>
-                <hr>
-                <h1 class="mume-header" id="3-controller-diagrams">3. Controller Diagrams</h1>
+      <ul>
+        <li>
+          <strong>SEND</strong>
+          <ul>
+            <li>
+              Enables Users to send chat messages to each other and amongst
+              groups with the chat feature. Chat messages are sent, received and
+              viewed through a chat box.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>RECEIVE</strong>
+          <ul>
+            <li>
+              Users can receive messages from other users directly and from
+              fellow group members in a group-wide discussion. Chat messages are
+              sent, received and viewed through a chat box.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>SEARCH</strong>
+          <ul>
+            <li>
+              Using a search bar, Users can search and discover Groups by Group
+              Name or Users by Username. The search function uses
+              full-text-search to search for results in the database that match
+              the Search query.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>POST</strong>
+          <ul>
+            <li>
+              Creates or edits a post for the group. When creating a new post,
+              the user is prompted to enter the content of their post in a text
+              box, and the title of their post in another text box.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>INVITE</strong>
+          <ul>
+            <li>
+              Invites a member to the group. An Invitation is the opportunity
+              for a User to join a Private Group. Any member of a Private Group
+              can choose to send an Invitation to a User who isn&#x2019;t
+              already a member. Through the group page, members are invited by
+              clicking an &#x201C;Invite&#x201D; button next to their username
+              in the search results for the user to be invited.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>USERMATCH</strong>
+          <ul>
+            <li>
+              Matches user with another user. Suggested user matches are
+              displayed in a list on a group page. To match with one of these
+              suggested matches and add them as a friend, the user must click a
+              &#x201C;Match&#x201D; button next to their username in this list.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>SHOW</strong>
+          <ul>
+            <li>
+              Shows a room that users can join when a &#x2018;Desk&#x2019; is
+              created.
+            </li>
+            <li>Shows a user&#x2019;s profile and their info.</li>
+            <li>Shows all of a user&#x2019;s friends.</li>
+            <li>Shows information about a group.</li>
+            <li>Shows all members in a group.</li>
+            <li>
+              Shows posts in groups, the contents of a post, the person who
+              posted it, and the comments on the post.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>AUTHENTICATE</strong>
+          <ul>
+            <li>
+              Authenticates a user; verifies their identity by requiring the
+              entry of a correct email and password combination. Upon logging
+              in, the user will be required to enter their email and password in
+              two separate text boxes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>CHAT</strong>
+          <ul>
+            <li>
+              A Chat is a feature where all members of a Group can send text
+              messages to each other. Two users can also send direct chats to
+              one another if they are friends. The Chat is viewed through a chat
+              box on the Group&#x2019;s page, or through the user&#x2019;s main
+              page in the case of direct chat conversations.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <hr />
+      <h1 class="mume-header" id="3-controller-diagrams">
+        3. Controller Diagrams
+      </h1>
 
-                <h2 class="mume-header" id="31-user-controller-event-loop">3.1. User Controller Event Loop</h2>
+      <h2 class="mume-header" id="31-user-controller-event-loop">
+        3.1. User Controller Event Loop
+      </h2>
 
-                <p><img src="../img/analysis_img/31.png" alt></p>
-                <h2 class="mume-header" id="32-user-controller-class">3.2. User Controller Class</h2>
+      <p><img src="../img/analysis_img/31.png" alt /></p>
+      <h2 class="mume-header" id="32-user-controller-class">
+        3.2. User Controller Class
+      </h2>
 
-                <p><img src="../img/analysis_img/32.png" alt></p>
-                <h2 class="mume-header" id="33-group-controller-class">3.3. Group Controller Class</h2>
+      <p><img src="../img/analysis_img/32.png" alt /></p>
+      <h2 class="mume-header" id="33-group-controller-class">
+        3.3. Group Controller Class
+      </h2>
 
-                <p><img src="../img/analysis_img/33.png" alt></p>
-                <h2 class="mume-header" id="34-event-controller-class">3.4. Event Controller Class</h2>
+      <p><img src="../img/analysis_img/33.png" alt /></p>
+      <h2 class="mume-header" id="34-event-controller-class">
+        3.4. Event Controller Class
+      </h2>
 
-                <p><img src="../img/analysis_img/34.png" alt></p>
-                <hr>
-                <h1 class="mume-header" id="4-non-functional-attributes">4. Non Functional Attributes</h1>
+      <p><img src="../img/analysis_img/34.png" alt /></p>
+      <hr />
+      <h1 class="mume-header" id="4-non-functional-attributes">
+        4. Non Functional Attributes
+      </h1>
 
-                <ul>
-                    <li>User will see a screen when joining a DESK</li>
-                    <li>User will see when they are disconnected from a DESK</li>
-                    <li>Messages will be seen by all users when sent</li>
-                </ul>
-                <hr>
-                <h1 class="mume-header" id="5-classes">5. Classes</h1>
+      <ul>
+        <li>User will see a screen when joining a DESK</li>
+        <li>User will see when they are disconnected from a DESK</li>
+        <li>Messages will be seen by all users when sent</li>
+      </ul>
+      <hr />
+      <h1 class="mume-header" id="5-classes">5. Classes</h1>
 
-                <p><img src="../img/analysis_img/5.png" alt></p>
-                <hr>
-                <h1 class="mume-header" id="6-version-history">6. Version History</h1>
+      <p><img src="../img/analysis_img/5.png" alt /></p>
+      <hr />
+      <h1 class="mume-header" id="6-version-history">6. Version History</h1>
 
-                <h3> Version 1.0 - 02/20/2021 </h3>
-                <p>Initial Analysis document created</p>
-                <ul>
-                    <li>Shyam Dave</li>
-                    <li>Matthew Francis</li>
-                    <li>Arshdeep Sahi</li>
-                    <li>Zeeshan Jafri</li>
-                    <li>Evan Surtel</li>
-                    <li>Brian Carvalho</li>
-                </ul>
-                <h3> Version 1.1 - 03/03/2021</h3>
-                <p>Adjusted document upon SQA suggestions</p>
-                <ul>
-                    <li>Brian Carvalho</li>
-                    <li>Shyam Dave</li>
-                    <li>Matthew Francis</li>
-                    <li>Evan Surtel</li>
-                    <li>Arshdeep Sahi</li>
-                </ul>
-                <p>Thanks to SQA by</p>
-                <ul>
-                    <li>Janelle Tait</li>
-                    <li>David Rosien</li>
-                    <li>Arvin Benipal</li>
-                    <li>Mackenzie Van Zanden</li>
-                    <li>Muhammad Hashir</li>
-                </ul>
-                <h3> Version 1.2 - 03/03/2021</h3>
-                <p>Adjusted object diagram according to SQA suggestions</p>
-                <ul>
-                    <li>Brian Carvalho</li>
-                </ul>
-                <p>Thanks to SQA by</p>
-                <ul>
-                    <li>Janelle Tait</li>
-                </ul>
-                <h3>Version 1.3 - 03/04/2021 </h3>
-                <p>Adjusted object diagram according to SQA suggestions</p>
-                <ul>
-                    <li>Brian Carvalho</li>
-                </ul>
-                <p>Thanks to SQA by</p>
-                <ul>
-                    <li>Janelle Tait</li>
-                </ul>
-                <h3> Version 1.4 - 24/03/2021</h3>
-                <p>Performed SQA to check consistency with past documents</p>
-                <ul>
-                    <li>Ann Baldonasa</li>
-                    <li>Mackenzie Van Zanden</li>
-                    <li>Dayton Talarico</li>
-                    <li>Janelle Tait</li>
-                </ul>
-                <p>Removed mention of tutors as this will no longer be a part of the software</p>
-                <ul>
-                    <li>Dayton Talarico</li>
-                </ul>
-                <p>Added Interests definition and changed any previous mentioning of &#x201C;user preferences&#x201D; to &#x201C;Interests&#x201D;</p>
-                <ul>
-                    <li>Dayton Talarico</li>
-                </ul>
-                <p>Clarify Top Groups definition</p>
-                <ul>
-                    <li>Janelle Tait</li>
-                </ul>
-                <p>Updated section 6 to match the chat class outlined in design doc</p>
-                <ul>
-                    <li>Janelle Tait</li>
-                </ul>
-                <h3> Version 1.5 - 11/04/2021</h3>
-                <p>Corrected spelling error in Object Diagram</p>
-                <ul>
-                    <li>Dayton Talarico</li>
-                </ul>
-                <p>Replaced Class Diagram with updated Design document version</p>
-                <ul>
-                    <li>Janelle Tait</li>
-                </ul>
-                <p>Revised Section 4 Non Functional Attributes based on David Brown&#x2019;s comments</p>
-                <ul>
-                    <li>Dayton Talarico</li>
-                </ul>
-                <p>Reworded vague statements throughout the document based on David Brown&#x2019;s comments</p>
-                <ul>
-                    <li>Dayton Talarico</li>
-                </ul>
-                <p>Removed Message Control due to redundancy with new Class Diagram</p>
-                <ul>
-                    <li>Dayton Talarico</li>
-                </ul>
-                <p>Reformatted and converted to HTML</p>
-                <ul>
-                    <li>Ann Baldonasa</li>
-                </ul>
-            </div>
-</body>
-
+      <h3>Version 1.0 - 02/20/2021</h3>
+      <p>Initial Analysis document created</p>
+      <ul>
+        <li>Shyam Dave</li>
+        <li>Matthew Francis</li>
+        <li>Arshdeep Sahi</li>
+        <li>Zeeshan Jafri</li>
+        <li>Evan Surtel</li>
+        <li>Brian Carvalho</li>
+      </ul>
+      <h3>Version 1.1 - 03/03/2021</h3>
+      <p>Adjusted document upon SQA suggestions</p>
+      <ul>
+        <li>Brian Carvalho</li>
+        <li>Shyam Dave</li>
+        <li>Matthew Francis</li>
+        <li>Evan Surtel</li>
+        <li>Arshdeep Sahi</li>
+      </ul>
+      <p>Thanks to SQA by</p>
+      <ul>
+        <li>Janelle Tait</li>
+        <li>David Rosien</li>
+        <li>Arvin Benipal</li>
+        <li>Mackenzie Van Zanden</li>
+        <li>Muhammad Hashir</li>
+      </ul>
+      <h3>Version 1.2 - 03/03/2021</h3>
+      <p>Adjusted object diagram according to SQA suggestions</p>
+      <ul>
+        <li>Brian Carvalho</li>
+      </ul>
+      <p>Thanks to SQA by</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <h3>Version 1.3 - 03/04/2021</h3>
+      <p>Adjusted object diagram according to SQA suggestions</p>
+      <ul>
+        <li>Brian Carvalho</li>
+      </ul>
+      <p>Thanks to SQA by</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <h3>Version 1.4 - 24/03/2021</h3>
+      <p>Performed SQA to check consistency with past documents</p>
+      <ul>
+        <li>Ann Baldonasa</li>
+        <li>Mackenzie Van Zanden</li>
+        <li>Dayton Talarico</li>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>
+        Removed mention of tutors as this will no longer be a part of the
+        software
+      </p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>
+        Added Interests definition and changed any previous mentioning of
+        &#x201C;user preferences&#x201D; to &#x201C;Interests&#x201D;
+      </p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>Clarify Top Groups definition</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>Updated section 6 to match the chat class outlined in design doc</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <h3>Version 1.5 - 11/04/2021</h3>
+      <p>Corrected spelling error in Object Diagram</p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>Replaced Class Diagram with updated Design document version</p>
+      <ul>
+        <li>Janelle Tait</li>
+      </ul>
+      <p>
+        Revised Section 4 Non Functional Attributes based on David
+        Brown&#x2019;s comments
+      </p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>
+        Reworded vague statements throughout the document based on David
+        Brown&#x2019;s comments
+      </p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>Removed Message Control due to redundancy with new Class Diagram</p>
+      <ul>
+        <li>Dayton Talarico</li>
+      </ul>
+      <p>Reformatted and converted to HTML</p>
+      <ul>
+        <li>Ann Baldonasa</li>
+      </ul>
+    </div>
+  </body>
 </html>
